@@ -1,9 +1,22 @@
 @import "reset.css";
 @import "fonts.css";
 @import "layout.css";
-@import "animation.css";
-@import "adaptive.css";
-@import "about.css";
-@import "articles.css";
-@import "cards.css";
-@import "article2.css";
+
+/* @import 'stylesheets/header.css';
+@import 'stylesheets/footer.css';
+@import 'stylesheets/about.css';
+@import 'stylesheets/articles.css';
+@import 'stylesheets/cards.css';
+@import 'stylesheets/tests.css'; */
+@import "test1.css";
+@import "randomizer.css";
+@import "randomizer.css";
+@import "styleguide.css";
+
+@import "components/01_quarks.css";
+@import "components/02_atoms.css";
+@import "components/03_molecules.css";
+@import "components/04_collections.css";
+@import "components/05_wrappers.css";
+@import "components/06_organisms.css";
+@import "components/07_superorganisms.css";

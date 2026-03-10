@@ -1,0 +1,50 @@
+/* .Q_iconSearch {
+  padding: 0;
+  background-image: url("/src/images/Q_iconSearch.webp");
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+}
+
+.M_header_search_bar {
+  align-items: center;
+  display: flex;
+  gap: var(--spacing-10);
+  overflow: visible;
+  position: relative;
+}
+
+.A_header_search_input {
+  background: var(--color-blue);
+  border: none;
+  border-radius: var(--corner-20);
+  box-sizing: border-box;
+  font: var(--font-button-text);
+  height: 30px;
+  max-height: 30px;
+  min-width: 0;
+  opacity: 0;
+  outline: none;
+  padding: 0;
+  position: absolute;
+  right: 40px;
+  transition: all 0.2s ease;
+  width: 0;
+}
+.W_search_results_dropdown {
+  border-radius: var(--corner-15);
+  left: 0;
+  width: 20.6rem;
+  z-index: 1000;
+}
+.W_header_search_icon {
+  align-items: center;
+  background: var(--color-blue);
+  border-radius: var(--corner-20);
+  cursor: pointer;
+  display: flex;
+  height: 30px;
+  justify-content: center;
+  transition: background 0.3s ease;
+  width: 30px;
+} */

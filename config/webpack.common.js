@@ -9,11 +9,20 @@ const path = require("path");
 module.exports = {
   entry: {
     index: "./src/javascripts/index.js",
+    filterTags: "./src/javascripts/filterTags.js",
+    articles: "./src/javascripts/articles.js",
+    b_article: "./src/javascripts/b_article.js",
+    s_article: "./src/javascripts/s_article.js",
+    tests: "./src/javascripts/tests.js",
+    test1: "./src/javascripts/test1suitable-horror-subgenre.js",
+    randomizer: "./src/javascripts/randomizer.js",
     styleguide: "./src/javascripts/styleguide.js",
   },
   output: {
     filename: "[name].js",
     path: path.resolve(".", "docs"),
+    publicPath: "/",
+    // добавила publicPath: "/",
   },
   module: {
     rules: [
@@ -37,7 +46,7 @@ module.exports = {
         loader: "html-loader",
       },
       {
-        test: /\.(png|jpg|jpeg|gif|svg)$/i,
+        test: /\.(png|jpg|jpeg|gif|svg|webp)$/i,
         type: "asset/resource",
         generator: {
           filename: "images/[hash][ext][query]",
@@ -56,14 +65,5 @@ module.exports = {
   optimization: {
     minimizer: [new CssMinimizerPlugin()],
   },
-  plugins: [
-    new MiniCssExtractPlugin(),
-    ...htmlPages
-    // new CopyPlugin({
-    //   patterns: [
-    //     { from: "source", to: "dest" },
-    //     { from: "other", to: "public" },
-    //   ],
-    // }),
-  ],
+  plugins: [new MiniCssExtractPlugin(), ...htmlPages],
 };

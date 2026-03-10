@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <title>Grim — Медиа про лор крупных хоррор фандомов</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Grim — Медиа про лор крупных хоррор фандомов</title>
     <meta
       name="title"
       content="Grim — Медиа про лор крупных хоррор фандомов "
@@ -26,7 +26,7 @@
     />
     <meta
       property="og:image"
-      content="https://raw.githubusercontent.com/HSEADC/tutururutu/refs/heads/main/src/images/about-photo.png"
+      content="https://metatags.io/images/meta-tags.png"
     />
 
     <!-- X (Twitter) -->
@@ -43,47 +43,52 @@
       property="twitter:description"
       content="Медиасервис, который собирает весь лор популярных хорроров в одном месте: понятно, структурно и без догадок."
     />
-    <meta
+    <!-- <meta
       property="twitter:image"
-      content="https://raw.githubusercontent.com/HSEADC/tutururutu/refs/heads/main/src/images/about-photo.png"
+      content="https://metatags.io/images/meta-tags.png"
     />
-    <title>Статьи</title>
     <link
       rel="shortcut icon"
       href="../images/favicon.ico"
       type="image/x-icon"
-    />
+    /> -->
   </head>
   <body>
-    <header>
-      <div class="O_Header">
-        <nav>
-          <a class="A_logoHeader" href="../index.html">
-            <img src="../images/A_logoHeader.webp" alt="" />
-          </a>
-          <div class="M_Navigation">
-            <a class="A_navigationHeader" href="about.html">О нас</a>
-            <a class="A_navigationHeader" href="articles.html">Статьи</a>
-            <a class="A_navigationHeader" href="cards.html">Карточки</a>
-            <a class="A_navigationHeader" href="tests.html">Тесты</a>
-          </div>
-        </nav>
+     <header>
+      <div class="O_Header desktop">
+          <nav>
+            <a class="A_logoHeader" href="../index.html">
+              <img src="../images/A_logoHeader.webp" alt="" />
+            </a>
+            <div class="M_Navigation">
+              <a class="A_navigationHeader" href="about.html">О нас</a>
+              <a class="A_navigationHeader" href="articles.html">Статьи</a>
+              <a class="A_navigationHeader" href="cards.html">Карточки</a>
+              <a class="A_navigationHeader" href="tests.html">Тесты</a>
+            </div>
+            <div class="M_header_search_bar">
+              <input type="text" class="A_header_search_input" />
+              <div class="W_search_results_dropdown"></div>
+              <div class="W_header_search_icon">
+                <div class="Q_iconSearch"></div>
+              </div>
+            </div>
+          </nav>
       </div>
-      
         <!-- Мобильное меню -->
-        <div class="O_Header mobile">
+        <!-- <div class="O_Header mobile">
           <a class="A_logoHeader_mobile" href="../index.html">
             <img src="../images/A_logoHeader.webp" alt="Логотип" />
           </a>
           
-          <!-- Бургер-иконка -->
+       
           <div class="hamMenu">
             <div class="Q_menuIcon"></div>
             <div class="Q_menuIcon"></div>
             <div class="Q_menuIcon"></div>
           </div>
           
-          <!-- Оверлей-меню -->
+        
           <div class="menu-overlay">
             <div class="overlay-header">
               <img src="../images/A_logoHeader.webp" alt="Логотип" />
@@ -94,19 +99,24 @@
             
             <div class="A_inputHeader">
               <nav class="M_menuItems">
-                <a class="A_navigationHeader_mobile" href="articles.html">Статьи</a>
-                <a class="A_navigationHeader_mobile" href="cards.html">Карточки</a>
-                <a class="A_navigationHeader_mobile" href="about.html">О нас</a>
+                <a class="A_navigationHeader_mobile" href="articles.html" class="A_H1">Статьи</a>
+                <a class="A_navigationHeader_mobile" href="cards.html" class="A_H1">Карточки</a>
+                <a class="A_navigationHeader_mobile" href="about.html" class="A_H1">О нас</a>
               </nav>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </header>
-    <div class="M_mainText">
-      <h1 class="A_h1 desktop">Заголовок</h1>
-      <h3 class="A_h3">подзаголовок</h3>
+     <div class="M_mainTextRandomizer">
+      <h1 class="A_h1">Grim</h1>
+      <h3 class="A_h3">
+        Колода «Гримуар» хранит секреты хоррор-вселенных. <br>
+        Открой карту — и узнаешь один из них.
+      </h3>
     </div>
-    <a href="tests/suitable-horror-subgenre.html">Тест №1</a>
+    <div class="RandomizerCards">
+      <button>Тяни</button>
+    </div>
   </body>
 </html>

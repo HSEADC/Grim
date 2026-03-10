@@ -1,0 +1,200 @@
+/* :root {
+  --white: #ffffff;
+  --red: #bc0101;
+  --black: #11141b;
+  --grey: #9494a0;
+  --lightGrey: #d9d9d9;
+  --silver: silver;
+  --shadow: 0px 0px 16px 0px rgba(255, 0, 4, 0.7);
+  --radiusBig: 0.9rem;
+  --radiusMedium: 0.6rem;
+  --radiusSmall: 0.5rem;
+  --fontP: 400 1rem / 1rem "SuisseIntl", sans-serif;
+  --fontLevelTags: 450 0.9rem / 0.8rem "SuisseIntl", sans-serif;
+  --fontMainButton: 550 1.3rem / 1.5rem "SuisseIntl", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  position: relative;
+  background-color: #11141b;
+  overflow-x: hidden;
+  color: var(--white);
+} */
+/* 
+.O_Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  margin: 0 auto;
+}
+
+.O_Header nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.A_logoHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 0 0 auto;
+}
+
+.M_Navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: var(--radiusSmall);
+  width: 24.18rem;
+  padding: 0.7rem 2rem;
+  box-shadow: var(--shadow);
+  position: relative;
+  background-image: url(../images/M_Navigation_background.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+
+.A_navigationHeader {
+  color: var(--white);
+  letter-spacing: 0.06rem;
+  font-family: "BebasNeueCyrillic";
+  font-size: 1.3rem;
+}
+
+.W_Test {
+  border-radius: 40px;
+  backdrop-filter: blur(10px);
+  background-color: #dddddd58;
+  border: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px 40px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  width: 880px;
+  margin: 80px auto 0;
+}
+
+.O_Test {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.C_Answers {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.M_AnswerMessage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: aliceblue;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.M_AnswerMessage:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.M_TestResult {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 40px;
+  text-align: center;
+}
+
+.A_Question,
+.A_TestResultHeader {
+  font-size: 40px;
+  line-height: 1.2;
+  margin-top: 50px;
+  color: #333;
+}
+
+.A_NumberOfQuestion,
+.A_TestName,
+.A_TestResultCount {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #666;
+}
+
+.A_TestName {
+  margin-top: 50px;
+  color: #333;
+}
+
+.A_AnswerText,
+.A_TestResultParagraph {
+  font-size: 26px;
+  cursor: pointer;
+  margin-left: 35px;
+  color: #333;
+}
+
+.A_FalseCheckbox {
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid cornflowerblue;
+  border-radius: 8px;
+  background-color: #eee;
+  transition: background-color 0.3s;
+}
+
+.A_TrueCheckbox {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  z-index: 2;
+  margin: 0;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.A_TrueCheckbox:checked + .A_FalseCheckbox {
+  background-color: cornflowerblue;
+}
+
+.A_TrueCheckbox:checked + .A_FalseCheckbox::after {
+  content: "✓";
+  position: absolute;
+  color: white;
+  font-size: 16px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.A_TestResultImage {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+} */

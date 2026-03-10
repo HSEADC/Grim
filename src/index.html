@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
     <title>Grim — Медиа про лор крупных хоррор фандомов</title>
@@ -52,33 +52,49 @@
 
   <body>
     <header>
-        <div class="O_Header desktop">
-          <nav>
-            <a class="A_logoHeader" href="index.html">
-              <img src="images/A_logoHeader.webp" alt="Логотип" />
-            </a>
-            <div class="M_Navigation">
-              <a class="A_navigationHeader" href="pages/about.html">О нас</a>
-              <a class="A_navigationHeader" href="pages/articles.html">Статьи</a>
-              <a class="A_navigationHeader" href="pages/cards.html">Карточки</a>
+      <div class="O_Header desktop">
+        <nav>
+          <a class="A_logoHeader" href="index.html">
+            <img src="images/A_logoHeader.webp" alt="Логотип" />
+          </a>
+          <div class="M_Navigation">
+            <a class="A_navigationHeader" class="A_p" href="pages/about.html"
+              >О нас</a
+            >
+            <a class="A_navigationHeader" class="A_p" href="pages/articles.html"
+              >Статьи</a
+            >
+            <a class="A_navigationHeader" class="A_p" href="pages/cards.html"
+              >Карточки</a
+            >
+            <a class="A_navigationHeader" class="A_p" href="pages/tests.html"
+              >Тесты</a
+            >
+          </div>
+          <div class="M_header_search_bar">
+            <input type="text" class="A_header_search_input" />
+            <div class="W_search_results_dropdown"></div>
+            <div class="W_header_search_icon">
+              <div class="Q_iconSearch"></div>
             </div>
-          </nav>
-        </div>
-        
-        <!-- Мобильное меню -->
-        <div class="O_Header mobile">
+          </div>
+        </nav>
+      </div>
+
+      <!-- Мобильное меню -->
+      <!-- <div class="O_Header mobile">
           <a class="A_logoHeader_mobile" href="index.html">
             <img src="images/A_logoHeader.webp" alt="Логотип" />
           </a>
           
-          <!-- Бургер-иконка -->
+          
           <div class="hamMenu">
             <div class="Q_menuIcon"></div>
             <div class="Q_menuIcon"></div>
             <div class="Q_menuIcon"></div>
           </div>
           
-          <!-- Оверлей-меню -->
+        
           <div class="menu-overlay">
             <div class="overlay-header">
               <img src="images/A_logoHeader.webp" alt="Логотип" />
@@ -96,7 +112,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </header>
     <div class="M_mainText">
       <h1 class="A_h1 desktop">Запутались в лоре <br />и фанатских теориях?</h1>
@@ -113,8 +129,8 @@
       </div>
       <div class="Q-borderDown"></div>
     </div>
-    <div class="O_chapter">
-      <h1 class="A_h1">Статьи</h1>
+    <!-- <div class="O_chapter">
+      <h1 class="A_h1">Сейчас читают</h1>
     </div>
     <div class="W_articles">
       <a href="pages/articles/article2.html" class="W_cardArticle">
@@ -133,8 +149,58 @@
           <img src="images/Q_cardTextImgarticle.webp" alt="" />
         </div>
       </a>
-    </div>
-    <div class="O_chapter">
+    </div> -->
+    <section class="S_ArticlesHeading">
+      <div class="W_HeadingArticles">
+        <div class="W_TitleLink">
+          <h1 class="A_h1">Сейчас читают</h1>
+          <div class="A_LinkArticleNavigation">
+            <a href="articles.html" class="A_LinkCategory">Перейти в раздел</a>
+            <div class="Q_ArrowForward"></div>
+          </div>
+        </div>
+        <div class="C_ArticlesRow">
+          <a class="O_CardArticle" href="articles/decoration.html">
+            <div class="Q_Image">
+              <img src="images/Q_ImageArticlesMainRunningMan.webp" alt="" />
+            </div>
+            <div class="M_ArticleInfo">
+              <div class="M_TagDate">
+                <div class="A_Date">20.02.2026</div>
+              </div>
+              <h2 class="A_ArticleName">
+                «Бегущий человек» как антиутопия эпохи алгоритмов
+              </h2>
+              <div class="M_TagLine">
+                <div class="A_TagArticleBigSocialCriticism">
+                  <p class="A_p_tag">Социальная критика</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a
+            class="O_CardArticle"
+            href="/pages/articles/big_articles/philosophy-of-the-saw.html"
+          >
+            <div class="Q_Image">
+              <img src="images/Q_ImageArticlesBigSaw.webp" alt="" />
+            </div>
+            <div class="M_ArticleInfo">
+              <div class="M_TagDate">
+                <div class="A_Date">26.02.2026</div>
+              </div>
+              <h2 class="A_ArticleName">
+                Философия Пилы: Почему Джон Крамер — не просто злодей
+              </h2>
+              <div class="A_TagArticleBigCharacterAnalysis">
+                <p class="A_p_tag">Анализ персонажа</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- <div class="O_chapter">
       <h1 class="A_h1">Карточки</h1>
     </div>
     <div class="W_cards">
@@ -205,6 +271,6 @@
           <a class="tg_icon" href="https://t.me/grimchannellink"></a>
         </div>
       </div>
-    </footer>
+    </footer> -->
   </body>
 </html>

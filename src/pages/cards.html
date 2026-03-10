@@ -57,31 +57,38 @@
     <header>
       <div class="O_Header desktop">
           <nav>
-          <a class="A_logoHeader" href="../index.html">
-            <img src="../images/A_logoHeader.webp" alt="" />
-          </a>
-          <div class="M_Navigation">
-            <a class="A_navigationHeader" href="about.html">О нас</a>
-            <a class="A_navigationHeader" href="articles.html">Статьи</a>
-            <a class="A_navigationHeader" href="cards.html">Карточки</a>
-          </div>
-        </nav>
-        </div>
-        
+            <a class="A_logoHeader" href="../index.html">
+              <img src="../images/A_logoHeader.webp" alt="" />
+            </a>
+            <div class="M_Navigation">
+              <a class="A_navigationHeader" href="about.html">О нас</a>
+              <a class="A_navigationHeader" href="articles.html">Статьи</a>
+              <a class="A_navigationHeader" href="cards.html">Карточки</a>
+              <a class="A_navigationHeader" href="tests.html">Тесты</a>
+            </div>
+            <div class="M_header_search_bar">
+              <input type="text" class="A_header_search_input" />
+              <div class="W_search_results_dropdown"></div>
+              <div class="W_header_search_icon">
+                <div class="Q_iconSearch"></div>
+              </div>
+            </div>
+          </nav>
+      </div>
         <!-- Мобильное меню -->
-        <div class="O_Header mobile">
+        <!-- <div class="O_Header mobile">
           <a class="A_logoHeader_mobile" href="../index.html">
             <img src="../images/A_logoHeader.webp" alt="Логотип" />
           </a>
           
-          <!-- Бургер-иконка -->
+       
           <div class="hamMenu">
             <div class="Q_menuIcon"></div>
             <div class="Q_menuIcon"></div>
             <div class="Q_menuIcon"></div>
           </div>
           
-          <!-- Оверлей-меню -->
+        
           <div class="menu-overlay">
             <div class="overlay-header">
               <img src="../images/A_logoHeader.webp" alt="Логотип" />
@@ -98,14 +105,108 @@
               </nav>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </header>
-    <div class="M_mainText">
-      <h1 class="A_h1 desktop">Основано на реальных событиях?</h1>
-      <h3 class="A_h3">Интересные детали <br />о персонажах</h3>
+    <!-- <section class="S_MainBannerCards">
+      <div class="M_mainTextCard">
+        <h1 class="A_h1">Основано <br> на реальных событиях?</h1>
+      </div>
+    </section> -->
+    <section class="S_MainBannerCards">
+      <img src="../images/cards/S_MainBannerCards.webp" alt="" class="banner-image">
+      <div class="M_mainTextCard">
+        <h1 class="A_h1">Основано <br> на реальных событиях?</h1>
+      </div>
+    </section>
+    <div class="С_ArticleCategoryTags">
+      <div class="A_FilterTag">Антагонист</div>
+      <div class="A_FilterTag">Протагонист</div>
     </div>
-    <div class="W_cards">
+     <div class="C_AllArticles">
+      <a
+        class="O_Card"
+        data-tags="Антагонист"
+      >
+        <div class="Q_Image_Card">
+          <img src="../images/cards/Video Project 4 1.png" alt="" />
+        </div>
+        <div class="M_ArticleInfo">
+          <h2 class="A_SubCard">
+            Векна
+          </h2>
+          <h2 class="A_SubCard">
+          Имя и концепция персонажа взяты <br>
+          из Dungeons & Dragons, где Векна — <br>
+          божество смерти и секретов
+          </h2>
+          <div class="M_TagLine">
+            <div class="A_CardTag">Антагонист</div>
+          </div>
+        </div>
+      </a>
+      <a
+        class="O_Card"
+        data-tags="Протагонист"
+      >
+        <div class="Q_Image_Card">
+          <img src="../images/cards/Video Project 4 1.png" alt="" />
+        </div>
+        <div class="M_ArticleInfo">
+          <h2 class="A_SubCard">
+            Дастин Хендерсон
+          </h2>
+          <h2 class="A_SubCard">
+            Уникальная внешность Дастина обусловлена <br>
+            редким генетическим заболеванием актёра <br>
+            — ключично-черепной дисплазией
+          </h2>
+          <div class="M_TagLine">
+            <div class="A_CardTag">Протагонист</div>
+          </div>
+        </div>
+      </a>
+      <a
+        class="O_Card"
+        data-tags="Антагонист"
+      >
+        <div class="Q_Image_Card">
+          <img src="../images/cards/Video Project 4 1.png" alt="" />
+        </div>
+        <div class="M_ArticleInfo">
+          <h2 class="A_SubCard">
+            Ганнибал Лектер
+          </h2>
+          <h2 class="A_SubCard">
+            Прототип персонажа хирург-убийца <br>
+            Альфредо Балли Тревино, с которым писатель <br>
+            познакомился в тюрьме в 1960-х
+          </h2>
+          <div class="M_TagLine">
+            <div class="A_CardTag">Антагонист</div>
+          </div>
+        </div>
+      </a>
+      <div class="W_interactives_generator">
+          <div id="B_interactives_generator"></div>
+          <div class="W_interactives_generator_content">
+            <div class="A_interactives_generator_title">
+              <h2>Гримуар будет</h2>
+            </div>
+            <div class="A_interactives_generator_description">
+              <p>
+                Накопали фактов про твоих <br>любимых персонажей. <br>Тяни карточку дня 
+              </p>
+            </div>
+            <div class="A_interactives_testing_button">
+              <a href="randomizer.html"
+                >Вытянуть карту</a
+              >
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- <div class="W_cards">
       <div class="S_popupContainer">
         <div class="O_cardInfo">
           <div class="Q_cardInfoImg">
@@ -181,6 +282,45 @@
           <a class="tg_icon" href="t.me/grimchannellink"></a>
         </div>
       </div>
-    </footer>
+    </footer> -->
+    <!-- <script>
+document.addEventListener('DOMContentLoaded', function() {
+  console.log('Скрипт загружен');
+
+  const filterTags = document.querySelectorAll('.A_FilterTag');
+  const cards = document.querySelectorAll('.O_Card');
+
+  console.log('Найдено тегов:', filterTags.length);
+  console.log('Найдено карточек:', cards.length);
+
+  filterTags.forEach(tag => {
+    tag.addEventListener('click', function() {
+      const selectedTag = this.innerText.trim();
+      console.log('Клик по тегу:', selectedTag);
+
+      // Если тег уже активен — сбрасываем фильтр
+      if (this.classList.contains('active')) {
+        console.log('Сброс фильтра');
+        this.classList.remove('active');
+        cards.forEach(card => card.style.display = '');
+      } else {
+        // Иначе активируем этот тег, деактивируем другие
+        console.log('Фильтр по тегу:', selectedTag);
+        filterTags.forEach(t => t.classList.remove('active'));
+        this.classList.add('active');
+
+        cards.forEach(card => {
+          const cardTags = card.getAttribute('data-tags');
+          if (cardTags && cardTags.split(',').map(t => t.trim()).includes(selectedTag)) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      }
+    });
+  });
+});
+</script> -->
   </body>
 </html>
