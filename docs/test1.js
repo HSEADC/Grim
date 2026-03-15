@@ -1,163 +1,189 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
+/******/ 	// The require scope
+/******/ 	var __webpack_require__ = {};
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript && document.currentScript.tagName.toUpperCase() === 'SCRIPT')
+/******/ 				scriptUrl = document.currentScript.src;
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) {
+/******/ 					var i = scripts.length - 1;
+/******/ 					while (i > -1 && (!scriptUrl || !/^http(s?):/.test(scriptUrl))) scriptUrl = scripts[i--].src;
+/******/ 				}
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/^blob:/, "").replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
+/******/ 	})();
+/******/ 	
+/************************************************************************/
 
-document.addEventListener("DOMContentLoaded", function () {
-  // Данные теста
-  var stages = [{
-    question: "Какое растение, согласно народной медицине, следует использовать для заживления ран?",
-    answers: [{
-      text: "ромашка",
-      count: 0
-    }, {
-      text: "брусника",
-      count: 0
-    }, {
-      text: "алоэ",
-      count: 1
-    }]
-  }, {
-    question: "Отвар и настой ягод какого растения применяется как дезинфицирующее средство?",
-    answers: [{
-      text: "калина",
-      count: 0
-    }, {
-      text: "брусника",
-      count: 1
-    }, {
-      text: "клюква",
-      count: 0
-    }]
-  }, {
-    question: "Какое из перечисленных растений обладает противовоспалительным действием?",
-    answers: [{
-      text: "ромашка",
-      count: 0
-    }, {
-      text: "аир",
-      count: 0
-    }, {
-      text: "девятисил",
-      count: 1
-    }]
-  }, {
-    question: "Экстракт какого растения используется для приготовлении безрецептурных растительных антидепрессантов?",
-    answers: [{
-      text: "зверобой",
-      count: 1
-    }, {
-      text: "шалфей",
-      count: 0
-    }, {
-      text: "солодка",
-      count: 0
-    }]
-  }];
-  var currentStage = 0;
-  var resultCount = 0;
+;// ./src/images/tests/Q_Psychological.webp
+const Q_Psychological_namespaceObject = __webpack_require__.p + "images/03463dade381e1f988c3.webp";
+;// ./src/images/tests/Q_Supernatural.webp
+const Q_Supernatural_namespaceObject = __webpack_require__.p + "images/364099561b51102667a3.webp";
+;// ./src/images/tests/Q_Cosmic.webp
+const Q_Cosmic_namespaceObject = __webpack_require__.p + "images/e8ba2b9f350717bc0a4a.webp";
+;// ./src/images/tests/Q_Body.webp
+const Q_Body_namespaceObject = __webpack_require__.p + "images/7bbcde09d20be85c2bd8.webp";
+;// ./src/javascripts/test1suitable-horror-subgenre.js
 
-  // Функция инициализации теста
-  function initTest() {
-    var numberOfQuestion = document.querySelector(".A_NumberOfQuestion");
-    var question = document.querySelector(".A_Question");
-    var answers = document.querySelectorAll(".A_AnswerText");
-    var radioButtons = document.querySelectorAll(".A_TrueCheckbox");
-    if (currentStage >= stages.length) {
-      showResult();
-      return;
-    }
 
-    // Сбрасываем все radio кнопки
-    radioButtons.forEach(function (radio) {
-      radio.checked = false;
+
+
+
+var testData = {
+  questions: [{
+    id: 1,
+    text: "Какая ситуация пугает вас сильнее всего?",
+    answers: ["Понять, что реальность вокруг может быть иллюзией, а ваш разум — нет", "Столкнуться с необъяснимым сверхъестественным явлением", "Узнать, что существуют древние силы, для которых люди — ничто", "Осознать, что ваше тело начинает меняться или разрушаться"]
+  }, {
+    id: 2,
+    text: "Где происходит идеальная хоррор-история?",
+    answers: ["В обычном городе или доме, где постепенно что-то начинает идти не так", "В старом доме, лесу или месте с проклятой историей", "В неизвестной зоне, космосе или месте, связанном с чем-то древним", "В лаборатории, больнице или месте жестоких экспериментов"]
+  }, {
+    id: 3,
+    text: "Что делает историю страшной именно для вас?",
+    answers: ["Медленное психологическое напряжение и паранойя", "Призраки, демоны или проклятия, которые невозможно объяснить", "Осознание масштаба вселенной и ничтожности человека", "Физические трансформации, паразиты, мутации живых существ"]
+  }, {
+    id: 4,
+    text: "Какой финал кажется вам самым сильным?",
+    answers: ["Герой понимает, что сам становится частью безумия", "Зло не побеждено и продолжает существовать где-то рядом", "Герой узнаёт ужасную правду о природе реальности", "Герой теряет своё тело, внешний облик или саму человечность"]
+  }, {
+    id: 5,
+    text: "Какой страх кажется наиболее реалистичным?",
+    answers: ["Потерять контроль над собственным разумом, начать сомневаться в том, что реально", "Столкнуться с чем-то потусторонним, нереальным", "Узнать, что мир устроен намного страшнее, чем кажется", "Потерять контроль над собственным телом и обликом"]
+  }],
+  results: [{
+    index: 0,
+    // соответствует верхнему левому ответу
+    title: "Психологический хоррор",
+    description: "Этот поджанр хоррора исследует \nвнутреннее состояние персонажа: \nстрах и паранойя становятся \nосновными источниками ужаса",
+    image: Q_Psychological_namespaceObject,
+    caption: "«Прочь» (Get Out, 2017)"
+  }, {
+    index: 1,
+    // верхний правый
+    title: "Сверхъестественный хоррор",
+    description: "Здесь страх связан с силами, выходящими \nза пределы обычной реальности, \nкогда могут появляться призраки или другие \nпотусторонние сущности",
+    image: Q_Supernatural_namespaceObject,
+    caption: "«Синистер 2» (Sinister 2, 2015)"
+  }, {
+    index: 2,
+    // нижний левый
+    title: "Космический хоррор",
+    description: "Этот поджанр раскрывает вселенную. \nУжас возникает из-за столкновения \nс непостижимыми силами \nили знаниями",
+    image: Q_Cosmic_namespaceObject,
+    caption: "«Чужой: Ромул» (Alien: Romulus, 2024)"
+  }, {
+    index: 3,
+    // нижний правый
+    title: "Боди-хоррор",
+    description: "В центре этого поджанра — изменения \nи искажения человеческого тела. Герои \nмогут сталкиваться с мутациями, \nболезнями или экспериментами",
+    image: Q_Body_namespaceObject,
+    caption: "«Субстанция» (The Substance, 2024)"
+  }]
+};
+var currentQuestionIndex = 0;
+var userAnswers = []; // здесь будем хранить индексы выбранных ответов (0-3)
+var selectedAnswerIndex = null;
+function renderQuestion() {
+  var question = testData.questions[currentQuestionIndex];
+  selectedAnswerIndex = null;
+  var isLastQuestion = currentQuestionIndex === testData.questions.length - 1;
+  var navigationHtml;
+  if (currentQuestionIndex === 0) {
+    navigationHtml = "\n      <div class=\"W_TestNavigation\">\n        <button class=\"A_TestPrevButton text_button_text\" id=\"backButton\">\u0412\u0435\u0440\u043D\u0443\u0442\u044C\u0441\u044F \u043D\u0430\u0437\u0430\u0434</button>\n        <button class=\"A_TestNextButton text_button_text\" id=\"nextButton\" disabled>\n          \u0414\u0430\u043B\u0435\u0435\n        </button>\n      </div>\n    ";
+  } else {
+    navigationHtml = "\n      <div class=\"W_TestNavigation\">\n        <button class=\"A_TestPrevButton text_button_text\" id=\"prevButton\">\u041D\u0430\u0437\u0430\u0434</button>\n        <button class=\"A_TestNextButton text_button_text\" id=\"nextButton\" disabled>\n          ".concat(isLastQuestion ? "Завершить" : "Далее", "\n        </button>\n      </div>\n    ");
+  }
+  document.getElementById("W_test_container").innerHTML = "\n    <div class=\"W_TestHeading\">\n      <div class=\"W_TestQuestion\">\n        <div class=\"M_TestQuestionCounter\">\n          <p class=\"text_button_text\">\u0412\u043E\u043F\u0440\u043E\u0441 <span>".concat(currentQuestionIndex + 1, "</span> \u0438\u0437 ").concat(testData.questions.length, "</p>\n        </div>\n        <h2 class=\"A_TestQuestionTitle\">").concat(question.text, "</h2>\n      </div>\n    </div>\n    <div class=\"W_TestBody\">\n      <div class=\"C_AnswerVariants\">\n        ").concat(question.answers.map(function (answer, index) {
+    return "\n            <div class=\"M_AnswerVariant\" data-index=\"".concat(index, "\">\n              <p class=\"text_body_text\">").concat(answer, "</p>\n            </div>\n          ");
+  }).join(""), "\n      </div>\n      ").concat(navigationHtml, "\n    </div>\n  ");
+  document.querySelectorAll(".M_AnswerVariant").forEach(function (variant) {
+    variant.addEventListener("click", function () {
+      document.querySelectorAll(".M_AnswerVariant").forEach(function (v) {
+        v.classList.remove("selected");
+      });
+      this.classList.add("selected");
+      selectedAnswerIndex = parseInt(this.getAttribute("data-index"));
+      document.getElementById("nextButton").disabled = false;
     });
-
-    // Обновляем номер вопроса
-    if (numberOfQuestion) {
-      numberOfQuestion.textContent = "\u0412\u043E\u043F\u0440\u043E\u0441 \u2116".concat(currentStage + 1, " \u0438\u0437 ").concat(stages.length);
-    }
-
-    // Обновляем текст вопроса
-    if (question) {
-      question.textContent = stages[currentStage].question;
-    }
-
-    // Обновляем варианты ответов
-    for (var i = 0; i < answers.length; i++) {
-      if (answers[i]) {
-        answers[i].textContent = stages[currentStage].answers[i].text;
-        // Сохраняем значение count в data-атрибут
-        if (radioButtons[i]) {
-          radioButtons[i].dataset.count = stages[currentStage].answers[i].count;
-        }
-      }
-    }
+  });
+  document.getElementById("nextButton").addEventListener("click", goToNextQuestion);
+  if (currentQuestionIndex === 0) {
+    document.getElementById("backButton").addEventListener("click", function () {
+      window.location.href = "/pages/tests.html"; // путь к списку тестов
+    });
+  } else {
+    document.getElementById("prevButton").addEventListener("click", goToPreviousQuestion);
   }
-
-  // Функция показа результата
-  function showResult() {
-    var testContainer = document.querySelector(".O_Test");
-    if (!testContainer) return;
-    var resultHeader, resultParagraph;
-    if (resultCount === 4) {
-      resultHeader = "Отличный результат!";
-      resultParagraph = "Видно, что вы прекрасно разбираетесь в теме! Проверьте свои знания в других наших тестах";
-    } else if (resultCount >= 2) {
-      resultHeader = "Хороший результат!";
-      resultParagraph = "Видно, что вы неплохо знакомы с темой! Проверьте свои знания в других наших тестах";
+}
+function goToNextQuestion() {
+  if (selectedAnswerIndex !== null) {
+    userAnswers.push(selectedAnswerIndex);
+    if (currentQuestionIndex < testData.questions.length - 1) {
+      currentQuestionIndex++;
+      renderQuestion();
     } else {
-      resultHeader = "Кажется, вы новичок в этой теме...";
-      resultParagraph = "Почитайте наши статьи, чтобы лучше подготовиться, и попробуйте снова проверить свои знания!";
+      showResults();
     }
-    testContainer.innerHTML = "\n      <div class=\"M_TestResult\">\n        <p class=\"A_TestResultCount\">\u0418\u0442\u043E\u0433\u043E: ".concat(resultCount, " \u0438\u0437 ").concat(stages.length, "</p>\n        <h2 class=\"A_TestResultHeader\">").concat(resultHeader, "</h2>\n        <p class=\"A_TestResultParagraph\">").concat(resultParagraph, "</p>\n        <button onclick=\"location.reload()\" style=\"\n          padding: 15px 30px;\n          background: cornflowerblue;\n          color: white;\n          border: none;\n          border-radius: 8px;\n          cursor: pointer;\n          font-size: 18px;\n          margin-top: 20px;\n        \">\u041F\u0440\u043E\u0439\u0442\u0438 \u0442\u0435\u0441\u0442 \u0441\u043D\u043E\u0432\u0430</button>\n      </div>\n    ");
   }
-
-  // Проверяем, есть ли элементы теста на странице
-  var testExists = document.querySelector(".W_Test") || document.querySelector(".A_Question") || document.querySelector(".C_Answers");
-  if (testExists) {
-    // Инициализируем первый вопрос
-    initTest();
-
-    // Добавляем обработчики на все radio кнопки
-    var radioButtons = document.querySelectorAll(".A_TrueCheckbox");
-    var answerLabels = document.querySelectorAll(".A_AnswerText");
-
-    // Обработчик для radio кнопок
-    if (radioButtons.length > 0) {
-      radioButtons.forEach(function (radio) {
-        radio.addEventListener("change", function () {
-          if (this.checked) {
-            // Добавляем баллы за правильный ответ
-            resultCount += parseInt(this.dataset.count || 0);
-
-            // Переходим к следующему вопросу через задержку
-            setTimeout(function () {
-              currentStage++;
-              initTest();
-            }, 500);
-          }
-        });
-      });
+}
+function goToPreviousQuestion() {
+  if (currentQuestionIndex > 0) {
+    // Удаляем последний сохранённый ответ (он относится к текущему вопросу, который мы покидаем)
+    if (userAnswers.length > currentQuestionIndex) {
+      userAnswers.pop();
     }
-
-    // Обработчик для клика по тексту ответа
-    if (answerLabels.length > 0) {
-      answerLabels.forEach(function (label) {
-        label.addEventListener("click", function () {
-          var _this$previousElement;
-          // Находим соответствующий radio и выбираем его
-          var radio = (_this$previousElement = this.previousElementSibling) === null || _this$previousElement === void 0 ? void 0 : _this$previousElement.previousElementSibling;
-          if (radio) {
-            radio.checked = true;
-
-            // Инициируем событие change
-            var event = new Event("change");
-            radio.dispatchEvent(event);
-          }
-        });
-      });
-    }
-    console.log("Тест инициализирован");
+    currentQuestionIndex--;
+    renderQuestion();
   }
-});
+}
+function showResults() {
+  // Подсчитываем, какой индекс ответа выбирался чаще всего
+  var counts = [0, 0, 0, 0];
+  userAnswers.forEach(function (ansIndex) {
+    counts[ansIndex] += 1;
+  });
+
+  // Находим индекс с максимальным количеством (если несколько – берём первый)
+  var maxCount = -1;
+  var resultIndex = 0;
+  counts.forEach(function (count, idx) {
+    if (count > maxCount) {
+      maxCount = count;
+      resultIndex = idx;
+    }
+  });
+  var result = testData.results.find(function (r) {
+    return r.index === resultIndex;
+  }) || testData.results[0];
+  document.getElementById("W_test_container").innerHTML = "\n    <div class=\"W_ResultContent\">\n      <div class=\"M_TestQuestionCounter\">\n        <p class=\"text_button_text\">\u0420\u0435\u0437\u0443\u043B\u044C\u0442\u0430\u0442</p>\n      </div>\n      <div class=\"W_ResultText\">\n        <h1 class=\"A_ResultTitle\">".concat(result.title, "</h1>\n        <p class=\"text_body_text A_ResultDescription\">").concat(result.description, "</p>\n      </div>\n      <div class=\"W_ResultImage\">\n        <img src=\"").concat(result.image, "\" alt=\"").concat(result.caption, "\" class=\"A_ResultImage\" />\n        <p class=\"A_ResultCaption text_body_text\">").concat(result.caption, "</p>\n      </div>\n      <div class=\"W_ResultButtons\">\n        <a href=\"/pages/tests.html\" class=\"A_BackToTestsButton text_button_text\">\u041F\u0440\u043E\u0439\u0442\u0438 \u0434\u0440\u0443\u0433\u0438\u0435 \u0442\u0435\u0441\u0442\u044B</a>\n      </div>\n    </div>\n  ");
+}
+document.addEventListener("DOMContentLoaded", renderQuestion);
 /******/ })()
 ;
