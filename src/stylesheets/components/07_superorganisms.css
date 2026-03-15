@@ -1,0 +1,233 @@
+/* ___________________index.html___________________ */
+.S_ArticlesHeading {
+  margin-top: 4rem;
+  padding: 6rem 0px;
+}
+
+.S_CardsHeading {
+  padding: 6rem 0px;
+}
+
+.S_TestsHeading {
+  padding: 6rem 0px;
+}
+
+.S_CommunitySection {
+  position: relative;
+  width: 100%;
+  padding: 6rem 2.3rem;
+  border-radius: var(--radiusBig);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.S_CommunitySection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 1.2rem;
+  right: 1.2rem;
+  bottom: 0;
+  background-image: url(/src/images/M_Community.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: inherit;
+  z-index: 0;
+}
+
+.S_Footer {
+  width: 100%;
+  height: 40rem;
+  margin-top: 7rem;
+  padding: 2.5rem;
+  box-sizing: border-box;
+  border-radius: 2rem 2rem 0 0;
+  border: none;
+  background-image: url(/src/images/M_BackgroundFooter.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ___________________articles.html___________________ */
+.S_MainBannerArticle {
+  position: relative;
+  width: 100%;
+  padding: 0 2.3rem;
+  box-sizing: border-box;
+  margin-bottom: 3rem;
+}
+
+.S_MainBannerArticle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 2.3rem;
+  right: 2.3rem;
+  bottom: 0;
+  background-image: url(/src/images/articles/S_MainBannerArticles.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: var(--radiusBig);
+  z-index: 0;
+}
+
+/* ___________________cards.html___________________ */
+
+.S_MainBannerCards {
+  position: relative;
+  width: 100%;
+  padding: 0 2.3rem;
+  box-sizing: border-box;
+  margin-bottom: 3rem;
+}
+
+.S_MainBannerCards::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 2.3rem;
+  right: 2.3rem;
+  bottom: 0;
+  background-image: url(/src/images/cards/S_MainBannerCards.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: var(--radiusBig);
+  z-index: 0;
+}
+
+/* __Randomizer__ */
+
+.S_Randomizer {
+  align-items: center;
+  background: var(--black);
+  border-radius: var(--radiusBig);
+  display: flex;
+  height: 28rem;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  box-shadow: inset 0 0 54px #050505;
+  z-index: 3;
+}
+
+#B_Randomizer {
+  background-image: url(/src/images/cards/M_RandomizerBackground.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+/* ___________________tests.html___________________ */
+
+.S_MainBannerTests {
+  position: relative;
+  width: 100%;
+  padding: 0 2.3rem;
+  box-sizing: border-box;
+  margin-bottom: 3rem;
+}
+
+.S_MainBannerTests::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 2.3rem;
+  right: 2.3rem;
+  bottom: 0;
+  background-image: url(/src/images/tests/S_MainBannerTests.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: var(--radiusBig);
+  z-index: 0;
+}
+
+@media only screen and (max-width: 1720px) and (min-width: 1300px) {
+}
+
+@media only screen and (max-width: 1300px) and (min-width: 1024px) {
+  .S_Footer {
+    background-image: url(/src/images/M_BackgroundFooterTablet.webp);
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+  .S_CommunitySection::before {
+    background-image: url(/src/images/M_CommunityTablet.webp);
+  }
+}
+
+@media only screen and (max-width: 767px) and (min-width: 360px) {
+  .S_ArticlesHeading {
+    margin-top: 2rem;
+    padding: 7vw 0vw 14vw;
+  }
+
+  .S_CardsHeading {
+    margin-top: 2rem;
+    padding: 7vw 0vw 14vw;
+  }
+
+  .S_TestsHeading {
+    margin-top: 2rem;
+    padding: 7vw 0vw 14vw;
+  }
+
+  .S_CommunitySection {
+    margin-top: 2rem;
+  }
+
+  .S_CommunitySection::before {
+    background-image: url(/src/images/M_CommunityMobile.webp);
+  }
+
+  .S_Footer {
+    height: 43rem;
+    background-image: url(/src/images/M_BackgroundFooterMobile.webp);
+    justify-content: flex-start;
+    padding: 0;
+  }
+  /* _______________articles.html_______________ */
+
+  .S_MainBannerArticle::before {
+    background-image: url(/src/images/articles/S_MainBannerArticlesMobile.webp);
+  }
+
+  /* _______________cards.html_______________ */
+  .S_MainBannerCards::before {
+    background-image: url(/src/images/cards/S_MainBannerCardsMobile.webp);
+  }
+
+  /* ___________________tests.html___________________ */
+  .S_MainBannerTests::before {
+    background-image: url(/src/images/tests/S_MainBannerTestsMobile.webp);
+  }
+
+  /* ___________________cards.html___________________ */
+
+  /* __Randomizer__ */
+
+  .S_Randomizer {
+    height: 18.7rem;
+    justify-content: flex-start;
+  }
+
+  #B_Randomizer {
+    background-image: url(/src/images/cards/M_RandomizerBackgroundMobile.webp);
+    background-size: cover;
+  }
+}

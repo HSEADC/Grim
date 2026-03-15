@@ -1,0 +1,190 @@
+/* ___________________index.html___________________ */
+.W_HeadingArticles {
+  padding: 0 2.3rem;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.W_HeadingCards {
+  padding: 0 2.3rem;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.W_HeadingTests {
+  padding: 0 2.3rem;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.W_TitleLink {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2vw;
+}
+
+.W_CommunityContainer {
+  position: relative;
+  z-index: 1;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* ___Footer___ */
+
+.W_footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 75rem;
+  width: 100%;
+}
+/* ___________________articles.html___________________ */
+
+.W_BannerContainer {
+  position: relative;
+  z-index: 1;
+  max-width: 1366px;
+  height: 258px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* ___________________about.html___________________ */
+
+.W_AboutWrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: calc(134rem + 5rem * 2);
+  padding: 4rem 5rem;
+  position: relative;
+  width: 100%;
+}
+
+.W_AboutContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 49.5rem;
+  width: 100%;
+}
+.W_AboutText {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+  width: 100%;
+}
+
+.W_AboutBrands {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2.375rem;
+  width: 100%;
+}
+
+.W_AboutCreators {
+  padding: 7rem 2.3rem 0rem 2.3rem;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 1720px) and (min-width: 1300px) {
+}
+
+@media only screen and (max-width: 1300px) and (min-width: 1024px) {
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+}
+
+@media only screen and (max-width: 767px) and (min-width: 360px) {
+  .W_HeadingArticles {
+    padding: 0 1.2rem;
+  }
+
+  .W_HeadingCards {
+    padding: 0 1.2rem;
+  }
+
+  .W_HeadingTests {
+    padding: 0 1.2rem;
+  }
+
+  .W_TitleLink {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .W_footer-content {
+    padding-top: 13rem;
+    gap: 1rem;
+    margin: 0;
+    width: 100%;
+  }
+
+  /* _______________articles.html_______________ */
+}
+
+@media (max-width: 1024px) {
+  .W_AboutWrapper {
+    padding: 3rem 2.5rem;
+  }
+
+  .W_AboutContent {
+    max-width: 40rem;
+  }
+
+  .W_AboutText {
+    gap: 1.25rem;
+  }
+
+  .W_AboutBrands {
+    margin-top: 2rem;
+    gap: 1.25rem;
+  }
+}
+@media (max-width: 768px) {
+  .W_AboutWrapper {
+    padding: 2rem 1.5rem;
+  }
+
+  .W_AboutContent {
+    max-width: 100%;
+  }
+
+  .W_AboutText {
+    gap: 1rem;
+  }
+
+  .W_AboutBrands {
+    margin-top: 1.5rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 360px) {
+  .W_AboutBrands {
+    gap: 0.75rem;
+  }
+}

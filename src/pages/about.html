@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
     <title>Grim — Медиа про лор крупных хоррор фандомов</title>
@@ -49,7 +49,7 @@
     />
     <link
       rel="shortcut icon"
-      href="../images/favicon.ico"
+      href="../images/favicon.png"
       type="image/x-icon"
     />
   </head>
@@ -57,7 +57,7 @@
   <body>
     <header>
       <div class="O_Header desktop">
-          <nav>
+        <nav>
           <a class="A_logoHeader" href="../index.html">
             <img src="../images/A_logoHeader.webp" alt="" />
           </a>
@@ -67,23 +67,30 @@
             <a class="A_navigationHeader" href="cards.html">Карточки</a>
             <a class="A_navigationHeader" href="tests.html">Тесты</a>
           </div>
+          <div class="M_header_search_bar">
+            <input type="text" class="A_header_search_input" />
+            <div class="W_search_results_dropdown"></div>
+            <div class="W_header_search_icon">
+              <div class="Q_iconSearch"></div>
+            </div>
+          </div>
         </nav>
-        </div>
-        
-        <!-- Мобильное меню -->
-        <div class="O_Header mobile">
+      </div>
+
+      <!-- Мобильное меню -->
+      <!-- <div class="O_Header mobile">
           <a class="A_logoHeader_mobile" href="../index.html">
             <img src="../images/A_logoHeader.webp" alt="Логотип" />
           </a>
           
-          <!-- Бургер-иконка -->
+          
           <div class="hamMenu">
             <div class="Q_menuIcon"></div>
             <div class="Q_menuIcon"></div>
             <div class="Q_menuIcon"></div>
           </div>
           
-          <!-- Оверлей-меню -->
+          
           <div class="menu-overlay">
             <div class="overlay-header">
               <img src="../images/A_logoHeader.webp" alt="Логотип" />
@@ -101,33 +108,105 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </header>
-    <div class="M_mainText_about">
-      <h1 class="A_h1 desktop">
-        Мы любим хорроры <br />и хотим разобрать их вместе
-      </h1>
-      <h3 class="A_h3">Наша цель — <br />объяснять сложный лор просто</h3>
+    <div class="M_mainText">
+      <h1 class="A_h1 desktop">Добро пожаловать <br />в нашу гримёрку</h1>
+      <h3 class="A_h3">
+        Мы любим хорроры <br />
+        и хотим разобрать их вместе
+      </h3>
     </div>
-
-    <div class="W_background">
+    <div class="M_background">
+      <div class="Q-borderUpper"></div>
       <div class="Q-background">
-        <img src="../images/M_backgroundUs.webp" alt="" />
+        <img src="../images/about/M_backgroundAbout.webp" alt="" />
+      </div>
+      <div class="Q-borderDown"></div>
+    </div>
+    <div class="W_AboutWrapper" id="W_aboutContainer">
+      <div class="A_AboutStar A_AboutStar_left"></div>
+      <div class="A_AboutStar A_AboutStar_right"></div>
+
+      <div class="W_AboutContent">
+        <div class="M_AboutLogo">
+          <img src="/src/images/A_logoFooter.webp" alt="Логотип" />
+        </div>
+
+        <div class="W_AboutText">
+          <p class="A_AboutSubtitleEessence">Наша суть</p>
+          <h2 class="A_AboutTitleEessence">
+            Мы — цифровое пространство<br />
+            для анализа и обсуждения <br />любимых вселенных
+          </h2>
+        </div>
+
+        <div class="W_AboutBrands">
+          <div class="A_BrandIcon"></div>
+        </div>
       </div>
     </div>
-    <footer class="S_Footer_about">
-      <div class="footer-content">
-        <a href="index.html" class="footer-logo">
+    <section class="S_AboutCreators">
+      <div class="W_AboutCreators">
+        <div class="M_AboutHeader">
+          <h1 class="A_AboutTitle">Создатели проекта</h1>
+          <p class="A_AboutSubtitle">студентки Школы дизайна ВШЭ</p>
+        </div>
+        <div class="C_CardsRow">
+          <a class="O_Card">
+            <div class="Q_Image_Card">
+              <img src="../images/about/Q_ImageCreator1.webp" alt="" />
+            </div>
+            <div class="M_CardArticleInfo">
+              <h3 class="A_CardName">Баштарова Элина</h3>
+              <p class="A_CardNameDescription">
+                Пишет тексты, чтобы вы не тратили <br />
+                время на хорроры, которые могут <br />
+                сильно разочаровывать
+              </p>
+            </div>
+          </a>
+          <a class="O_Card">
+            <div class="Q_Image_Card">
+              <img src="../images/about/Q_ImageCreator2.webp" alt="" />
+            </div>
+            <div class="M_CardArticleInfo">
+              <h3 class="A_CardName">Бекетова Анастасия</h3>
+              <p class="A_CardNameDescription">
+                Рисует и верстает, чтобы в гримёрку <br />было не страшно
+                заходить. Дизайн — <br />её способ сделать мрак красивым
+              </p>
+            </div>
+          </a>
+          <a class="O_Card">
+            <div class="Q_Image_Card">
+              <img src="../images/about/Q_ImageCreator3.webp" alt="" />
+            </div>
+            <div class="M_CardArticleInfo">
+              <h3 class="A_CardName">Криштофович Алиса</h3>
+              <p class="A_CardNameDescription">
+                Роется в источниках и вытаскивает <br />
+                факты, которые авторы надеялись <br />
+                оставить незамеченными.
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <footer class="S_Footer">
+      <div class="W_footer-content">
+        <a href="index.html" class="A_footer-logo">
           <img src="/src/images/A_logoFooter.webp" alt="Логотип" />
         </a>
-        <div class="team-section">
-          <h4 class="A_h4">Команда</h4>
-          <p class="A_p2">Баштарова Элина</p>
-          <p class="A_p2">Бекетова Анастасия</p>
-          <p class="A_p2">Криштофович Алиса</p>
-        </div>
-        <div class="social_icons">
-          <a class="tg_icon" href="t.me/grimchannellink"></a>
+        <p class="A_footer-description">
+          Медиа про лор <br />крупных хоррор фандомов
+        </p>
+        <div class="M_NavigationFooter">
+          <a class="A_navigationFooter" href="pages/about.html">О нас</a>
+          <a class="A_navigationFooter" href="pages/articles.html">Статьи</a>
+          <a class="A_navigationFooter" href="pages/cards.html">Карточки</a>
+          <a class="A_navigationFooter" href="pages/tests.html">Тесты</a>
         </div>
       </div>
     </footer>

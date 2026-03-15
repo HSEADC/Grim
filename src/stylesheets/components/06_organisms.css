@@ -1,0 +1,186 @@
+/* ___________________index.html___________________ */
+.O_Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2.3rem;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  margin: 0 auto;
+}
+
+.O_Header nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.O_CardArticleBig {
+  background-color: var(--black);
+  box-shadow: inset 0 0 82px #050505;
+  display: flex;
+  width: 100%;
+  height: 35.5rem;
+  flex-direction: column;
+  padding: 2rem 2.5rem 2rem 2.5rem;
+  border-radius: var(--radiusBig);
+  text-decoration: none;
+  gap: 20px;
+}
+
+.O_Card {
+  background-color: var(--black);
+  box-shadow: inset 0 0 54px #050505;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 36.2rem;
+  padding: 2rem 1.7rem;
+  border-radius: var(--radiusBig);
+  text-decoration: none;
+  gap: 20px;
+}
+
+.O_CardTest {
+  background-color: var(--black);
+  box-shadow: inset 0 0 54px #050505;
+  border-radius: var(--radiusBig);
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.O_CardTextGroup {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.O_CommunityBlock {
+  width: 452px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* ___________________articles.html___________________ */
+.O_CardArticle {
+  background-color: var(--black);
+  box-shadow: inset 0 0 82px #050505;
+  display: flex;
+  width: 100%;
+  height: 26rem;
+  flex-direction: column;
+  padding: 1.3rem 1.6rem 1.3rem 1.6rem;
+  border-radius: var(--radiusBig);
+  text-decoration: none;
+  gap: 20px;
+}
+
+@media only screen and (max-width: 1300px) and (min-width: 1024px) {
+  .O_CardArticleBig {
+    padding: 1.5rem 2rem;
+    gap: 1rem;
+    height: 41vw;
+    width: 46.1vw;
+  }
+
+  .O_Card {
+    height: 36vw;
+    padding: 1.5rem 1.5rem;
+    gap: 1rem;
+  }
+
+  /*__Tests__ */
+  .O_CardTest {
+    padding: 1.25rem;
+    gap: 1.5rem;
+  }
+}
+@media only screen and (max-width: 1720px) and (min-width: 1300px) {
+  /* __Card__ */
+  .O_Card {
+    padding: 1.75rem 1.75rem;
+    height: 34rem;
+  }
+}
+
+@media only screen and (max-width: 1300px) and (min-width: 1024px) {
+  .O_CardArticleBig {
+    padding: 1.2rem 1.7rem;
+    gap: 1rem;
+    height: 41vw;
+    width: 45.6vw;
+  }
+
+  /* __Card__ */
+  .O_Card {
+    height: 36vw;
+    padding: 1.5rem 1.5rem;
+    gap: 1rem;
+  }
+
+  /*__Tests__ */
+
+  .O_CardTest {
+    padding: 1rem;
+    gap: 0.7rem;
+  }
+
+  /* ___________________articles.html___________________ */
+  .O_CardArticle {
+    width: 30.4vw;
+    height: 33vw;
+    row-gap: 1vw;
+    min-width: 1px;
+    padding-bottom: 1.5rem;
+    padding: 1vw 1vw 2vw 1vw;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+  .O_CardArticleBig {
+    padding: 1.2rem 1.8rem;
+    gap: 0.8rem;
+    height: 42vw;
+  }
+
+  /*__Tests__ */
+  .O_Card {
+    height: 42vw;
+    padding: 1.2rem 1.2rem;
+    gap: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 767px) and (min-width: 360px) {
+  .O_CardArticleBig,
+  .O_CardArticle {
+    height: auto;
+    padding: 1rem 1rem;
+  }
+
+  /* __Card__ */
+  .O_Card {
+    height: auto;
+    padding: 1rem 1rem;
+    gap: 0.8rem;
+  }
+
+  /*__Tests__ */
+  .O_CardTest {
+    padding: 1rem;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  /* ___________________articles.html___________________ */
+}

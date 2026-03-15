@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ru">
   <head>
     <title>Grim — Медиа про лор крупных хоррор фандомов</title>
     <meta charset="UTF-8" />
@@ -49,15 +49,15 @@
     />
     <link
       rel="shortcut icon"
-      href="../images/favicon.ico"
+      href="../images/favicon.png"
       type="image/x-icon"
     />
   </head>
 
   <body>
     <header>
-     <div class="O_Header desktop">
-          <nav>
+      <div class="O_Header desktop">
+        <nav>
           <a class="A_logoHeader" href="../index.html">
             <img src="../images/A_logoHeader.webp" alt="" />
           </a>
@@ -67,23 +67,30 @@
             <a class="A_navigationHeader" href="cards.html">Карточки</a>
             <a class="A_navigationHeader" href="tests.html">Тесты</a>
           </div>
+          <div class="M_header_search_bar">
+            <input type="text" class="A_header_search_input" />
+            <div class="W_search_results_dropdown"></div>
+            <div class="W_header_search_icon">
+              <div class="Q_iconSearch"></div>
+            </div>
+          </div>
         </nav>
-        </div>
-        
-        <!-- Мобильное меню -->
-        <div class="O_Header mobile">
+      </div>
+
+      <!-- Мобильное меню -->
+      <!-- <div class="O_Header mobile">
           <a class="A_logoHeader_mobile" href="../index.html">
             <img src="../images/A_logoHeader.webp" alt="Логотип" />
           </a>
           
-          <!-- Бургер-иконка -->
+          
           <div class="hamMenu">
             <div class="Q_menuIcon"></div>
             <div class="Q_menuIcon"></div>
             <div class="Q_menuIcon"></div>
           </div>
           
-          <!-- Оверлей-меню -->
+          
           <div class="menu-overlay">
             <div class="overlay-header">
               <img src="../images/A_logoHeader.webp" alt="Логотип" />
@@ -101,48 +108,155 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </header>
-    <!-- <div class="M_mainText-artic">
-      <h1 class="A_h1 desktop">
-        Разбираем <br />хоррор-вселенные <br />по косточкам
-      </h1>
+    <section class="S_MainBannerArticle">
+      <div class="W_BannerContainer">
+        <h1 class="A_h1">Разбираем <br />хоррор-вселенные<br />по косточкам</h1>
+      </div>
+    </section>
+    <!-- -----------------FilterTags-------------------- -->
+    <div class="С_ArticleCategoryTags">
+      <div class="A_FilterTag A_FilterTag--characterAnalysis">
+        <div class="A_FilterTagp">Анализ персонажа</div>
+      </div>
+      <div class="A_FilterTag A_FilterTag--conceptualAnalysis">
+        <div class="A_FilterTagp">Концептуальный разбор</div>
+      </div>
+      <div class="A_FilterTag A_FilterTag--psychologyHorror">
+        <div class="A_FilterTagp">Психология хоррора</div>
+      </div>
+      <div class="A_FilterTag A_FilterTag--socialCriticism">
+        <div class="A_FilterTagp">Социальная критика</div>
+      </div>
     </div>
-    <div class="W_articles">
-      <a href="articles/article2.html" class="W_cardArticle">
-        <div class="O_cardTextGroup">
-          <div class="M_cardArticles">
-            <p class="A_p">18.12.2025</p>
-            <h3 class="A_h3">
-              Джойс Байерс: плохая мать или жертва обстоятельств?
-            </h3>
-            <div class="A_articleLevelTags">
-              <p class="A_p_tag">анализ персонажей</p>
+    <!-- -----------------Allarticles-------------------- -->
+    <div class="C_AllArticles">
+      <div class="C_ArticlesRowThird">
+        <a
+          class="O_CardArticle"
+          href="pages/articles/big_articles/philosophy-of-the-saw.html"
+          data-tags="Анализ персонажа"
+        >
+          <div class="Q_ImageSmall">
+            <img
+              src="/src/images/articles/Q_ImageArticlesMainJoyce.webp"
+              alt=""
+            />
+          </div>
+          <div class="M_ArticleInfo">
+            <div class="M_TagDateSmall">
+              <div class="A_Date">18.12.2025</div>
+            </div>
+            <h2 class="A_ArticleNameSmall">
+              Джойс Байерс: плохая мать <br />или жертва обстоятельств?
+            </h2>
+            <div class="A_TagArticleCharacterAnalysis">
+              <p class="A_p_tag">Анализ персонажа</p>
             </div>
           </div>
-        </div>
-        <div class="Q_cardTextImg">
-          <img src="../images/Q_cardTextImgarticle.webp" alt="" />
-        </div>
-      </a>
+        </a>
+        <a
+          class="O_CardArticle"
+          href="pages/articles/big_articles/philosophy-of-the-saw.html"
+          data-tags="Психология хоррора"
+        >
+          <div class="Q_ImageSmall">
+            <img src="/src/images/articles/Q_ImageArticlesMainIt.webp" alt="" />
+          </div>
+          <div class="M_ArticleInfo">
+            <div class="M_TagDateSmall">
+              <div class="A_Date">10.02.2026</div>
+            </div>
+            <h2 class="A_ArticleNameSmall">
+              Почему мы боимся клоунов? <br />Разбор феномена Пеннивайза
+            </h2>
+            <div class="A_TagArticlePsychologyOfHorror">
+              <p class="A_p_tag">Психология хоррора</p>
+            </div>
+          </div>
+        </a>
+        <a
+          class="O_CardArticle"
+          href="pages/articles/big_articles/philosophy-of-the-saw.html"
+          data-tags="Концептуальный разбор"
+        >
+          <div class="Q_ImageSmall">
+            <img
+              src="/src/images/articles/Q_ImageArticlesMainGetOut.webp"
+              alt=""
+            />
+          </div>
+          <div class="M_ArticleInfo">
+            <div class="M_TagDateSmall">
+              <div class="A_Date">17.02.2026</div>
+            </div>
+            <h2 class="A_ArticleNameSmall">
+              Символика «Sunken Place» <br />в фильме «Прочь»
+            </h2>
+            <div class="A_TagArticleConceptualAnalysis">
+              <p class="A_p_tag">Концептуальный разбор</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="C_ArticlesRow">
+        <a
+          class="O_CardArticleBig"
+          href="pages/articles/big_articles/running-man.html"
+          data-tags="Социальная критика"
+        >
+          <div class="Q_Image">
+            <img src="/src/images/Q_ImageArticlesMainRunningMan.webp" alt="" />
+          </div>
+          <div class="M_ArticleInfo">
+            <div class="M_TagDate">
+              <div class="A_Date">20.02.2026</div>
+            </div>
+            <h2 class="A_ArticleName">
+              «Бегущий человек» <br />
+              антиутопия эпохи алгоритмов
+            </h2>
+            <div class="A_TagArticleBigSocialCriticism">
+              <p class="A_p_tag">Социальная критика</p>
+            </div>
+          </div>
+        </a>
+        <a
+          class="O_CardArticleBig"
+          href="pages/articles/big_articles/philosophy-of-the-saw.html"
+          data-tags="Анализ персонажа"
+        >
+          <div class="Q_Image">
+            <img src="/src/images/Q_ImageArticlesBigSaw.webp" alt="" />
+          </div>
+          <div class="M_ArticleInfo">
+            <div class="M_TagDate">
+              <div class="A_Date">26.02.2026</div>
+            </div>
+            <h2 class="A_ArticleName">
+              Философия Пилы: Почему Джон Крамер — не просто злодей
+            </h2>
+            <div class="A_TagArticleBigCharacterAnalysis">
+              <p class="A_p_tag">Анализ персонажа</p>
+            </div>
+          </div>
+        </a>
+      </div>
     </div>
-
-    <section class="O_ArticleTeasers"></section> -->
-    <section class="O_ArticleTeasers"></section>
-
     <footer class="S_Footer">
-      <div class="footer-content">
-        <a href="index.html" class="footer-logo">
+      <div class="W_footer-content">
+        <a href="index.html" class="A_footer-logo">
           <img src="/src/images/A_logoFooter.webp" alt="Логотип" />
         </a>
-        <div class="team-section">
-          <h4 class="A_h4">Команда</h4>
-          <p class="A_p2">Баштарова Элина</p>
-          <p class="A_p2">Бекетова Анастасия</p>
-          <p class="A_p2">Криштофович Алиса</p>
-        </div>
-        <div class="social_icons">
-          <a class="tg_icon" href="t.me/grimchannellink"></a>
+        <p class="A_footer-description">
+          Медиа про лор <br />крупных хоррор фандомов
+        </p>
+        <div class="M_NavigationFooter">
+          <a class="A_navigationFooter" href="pages/about.html">О нас</a>
+          <a class="A_navigationFooter" href="pages/articles.html">Статьи</a>
+          <a class="A_navigationFooter" href="pages/cards.html">Карточки</a>
+          <a class="A_navigationFooter" href="pages/tests.html">Тесты</a>
         </div>
       </div>
     </footer>
