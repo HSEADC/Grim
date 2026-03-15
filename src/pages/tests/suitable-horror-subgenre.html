@@ -3,41 +3,93 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Тест №1</title>
+    <title>Тест: Какой поджанр хоррора тебе подходит?</title>
+    <meta name="title" content="Grim — Медиа про лор крупных хоррор фандомов" />
+    <meta
+      name="description"
+      content="Медиасервис, который собирает весь лор популярных хорроров в одном месте: понятно, структурно и без догадок."
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hseadc.github.io/tutururutu/" />
+    <meta
+      property="og:title"
+      content="Grim — Медиа про лор крупных хоррор фандомов "
+    />
+    <meta
+      property="og:description"
+      content="Медиасервис, который собирает весь лор популярных хорроров в одном месте: понятно, структурно и без догадок."
+    />
+    <meta
+      property="og:image"
+      content="https://metatags.io/images/meta-tags.png"
+    />
+
+    <!-- X (Twitter) -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://hseadc.github.io/tutururutu/"
+    />
+    <meta
+      property="twitter:title"
+      content="Grim — Медиа про лор крупных хоррор фандомов "
+    />
+    <meta
+      property="twitter:description"
+      content="Медиасервис, который собирает весь лор популярных хорроров в одном месте: понятно, структурно и без догадок."
+    />
+    <meta
+      property="twitter:image"
+      content="https://metatags.io/images/meta-tags.png"
+    />
+    <title>Стайлгайд</title>
+    <link
+      rel="shortcut icon"
+      href="../../images/favicon.png"
+      type="image/x-icon"
+    />
   </head>
-  <body>
-   <header>
+  <body class="W_test_page">
+    <header>
       <div class="O_Header desktop">
           <nav>
-          <a class="A_logoHeader" href="../index.html">
-            <!-- <img src="../images/A_logoHeader.webp" alt="" /> -->
-          </a>
-          <div class="M_Navigation">
-            <a class="A_navigationHeader" href="about.html">О нас</a>
-            <a class="A_navigationHeader" href="articles.html">Статьи</a>
-            <a class="A_navigationHeader" href="cards.html">Карточки</a>
-            <a class="A_navigationHeader" href="tests.html">Тесты</a>
-          </div>
-        </nav>
-        </div>
-        
+            <a class="A_logoHeader" href="/index.html">
+              <img src="../../images/A_logoHeader.webp" alt="" />
+            </a>
+            <div class="M_Navigation">
+              <a class="A_navigationHeader" href="/pages/about.html">О нас</a>
+              <a class="A_navigationHeader" href="/pages/articles.html">Статьи</a>
+              <a class="A_navigationHeader" href="/pages/cards.html">Карточки</a>
+              <a class="A_navigationHeader" href="/pages/tests.html">Тесты</a>
+            </div>
+            <div class="M_header_search_bar">
+              <input type="text" class="A_header_search_input" />
+              <div class="W_search_results_dropdown"></div>
+              <div class="W_header_search_icon">
+                <div class="Q_iconSearch"></div>
+              </div>
+            </div>
+          </nav>
+      </div>
         <!-- Мобильное меню -->
-        <div class="O_Header mobile">
+        <!-- <div class="O_Header mobile">
           <a class="A_logoHeader_mobile" href="../index.html">
-            <!-- <img src="../images/A_logoHeader.webp" alt="Логотип" /> -->
+            <img src="../images/A_logoHeader.webp" alt="Логотип" />
           </a>
           
-          <!-- Бургер-иконка -->
+       
           <div class="hamMenu">
             <div class="Q_menuIcon"></div>
             <div class="Q_menuIcon"></div>
             <div class="Q_menuIcon"></div>
           </div>
           
-          <!-- Оверлей-меню -->
+        
           <div class="menu-overlay">
             <div class="overlay-header">
-              <!-- <img src="../images/A_logoHeader.webp" alt="Логотип" /> -->
+              <img src="../images/A_logoHeader.webp" alt="Логотип" />
               <div class="closeMenu">
                 <div class="Q_closeButton">×</div>
               </div>
@@ -45,59 +97,31 @@
             
             <div class="A_inputHeader">
               <nav class="M_menuItems">
-                <a class="A_navigationHeader_mobile" href="articles.html">Статьи</a>
-                <a class="A_navigationHeader_mobile" href="cards.html">Карточки</a>
-                <a class="A_navigationHeader_mobile" href="about.html">О нас</a>
+                <a class="A_navigationHeader_mobile" href="articles.html" class="A_H1">Статьи</a>
+                <a class="A_navigationHeader_mobile" href="cards.html" class="A_H1">Карточки</a>
+                <a class="A_navigationHeader_mobile" href="about.html" class="A_H1">О нас</a>
               </nav>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </header>
-
-    <article class="W_ArticlesBG">
-      <div class="M_BGCircle">
-        <!-- <img class="A_BGFlower" src="../../images/flower-1.svg" alt="" /> -->
-      </div>
-      <div class="M_BGCircle"></div>
-    </article>
-
-    <article class="W_Test">
-      <main class="O_Test">
-        <p class="A_NumberOfQuestion"></p>
-        <h2 class="A_Question"></h2>
-
-        <div class="C_Answers">
-          <div class="M_AnswerMessage">
-            <input class="A_TrueCheckbox" type="checkbox" />
-            <span class="A_FalseCheckbox"></span>
-            <label class="A_AnswerText"></label>
-          </div>
-
-          <div class="M_AnswerMessage">
-            <input class="A_TrueCheckbox" type="checkbox" />
-            <span class="A_FalseCheckbox"></span>
-            <label class="A_AnswerText"></label>
-          </div>
-
-          <div class="M_AnswerMessage">
-            <input class="A_TrueCheckbox" type="checkbox" />
-            <span class="A_FalseCheckbox"></span>
-            <label class="A_AnswerText"></label>
-          </div>
+    <div class="W_TestContainer" id="W_test_container"></div>
+    <footer class="S_Footer">
+      <div class="W_footer-content">
+        <a href="index.html" class="A_footer-logo">
+          <img src="/src/images/A_logoFooter.webp" alt="Логотип" />
+        </a>
+        <p class="A_footer-description">
+          Медиа про лор <br />крупных хоррор фандомов
+        </p>
+        <div class="M_NavigationFooter">
+          <a class="A_navigationFooter" href="pages/about.html">О нас</a>
+          <a class="A_navigationFooter" href="pages/articles.html">Статьи</a>
+          <a class="A_navigationFooter" href="pages/cards.html">Карточки</a>
+          <a class="A_navigationFooter" href="pages/tests.html">Тесты</a>
         </div>
-
-        <h1 class="A_TestName">Лекарственные растения</h1>
-      </main>
-    </article>
-
-    <script
-      async
-      src="https://comments.app/js/widget.js?3"
-      data-comments-app-website="tQeYUaKu"
-      data-limit="5"
-      data-color="F646A4"
-      data-colorful="1"
-    ></script>
+      </div>
+    </footer> 
   </body>
 </html>

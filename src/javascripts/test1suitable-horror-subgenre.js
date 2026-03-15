@@ -1,178 +1,242 @@
 import "../stylesheets/test1.css";
 
-document.addEventListener("DOMContentLoaded", function () {
-  // Данные теста
-  const stages = [
+import psychoImage from "../images/tests/Q_Psychological.webp";
+import superImage from "../images/tests/Q_Supernatural.webp";
+import cosmicImage from "../images/tests/Q_Cosmic.webp";
+import bodyImage from "../images/tests/Q_Body.webp";
+const testData = {
+  questions: [
     {
-      question:
-        "Какое растение, согласно народной медицине, следует использовать для заживления ран?",
+      id: 1,
+      text: "Какая ситуация пугает вас сильнее всего?",
       answers: [
-        { text: "ромашка", count: 0 },
-        { text: "брусника", count: 0 },
-        { text: "алоэ", count: 1 },
+        "Понять, что реальность вокруг может быть иллюзией, а ваш разум — нет",
+        "Столкнуться с необъяснимым сверхъестественным явлением",
+        "Узнать, что существуют древние силы, для которых люди — ничто",
+        "Осознать, что ваше тело начинает меняться или разрушаться",
       ],
     },
     {
-      question:
-        "Отвар и настой ягод какого растения применяется как дезинфицирующее средство?",
+      id: 2,
+      text: "Где происходит идеальная хоррор-история?",
       answers: [
-        { text: "калина", count: 0 },
-        { text: "брусника", count: 1 },
-        { text: "клюква", count: 0 },
+        "В обычном городе или доме, где постепенно что-то начинает идти не так",
+        "В старом доме, лесу или месте с проклятой историей",
+        "В неизвестной зоне, космосе или месте, связанном с чем-то древним",
+        "В лаборатории, больнице или месте жестоких экспериментов",
       ],
     },
     {
-      question:
-        "Какое из перечисленных растений обладает противовоспалительным действием?",
+      id: 3,
+      text: "Что делает историю страшной именно для вас?",
       answers: [
-        { text: "ромашка", count: 0 },
-        { text: "аир", count: 0 },
-        { text: "девятисил", count: 1 },
+        "Медленное психологическое напряжение и паранойя",
+        "Призраки, демоны или проклятия, которые невозможно объяснить",
+        "Осознание масштаба вселенной и ничтожности человека",
+        "Физические трансформации, паразиты, мутации живых существ",
       ],
     },
     {
-      question:
-        "Экстракт какого растения используется для приготовлении безрецептурных растительных антидепрессантов?",
+      id: 4,
+      text: "Какой финал кажется вам самым сильным?",
       answers: [
-        { text: "зверобой", count: 1 },
-        { text: "шалфей", count: 0 },
-        { text: "солодка", count: 0 },
+        "Герой понимает, что сам становится частью безумия",
+        "Зло не побеждено и продолжает существовать где-то рядом",
+        "Герой узнаёт ужасную правду о природе реальности",
+        "Герой теряет своё тело, внешний облик или саму человечность",
       ],
     },
-  ];
+    {
+      id: 5,
+      text: "Какой страх кажется наиболее реалистичным?",
+      answers: [
+        "Потерять контроль над собственным разумом, начать сомневаться в том, что реально",
+        "Столкнуться с чем-то потусторонним, нереальным",
+        "Узнать, что мир устроен намного страшнее, чем кажется",
+        "Потерять контроль над собственным телом и обликом",
+      ],
+    },
+  ],
+  results: [
+    {
+      index: 0, // соответствует верхнему левому ответу
+      title: "Психологический хоррор",
+      description:
+        "Этот поджанр хоррора исследует \nвнутреннее состояние персонажа: \nстрах и паранойя становятся \nосновными источниками ужаса",
+      image: psychoImage,
+      caption: "«Прочь» (Get Out, 2017)",
+    },
+    {
+      index: 1, // верхний правый
+      title: "Сверхъестественный хоррор",
+      description:
+        "Здесь страх связан с силами, выходящими \nза пределы обычной реальности, \nкогда могут появляться призраки или другие \nпотусторонние сущности",
+      image: superImage,
+      caption: "«Синистер 2» (Sinister 2, 2015)",
+    },
+    {
+      index: 2, // нижний левый
+      title: "Космический хоррор",
+      description:
+        "Этот поджанр раскрывает вселенную. \nУжас возникает из-за столкновения \nс непостижимыми силами \nили знаниями",
+      image: cosmicImage,
+      caption: "«Чужой: Ромул» (Alien: Romulus, 2024)",
+    },
+    {
+      index: 3, // нижний правый
+      title: "Боди-хоррор",
+      description:
+        "В центре этого поджанра — изменения \nи искажения человеческого тела. Герои \nмогут сталкиваться с мутациями, \nболезнями или экспериментами",
+      image: bodyImage,
+      caption: "«Субстанция» (The Substance, 2024)",
+    },
+  ],
+};
 
-  let currentStage = 0;
-  let resultCount = 0;
+let currentQuestionIndex = 0;
+let userAnswers = []; // здесь будем хранить индексы выбранных ответов (0-3)
+let selectedAnswerIndex = null;
 
-  // Функция инициализации теста
-  function initTest() {
-    const numberOfQuestion = document.querySelector(".A_NumberOfQuestion");
-    const question = document.querySelector(".A_Question");
-    const answers = document.querySelectorAll(".A_AnswerText");
-    const radioButtons = document.querySelectorAll(".A_TrueCheckbox");
+function renderQuestion() {
+  const question = testData.questions[currentQuestionIndex];
+  selectedAnswerIndex = null;
+  const isLastQuestion = currentQuestionIndex === testData.questions.length - 1;
 
-    if (currentStage >= stages.length) {
-      showResult();
-      return;
-    }
-
-    // Сбрасываем все radio кнопки
-    radioButtons.forEach((radio) => {
-      radio.checked = false;
-    });
-
-    // Обновляем номер вопроса
-    if (numberOfQuestion) {
-      numberOfQuestion.textContent = `Вопрос №${currentStage + 1} из ${stages.length}`;
-    }
-
-    // Обновляем текст вопроса
-    if (question) {
-      question.textContent = stages[currentStage].question;
-    }
-
-    // Обновляем варианты ответов
-    for (let i = 0; i < answers.length; i++) {
-      if (answers[i]) {
-        answers[i].textContent = stages[currentStage].answers[i].text;
-        // Сохраняем значение count в data-атрибут
-        if (radioButtons[i]) {
-          radioButtons[i].dataset.count = stages[currentStage].answers[i].count;
-        }
-      }
-    }
-  }
-
-  // Функция показа результата
-  function showResult() {
-    const testContainer = document.querySelector(".O_Test");
-
-    if (!testContainer) return;
-
-    let resultHeader, resultParagraph;
-
-    if (resultCount === 4) {
-      resultHeader = "Отличный результат!";
-      resultParagraph =
-        "Видно, что вы прекрасно разбираетесь в теме! Проверьте свои знания в других наших тестах";
-    } else if (resultCount >= 2) {
-      resultHeader = "Хороший результат!";
-      resultParagraph =
-        "Видно, что вы неплохо знакомы с темой! Проверьте свои знания в других наших тестах";
-    } else {
-      resultHeader = "Кажется, вы новичок в этой теме...";
-      resultParagraph =
-        "Почитайте наши статьи, чтобы лучше подготовиться, и попробуйте снова проверить свои знания!";
-    }
-
-    testContainer.innerHTML = `
-      <div class="M_TestResult">
-        <p class="A_TestResultCount">Итого: ${resultCount} из ${stages.length}</p>
-        <h2 class="A_TestResultHeader">${resultHeader}</h2>
-        <p class="A_TestResultParagraph">${resultParagraph}</p>
-        <button onclick="location.reload()" style="
-          padding: 15px 30px;
-          background: cornflowerblue;
-          color: white;
-          border: none;
-          border-radius: 8px;
-          cursor: pointer;
-          font-size: 18px;
-          margin-top: 20px;
-        ">Пройти тест снова</button>
+  let navigationHtml;
+  if (currentQuestionIndex === 0) {
+    navigationHtml = `
+      <div class="W_TestNavigation">
+        <button class="A_TestPrevButton text_button_text" id="backButton">Вернуться назад</button>
+        <button class="A_TestNextButton text_button_text" id="nextButton" disabled>
+          Далее
+        </button>
+      </div>
+    `;
+  } else {
+    navigationHtml = `
+      <div class="W_TestNavigation">
+        <button class="A_TestPrevButton text_button_text" id="prevButton">Назад</button>
+        <button class="A_TestNextButton text_button_text" id="nextButton" disabled>
+          ${isLastQuestion ? "Завершить" : "Далее"}
+        </button>
       </div>
     `;
   }
 
-  // Проверяем, есть ли элементы теста на странице
-  const testExists =
-    document.querySelector(".W_Test") ||
-    document.querySelector(".A_Question") ||
-    document.querySelector(".C_Answers");
+  document.getElementById("W_test_container").innerHTML = `
+    <div class="W_TestHeading">
+      <div class="W_TestQuestion">
+        <div class="M_TestQuestionCounter">
+          <p class="text_button_text">Вопрос <span>${currentQuestionIndex + 1}</span> из ${testData.questions.length}</p>
+        </div>
+        <h2 class="A_TestQuestionTitle">${question.text}</h2>
+      </div>
+    </div>
+    <div class="W_TestBody">
+      <div class="C_AnswerVariants">
+        ${question.answers
+          .map(
+            (answer, index) => `
+            <div class="M_AnswerVariant" data-index="${index}">
+              <p class="text_body_text">${answer}</p>
+            </div>
+          `,
+          )
+          .join("")}
+      </div>
+      ${navigationHtml}
+    </div>
+  `;
 
-  if (testExists) {
-    // Инициализируем первый вопрос
-    initTest();
-
-    // Добавляем обработчики на все radio кнопки
-    const radioButtons = document.querySelectorAll(".A_TrueCheckbox");
-    const answerLabels = document.querySelectorAll(".A_AnswerText");
-
-    // Обработчик для radio кнопок
-    if (radioButtons.length > 0) {
-      radioButtons.forEach((radio) => {
-        radio.addEventListener("change", function () {
-          if (this.checked) {
-            // Добавляем баллы за правильный ответ
-            resultCount += parseInt(this.dataset.count || 0);
-
-            // Переходим к следующему вопросу через задержку
-            setTimeout(() => {
-              currentStage++;
-              initTest();
-            }, 500);
-          }
-        });
+  document.querySelectorAll(".M_AnswerVariant").forEach((variant) => {
+    variant.addEventListener("click", function () {
+      document.querySelectorAll(".M_AnswerVariant").forEach((v) => {
+        v.classList.remove("selected");
       });
-    }
+      this.classList.add("selected");
+      selectedAnswerIndex = parseInt(this.getAttribute("data-index"));
+      document.getElementById("nextButton").disabled = false;
+    });
+  });
 
-    // Обработчик для клика по тексту ответа
-    if (answerLabels.length > 0) {
-      answerLabels.forEach((label) => {
-        label.addEventListener("click", function () {
-          // Находим соответствующий radio и выбираем его
-          const radio = this.previousElementSibling?.previousElementSibling;
-          if (radio) {
-            radio.checked = true;
+  document
+    .getElementById("nextButton")
+    .addEventListener("click", goToNextQuestion);
 
-            // Инициируем событие change
-            const event = new Event("change");
-            radio.dispatchEvent(event);
-          }
-        });
-      });
-    }
-
-    console.log("Тест инициализирован");
+  if (currentQuestionIndex === 0) {
+    document.getElementById("backButton").addEventListener("click", () => {
+      window.location.href = "/pages/tests.html"; // путь к списку тестов
+    });
+  } else {
+    document
+      .getElementById("prevButton")
+      .addEventListener("click", goToPreviousQuestion);
   }
-});
+}
+
+function goToNextQuestion() {
+  if (selectedAnswerIndex !== null) {
+    userAnswers.push(selectedAnswerIndex);
+
+    if (currentQuestionIndex < testData.questions.length - 1) {
+      currentQuestionIndex++;
+      renderQuestion();
+    } else {
+      showResults();
+    }
+  }
+}
+
+function goToPreviousQuestion() {
+  if (currentQuestionIndex > 0) {
+    // Удаляем последний сохранённый ответ (он относится к текущему вопросу, который мы покидаем)
+    if (userAnswers.length > currentQuestionIndex) {
+      userAnswers.pop();
+    }
+    currentQuestionIndex--;
+    renderQuestion();
+  }
+}
+
+function showResults() {
+  // Подсчитываем, какой индекс ответа выбирался чаще всего
+  const counts = [0, 0, 0, 0];
+  userAnswers.forEach((ansIndex) => {
+    counts[ansIndex] += 1;
+  });
+
+  // Находим индекс с максимальным количеством (если несколько – берём первый)
+  let maxCount = -1;
+  let resultIndex = 0;
+  counts.forEach((count, idx) => {
+    if (count > maxCount) {
+      maxCount = count;
+      resultIndex = idx;
+    }
+  });
+
+  const result =
+    testData.results.find((r) => r.index === resultIndex) ||
+    testData.results[0];
+
+  document.getElementById("W_test_container").innerHTML = `
+    <div class="W_ResultContent">
+      <div class="M_TestQuestionCounter">
+        <p class="text_button_text">Результат</p>
+      </div>
+      <div class="W_ResultText">
+        <h1 class="A_ResultTitle">${result.title}</h1>
+        <p class="text_body_text A_ResultDescription">${result.description}</p>
+      </div>
+      <div class="W_ResultImage">
+        <img src="${result.image}" alt="${result.caption}" class="A_ResultImage" />
+        <p class="A_ResultCaption text_body_text">${result.caption}</p>
+      </div>
+      <div class="W_ResultButtons">
+        <a href="/pages/tests.html" class="A_BackToTestsButton text_button_text">Пройти другие тесты</a>
+      </div>
+    </div>
+  `;
+}
+
+document.addEventListener("DOMContentLoaded", renderQuestion);

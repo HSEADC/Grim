@@ -1,0 +1,246 @@
+/* ___________________index.html___________________ */
+.M_Navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: var(--radiusMedium);
+  width: 24.18rem;
+  height: 3rem;
+  padding: 0.7rem 2rem;
+  box-shadow: inset 0 0 25px #050505;
+  margin: 0 auto;
+}
+.M_mainText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  /* width: 42rem; */
+  margin: 0 auto;
+  padding: 3rem 0;
+  position: relative;
+  z-index: 2;
+}
+.M_background {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.M_background .Q-borderUpper {
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 3rem;
+  border-bottom-right-radius: 1.8rem;
+  border-bottom-left-radius: 1.8rem;
+  background-color: var(--black);
+  z-index: 2;
+}
+
+.M_background .Q-borderDown {
+  position: absolute;
+  bottom: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 3rem;
+  border-top-right-radius: 1.8rem;
+  border-top-left-radius: 1.8rem;
+  background-color: var(--black);
+  z-index: 2;
+}
+
+/* __Articecard__ */
+.M_ArticleInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.M_TagDate {
+  margin-bottom: 1rem;
+}
+
+/* __Card__ */
+.M_CardArticleInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*__Tests__ */
+
+.M_CardTexts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+/*__Footer__ */
+.M_NavigationFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: var(--radiusMedium);
+  width: 24.18rem;
+  height: 3rem;
+  padding: 0.7rem 2rem;
+  box-shadow: inset 0 0 25px #050505;
+  margin: 0 auto;
+}
+
+/* ___________________cards.html___________________ */
+
+/* __Randomizer__ */
+
+.M_RandomizerContent {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: calc(40.7rem + 2rem * 2);
+  padding: 0 2rem;
+  position: relative;
+  text-align: center;
+}
+
+/* ___________________randomizer.html___________________ */
+
+/* ___________________articles.html___________________ */
+/* __Articecard__ */
+.M_TagDateSmall {
+  margin-bottom: 0.7rem;
+}
+
+/* ___________________about.html___________________ */
+
+.M_AboutHeader {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
+
+.M_AboutLogo {
+  margin-bottom: 3.9375rem;
+  width: 24.6875rem;
+}
+
+.M_AboutLogo img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+@media only screen and (max-width: 1720px) and (min-width: 1300px) {
+  .M_TagDate {
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 1300px) and (min-width: 1024px) {
+  .M_TagDate {
+    margin-bottom: 0.75rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+  .M_TagDate {
+    margin-bottom: 0.5rem;
+  }
+
+  .M_mainText {
+    gap: 4.2vw;
+    width: 100%;
+    padding: 7.4vw 0;
+  }
+
+  /* ___________________randomizer.html___________________ */
+
+  .M_mainTextRandomizer {
+    gap: 4.2vw;
+    width: 100%;
+    padding: 7.4vw 0;
+  }
+
+  /* ___________________articles.html___________________ */
+
+  .M_TagDateSmall {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 767px) and (min-width: 360px) {
+  .M_TagDate {
+    margin-bottom: 0.5rem;
+  }
+
+  .M_mainText {
+    gap: 3vw;
+    width: 100%;
+    padding: 18.4vw 0;
+  }
+
+  .M_NavigationFooter {
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 7.8rem;
+    height: 12.8rem;
+    padding: 1.25rem 1.75rem;
+    gap: 1.8rem;
+    box-sizing: border-box;
+    margin: 0;
+    box-shadow: inset 0 0 1.5rem #050505;
+    border-radius: var(--radiusMedium);
+  }
+
+  /* ___________________cards.html___________________ */
+
+  /* __Randomizer__ */
+
+  .M_RandomizerContent {
+    align-items: flex-start;
+    padding-left: 6.9vw;
+    padding-right: 6.9vw;
+    text-align: left;
+    gap: 0;
+    width: 100%;
+    max-width: none;
+  }
+
+  /* ___________________randomizer.html___________________ */
+
+  .M_mainTextRandomizer {
+    gap: 3vw;
+    width: 100%;
+    padding: 18.4vw 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .M_AboutLogo {
+    width: 20rem;
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .M_AboutLogo {
+    width: 18rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .M_AboutLogo {
+    width: 15rem;
+    margin-bottom: 2rem;
+  }
+}

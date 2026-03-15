@@ -10,19 +10,21 @@ module.exports = {
   entry: {
     index: "./src/javascripts/index.js",
     filterTags: "./src/javascripts/filterTags.js",
+    filterArticles: "./src/javascripts/filterArticles.js",
     articles: "./src/javascripts/articles.js",
     b_article: "./src/javascripts/b_article.js",
     s_article: "./src/javascripts/s_article.js",
     tests: "./src/javascripts/tests.js",
     test1: "./src/javascripts/test1suitable-horror-subgenre.js",
+    test2: "./src/javascripts/test2knowledge-popular-horrors.js",
+    test3: "./src/javascripts/test3final-destination.js",
+    test4: "./src/javascripts/test4easy-to-dive-in.js",
     randomizer: "./src/javascripts/randomizer.js",
     styleguide: "./src/javascripts/styleguide.js",
   },
   output: {
     filename: "[name].js",
     path: path.resolve(".", "docs"),
-    publicPath: "/",
-    // добавила publicPath: "/",
   },
   module: {
     rules: [

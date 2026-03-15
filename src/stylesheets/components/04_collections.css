@@ -1,0 +1,173 @@
+/* ___________________index.html___________________ */
+.C_ArticlesRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+}
+
+.C_CardsRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+}
+
+.C_TestsRow {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem 1.25rem;
+  width: 100%;
+}
+
+.C_ArticlesRowThird {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+}
+
+/* ___________________articles.html___________________ */
+
+.C_AllArticles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7rem;
+  width: 100%;
+  padding: 0 2.3rem;
+  margin: 0 0 150px 0;
+  box-sizing: border-box;
+}
+
+.C_ArticlesRowThird {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+}
+/* ___________________cards.html___________________ */
+
+.С_ArticleCategoryTags {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  justify-content: center;
+  column-gap: 10px;
+  margin: 50px auto;
+}
+
+.C_AllCards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7rem;
+  width: 100%;
+  padding: 0 2.3rem;
+  margin: 0 0 150px 0;
+  box-sizing: border-box;
+}
+
+/* ___________________tests.html___________________ */
+
+.C_AllTests {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem 1.25rem;
+  width: 100%;
+  padding: 0 2.3rem;
+}
+
+@media only screen and (max-width: 1720px) and (min-width: 1300px) {
+}
+
+@media only screen and (max-width: 1300px) and (min-width: 1024px) {
+  .C_ArticlesRow {
+    gap: 15px;
+  }
+
+  .C_CardsRow {
+    gap: 15px;
+  }
+
+  /* _______________articles.html_______________ */
+  .C_ArticlesRowThird {
+    gap: 15px;
+  }
+
+  .С_ArticleCategoryTags {
+    width: 80%;
+    margin: 4vw auto;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+  .C_ArticlesRow {
+    gap: 12px;
+  }
+
+  .C_CardsRow {
+    gap: 12px;
+  }
+
+  .C_TestsRow {
+    gap: 1rem 0.6rem;
+  }
+
+  /* _______________articles.html_______________ */
+  .C_ArticlesRowThird {
+    gap: 12px;
+  }
+
+  /* ___________________tests.html___________________ */
+  .C_AllTests {
+    gap: 1rem 0.6rem;
+  }
+}
+
+@media only screen and (max-width: 767px) and (min-width: 360px) {
+  .C_ArticlesRow {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /*
+
+  .C_AllArticles {
+    border-radius: 1.5rem;
+    flex-direction: column;
+    margin-bottom: 20vw;
+    padding: 2rem 1rem 3rem;
+    row-gap: 4vw;
+    width: 100%;
+  }
+ */
+
+  .C_CardsRow {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .C_TestsRow {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  /* _______________articles.html_______________ */
+  .C_ArticlesRowThird {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .С_ArticleCategoryTags {
+    margin: 10vw auto 1.5rem;
+  }
+
+  /* ___________________tests.html___________________ */
+
+  .C_AllTests {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}

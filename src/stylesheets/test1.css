@@ -1,17 +1,15 @@
-/* :root {
+:root {
   --white: #ffffff;
   --red: #bc0101;
   --black: #11141b;
   --grey: #9494a0;
-  --lightGrey: #d9d9d9;
+  --grey-dark: #9494a099;
+  --lightGrey: #d5d5e2;
   --silver: silver;
-  --shadow: 0px 0px 16px 0px rgba(255, 0, 4, 0.7);
+  --radiusGiant: 3rem;
   --radiusBig: 0.9rem;
   --radiusMedium: 0.6rem;
   --radiusSmall: 0.5rem;
-  --fontP: 400 1rem / 1rem "SuisseIntl", sans-serif;
-  --fontLevelTags: 450 0.9rem / 0.8rem "SuisseIntl", sans-serif;
-  --fontMainButton: 550 1.3rem / 1.5rem "SuisseIntl", sans-serif;
 }
 
 * {
@@ -26,175 +24,258 @@ body {
   position: relative;
   background-color: #11141b;
   overflow-x: hidden;
-  color: var(--white);
-} */
-/* 
-.O_Header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2rem 2.5rem;
-  position: sticky;
-  top: 0;
-  z-index: 3;
-  margin: 0 auto;
 }
 
-.O_Header nav {
+.W_TestContainer {
+  align-items: center;
   display: flex;
+  flex-direction: column;
+  gap: 4.5rem;
+  margin: 0 auto;
+  max-width: calc(134rem + 5rem * 2);
+  padding: 4rem 5rem;
+  position: relative;
   width: 100%;
-  justify-content: space-between;
-  align-items: center;
 }
 
-.A_logoHeader {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  flex: 0 0 auto;
-}
-
-.M_Navigation {
+.W_TestHeading {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  width: 100%;
+}
+
+.W_TestQuestion {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.M_TestQuestionCounter {
+  align-self: center;
+  background: var(--black);
   border-radius: var(--radiusSmall);
-  width: 24.18rem;
-  padding: 0.7rem 2rem;
-  box-shadow: var(--shadow);
-  position: relative;
-  background-image: url(../images/M_Navigation_background.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
+  padding: 1rem 1.5rem;
+  width: fit-content;
+  font-family: "SuisseIntl-Book";
+  color: var(--grey);
+  box-shadow: inset 0 0 10px #050505;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.A_TestQuestionTitle {
+  align-self: flex-start;
+  max-width: 86rem;
+  font-family: "SuisseIntl-Book";
+  color: var(--white);
+  font-size: 2rem;
+}
+
+.W_TestBody {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  max-width: 92rem;
+  width: 100%;
+}
+
+.C_AnswerVariants {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  width: 100%;
+}
+
+.M_AnswerVariant {
+  background: var(--black);
+  border-radius: var(--radiusBig);
+  padding: 2.5rem;
+  transition: all 0.2s;
+  font-family: "SuisseIntl-Book";
+  font-size: 1rem;
+  box-shadow: inset 0 0 10px #050505;
+  cursor: pointer;
+  color: var(--white);
+}
+
+.M_AnswerVariant.selected {
+  background: var(--black);
+  color: var(--white);
+  box-shadow: inset 0 0 54px #d41d22;
+}
+
+.W_TestNavigation {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.A_TestPrevButton,
+.A_TestNextButton {
+  padding: 1rem 2rem;
+  border-radius: var(--radiusBig);
+  font-family: "SuisseIntl-Book";
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+  text-align: center;
+  min-width: 200px;
+}
+
+.A_TestPrevButton {
+  background: var(--lightGrey);
+  color: var(--black);
+}
+
+.A_TestPrevButton:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.A_TestNextButton {
+  background: var(--white);
+  color: var(--black);
+}
+
+.A_TestNextButton:disabled {
+  background: var(--grey-dark);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.W_ResultContent {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  max-width: 60rem;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+.A_ResultTitle {
+  font-family: "SuisseIntl-Book";
+  color: var(--white);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.A_ResultDescription {
+  font-family: "SuisseIntl-Book";
+  font-size: 1.2rem;
+  color: var(--lightGrey);
+  font-size: 1.2rem;
+  max-width: 40rem;
+  margin: 0 auto;
+  white-space: pre-line;
+}
+
+.W_ResultImage {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 500px;
   margin: 0 auto;
 }
 
-.A_navigationHeader {
+.A_ResultImage {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radiusBig);
+  box-shadow: 0 0 20px rgba(188, 1, 1, 0.3);
+}
+
+.A_ResultCaption {
+  color: var(--grey);
+  font-family: "SuisseIntl-Book";
+  font-size: 1rem;
+}
+
+.W_ResultButtons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.A_BackToTestsButton {
+  padding: 1rem 1.2rem;
   color: var(--white);
-  letter-spacing: 0.06rem;
-  font-family: "BebasNeueCyrillic";
-  font-size: 1.3rem;
-}
-
-.W_Test {
-  border-radius: 40px;
-  backdrop-filter: blur(10px);
-  background-color: #dddddd58;
-  border: 1px solid #eee;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  padding: 30px 40px;
-  color: rgb(255, 255, 255);
+  background: var(--black);
+  border-radius: var(--radiusGiant);
+  font-family: "SuisseIntl-Book";
+  font-size: 1rem;
+  display: inline-block;
+  cursor: pointer;
+  box-shadow:
+    inset 0 -20px 30px 0 rgba(235, 0, 23, 0.15),
+    inset 0 0 6px 0 #e57e7e,
+    inset 0 0 30px 0 #ba0214,
+    0 0 0 4px rgba(255, 83, 83, 0.05);
+  transition: box-shadow 0.3s ease;
   text-decoration: none;
-  width: 880px;
-  margin: 80px auto 0;
+  border: none;
 }
 
-.O_Test {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+.A_BackToTestsButton:hover {
+  box-shadow:
+    inset 0 -20px 30px 0 rgba(235, 0, 23, 0.4),
+    inset 0 0 6px 0 #e57e7e,
+    inset 0 0 30px 0 #ba0214,
+    0 0 0 4px rgba(255, 83, 83, 0.05);
 }
 
-.C_Answers {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+@media (max-width: 767px) {
+  .W_TestContainer {
+    padding: 2rem 1.5rem;
+  }
+
+  .C_AnswerVariants {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .W_TestNavigation {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .A_TestPrevButton,
+  .A_TestNextButton {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .A_ResultTitle {
+    font-size: 2rem;
+  }
+
+  .W_ResultImage {
+    max-width: 100%;
+  }
+
+  .A_ResultDescription {
+    font-size: 1rem;
+    line-height: 1.1;
+  }
 }
 
-.M_AnswerMessage {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: aliceblue;
-  cursor: pointer;
-  padding: 10px;
-  border-radius: 8px;
-  transition: background-color 0.3s;
+@media (max-width: 428px) {
+  .A_ResultDescription {
+    font-size: 0.8rem;
+    line-height: 1.1;
+  }
 }
-
-.M_AnswerMessage:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.M_TestResult {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-  padding: 40px;
-  text-align: center;
-}
-
-.A_Question,
-.A_TestResultHeader {
-  font-size: 40px;
-  line-height: 1.2;
-  margin-top: 50px;
-  color: #333;
-}
-
-.A_NumberOfQuestion,
-.A_TestName,
-.A_TestResultCount {
-  font-size: 12px;
-  text-transform: uppercase;
-  color: #666;
-}
-
-.A_TestName {
-  margin-top: 50px;
-  color: #333;
-}
-
-.A_AnswerText,
-.A_TestResultParagraph {
-  font-size: 26px;
-  cursor: pointer;
-  margin-left: 35px;
-  color: #333;
-}
-
-.A_FalseCheckbox {
-  position: absolute;
-  left: 0;
-  width: 20px;
-  height: 20px;
-  border: 2px solid cornflowerblue;
-  border-radius: 8px;
-  background-color: #eee;
-  transition: background-color 0.3s;
-}
-
-.A_TrueCheckbox {
-  position: absolute;
-  left: 0;
-  opacity: 0;
-  z-index: 2;
-  margin: 0;
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-}
-
-.A_TrueCheckbox:checked + .A_FalseCheckbox {
-  background-color: cornflowerblue;
-}
-
-.A_TrueCheckbox:checked + .A_FalseCheckbox::after {
-  content: "✓";
-  position: absolute;
-  color: white;
-  font-size: 16px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.A_TestResultImage {
-  width: 200px;
-  height: 200px;
-  object-fit: contain;
-} */
