@@ -53,57 +53,79 @@
   </head>
   <body class="W_test_page">
     <header>
+      <!-- Десктопная версия -->
       <div class="O_Header desktop">
-          <nav>
-            <a class="A_logoHeader" href="/index.html">
-              <img src="../../images/A_logoHeader.webp" alt="" />
-            </a>
-            <div class="M_Navigation">
-              <a class="A_navigationHeader" href="/pages/about.html">О нас</a>
-              <a class="A_navigationHeader" href="/pages/articles.html">Статьи</a>
-              <a class="A_navigationHeader" href="/pages/cards.html">Карточки</a>
-              <a class="A_navigationHeader" href="/pages/tests.html">Тесты</a>
-            </div>
-            <div class="M_header_search_bar">
-              <input type="text" class="A_header_search_input" />
-              <div class="W_search_results_dropdown"></div>
-              <div class="W_header_search_icon">
-                <div class="Q_iconSearch"></div>
-              </div>
-            </div>
-          </nav>
-      </div>
-        <!-- Мобильное меню -->
-        <!-- <div class="O_Header mobile">
-          <a class="A_logoHeader_mobile" href="../index.html">
-            <img src="../images/A_logoHeader.webp" alt="Логотип" />
+        <nav>
+          <a class="A_logoHeader" href="/index.html">
+            <img src="../../images/A_logoHeader.webp" alt="Логотип" />
           </a>
-          
-       
-          <div class="hamMenu">
-            <div class="Q_menuIcon"></div>
-            <div class="Q_menuIcon"></div>
-            <div class="Q_menuIcon"></div>
+          <div class="M_Navigation">
+            <a class="A_navigationHeader" href="/pages/about.html">О нас</a>
+            <a class="A_navigationHeader" href="/pages/articles.html">Статьи</a>
+            <a class="A_navigationHeader" href="/pages/cards.html">Карточки</a>
+            <a class="A_navigationHeader" href="/pages/tests.html">Тесты</a>
           </div>
-          
-        
-          <div class="menu-overlay">
-            <div class="overlay-header">
-              <img src="../images/A_logoHeader.webp" alt="Логотип" />
-              <div class="closeMenu">
-                <div class="Q_closeButton">×</div>
-              </div>
+          <!-- Десктопный поиск (скрытое поле, появляется по клику) -->
+          <div class="M_header_search_bar desktop-search">
+            <input
+              type="text"
+              class="A_header_search_input"
+              placeholder="Найти"
+            />
+            <div class="W_header_search_icon">
+              <div class="Q_iconSearch"></div>
             </div>
-            
-            <div class="A_inputHeader">
-              <nav class="M_menuItems">
-                <a class="A_navigationHeader_mobile" href="articles.html" class="A_H1">Статьи</a>
-                <a class="A_navigationHeader_mobile" href="cards.html" class="A_H1">Карточки</a>
-                <a class="A_navigationHeader_mobile" href="about.html" class="A_H1">О нас</a>
-              </nav>
-            </div>
+            <div class="W_search_results_dropdown"></div>
           </div>
-        </div> -->
+        </nav>
+      </div>
+
+      <!-- Мобильная версия (бургер) -->
+      <div class="O_Header mobile">
+        <a class="A_logoHeader_mobile" href="/index.html">
+          <img src="../../images/A_logoHeader.webp" alt="Логотип" />
+        </a>
+        <div class="hamMenu">
+          <div class="Q_menuIcon"></div>
+          <div class="Q_menuIcon"></div>
+          <div class="Q_menuIcon"></div>
+        </div>
+      </div>
+
+      <!-- Оверлей мобильного меню -->
+      <div class="menu-overlay">
+        <div class="overlay-header">
+          <img src="../../images/A_logoHeader.webp" alt="Логотип" />
+          <div class="closeMenu">
+            <span class="Q_closeButton">×</span>
+          </div>
+        </div>
+        <div class="M_menuItems">
+          <a class="A_navigationHeader_mobile" href="/pages/about.html"
+            >О нас</a
+          >
+          <a class="A_navigationHeader_mobile" href="/pages/articles.html"
+            >Статьи</a
+          >
+          <a class="A_navigationHeader_mobile" href="/pages/cards.html"
+            >Карточки</a
+          >
+          <a class="A_navigationHeader_mobile" href="/pages/tests.html"
+            >Тесты</a
+          >
+        </div>
+        <!-- Мобильный поиск (всегда открыт) -->
+        <div class="M_header_search_bar mobile-search always-open">
+          <input
+            type="text"
+            class="A_header_search_input"
+            placeholder="Найти"
+          />
+          <div class="W_header_search_icon">
+            <div class="Q_iconSearch"></div>
+          </div>
+          <div class="W_search_results_dropdown"></div>
+        </div>
       </div>
     </header>
     <div class="W_TestContainer" id="W_test_container"></div>
@@ -116,12 +138,12 @@
           Медиа про лор <br />крупных хоррор фандомов
         </p>
         <div class="M_NavigationFooter">
-          <a class="A_navigationFooter" href="pages/about.html">О нас</a>
-          <a class="A_navigationFooter" href="pages/articles.html">Статьи</a>
-          <a class="A_navigationFooter" href="pages/cards.html">Карточки</a>
-          <a class="A_navigationFooter" href="pages/tests.html">Тесты</a>
+          <a class="A_navigationFooter" href="/pages/about.html">О нас</a>
+          <a class="A_navigationFooter" href="/pages/articles.html">Статьи</a>
+          <a class="A_navigationFooter" href="/pages/cards.html">Карточки</a>
+          <a class="A_navigationFooter" href="/pages/tests.html">Тесты</a>
         </div>
       </div>
-    </footer> 
+    </footer>
   </body>
 </html>

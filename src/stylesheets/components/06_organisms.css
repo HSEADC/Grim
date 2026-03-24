@@ -11,10 +11,21 @@
 }
 
 .O_Header nav {
+  position: relative;
   display: flex;
   width: 100%;
   justify-content: space-between;
   align-items: center;
+}
+
+.O_Header nav::after {
+  content: "";
+  width: 39px;
+  visibility: hidden;
+}
+
+.O_Header.mobile {
+  display: none;
 }
 
 .O_CardArticleBig {
@@ -28,6 +39,7 @@
   border-radius: var(--radiusBig);
   text-decoration: none;
   gap: 20px;
+  transition: transform 0.2s;
 }
 
 .O_Card {
@@ -83,6 +95,87 @@
   border-radius: var(--radiusBig);
   text-decoration: none;
   gap: 20px;
+  transition: transform 0.2s;
+}
+
+/* ___________________article___________________ */
+
+.O_HeadingArticle {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 38px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.O_HeadingArticleTags {
+  width: 209px;
+  height: 32px;
+  padding: 9px 16px;
+  background: transparent;
+  border: 1px solid var(--grey);
+  border-radius: var(--radiusSmall);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.O_ArticleAuthorDescription {
+  max-width: 1268px;
+  margin: 0 auto;
+  display: flex;
+  gap: 264px;
+  align-items: flex-start;
+  padding-bottom: 39px;
+}
+
+.O_StoryMain {
+  display: flex;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  gap: 86px;
+  position: relative;
+}
+
+.O_BlockStoryText {
+  padding: 39px 30px 39px 49px;
+  background: transparent;
+  box-shadow: inset 0 0 25px #050505;
+  border-radius: var(--radiusBig);
+  margin-bottom: 40px;
+  scroll-margin-top: 40px;
+  max-width: 775px;
+}
+
+.O_BlockStoryText .A_TitleShitArticle {
+  font-size: 36px;
+  margin-bottom: 18px;
+  color: var(--white);
+  word-break: break-word;
+}
+
+.O_CardArticle:hover {
+  transform: translateY(-5px);
+}
+
+.O_CardArticleBig:hover {
+  transform: translateY(-5px);
+}
+
+@media only screen and (max-width: 1720px) and (min-width: 1300px) {
+  /* ___________________article___________________ */
+  .O_ArticleAuthorDescription {
+    gap: 172px;
+  }
+  .O_BlockStoryText {
+    padding: 35px 25px 35px 40px;
+  }
+  .O_BlockStoryText .A_TitleShitArticle {
+    font-size: 32px;
+  }
 }
 
 @media only screen and (max-width: 1300px) and (min-width: 1024px) {
@@ -103,6 +196,22 @@
   .O_CardTest {
     padding: 1.25rem;
     gap: 1.5rem;
+  }
+
+  /* ___________________article___________________ */
+  .O_StoryMain {
+    padding: 40px 40px;
+  }
+
+  .O_ArticleAuthorDescription {
+    gap: 120px;
+  }
+
+  .O_BlockStoryText {
+    padding: 30px 20px 30px 30px;
+  }
+  .O_BlockStoryText .A_TitleShitArticle {
+    font-size: 28px;
   }
 }
 @media only screen and (max-width: 1720px) and (min-width: 1300px) {
@@ -159,9 +268,39 @@
     padding: 1.2rem 1.2rem;
     gap: 0.8rem;
   }
+
+  /* ___________________articles.html___________________ */
+  .O_CardArticle {
+    padding: 1rem 1rem;
+    gap: 0.8rem;
+    height: 30vw;
+  }
+
+  /* ___________________article___________________ */
+  .O_StoryMain {
+    padding: 40px 20px;
+    gap: 30px;
+  }
+
+  .O_HeadingArticleTags {
+    width: 180px;
+    height: 28px;
+    padding: 6px 12px;
+  }
+
+  .O_ArticleAuthorDescription {
+    gap: 80px;
+  }
+
+  .O_BlockStoryText {
+    padding: 25px 16px;
+  }
+  .O_BlockStoryText .A_TitleShitArticle {
+    font-size: 24px;
+  }
 }
 
-@media only screen and (max-width: 767px) and (min-width: 360px) {
+@media only screen and (max-width: 767px) {
   .O_CardArticleBig,
   .O_CardArticle {
     height: auto;
@@ -182,5 +321,51 @@
     align-items: center;
   }
 
-  /* ___________________articles.html___________________ */
+  /* ___________________article___________________ */
+
+  .O_HeadingArticle {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .O_HeadingArticleTags {
+    width: auto;
+    height: auto;
+    padding: 6px 12px;
+  }
+
+  .O_ArticleAuthorDescription {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .O_StoryMain {
+    flex-direction: column;
+    padding: 32px 16px;
+    gap: 20px;
+  }
+
+  .O_BlockStoryText {
+    padding: 25px 16px;
+  }
+
+  .O_BlockStoryText .A_TitleShitArticle {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .O_Header.desktop {
+    display: none;
+  }
+  .O_Header.mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4vw 5vw;
+    position: sticky;
+    top: 0;
+    background: var(--black);
+    z-index: 10;
+  }
 }

@@ -10,6 +10,166 @@
   box-shadow: inset 0 0 25px #050505;
   margin: 0 auto;
 }
+
+.M_header_search_bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 30px;
+}
+
+.M_header_search_bar.desktop-search {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  transition: width 0.2s ease;
+}
+
+.M_header_search_bar.desktop-search.open {
+  width: 280px;
+}
+
+.M_header_search_bar.open .A_header_search_input {
+  opacity: 1;
+  width: calc(100% - 30px);
+  padding: 0 12px;
+}
+
+.M_header_search_bar.open .W_header_search_icon {
+  box-shadow: inset 0 0 10px #050505;
+}
+
+.M_search_result_item {
+  display: block;
+  padding: 12px 16px;
+  color: var(--white);
+  text-decoration: none;
+  transition: background 0.2s;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.M_search_result_item:last-child {
+  border-bottom: none;
+}
+
+.M_search_result_item:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.text_medium_description_text {
+  margin: 0 0 6px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--white);
+  font-family: "SuisseIntl-Book";
+}
+
+.text_small_description_text {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.7;
+  color: var(--white);
+  font-family: "SuisseIntl-Book";
+}
+
+.hamMenu {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  box-shadow: inset 0 0 10px #050505;
+  border-radius: var(--radiusMedium);
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--black);
+  z-index: 1000;
+  padding: 5vw;
+  box-sizing: border-box;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 10vw;
+  overflow-y: auto;
+}
+
+.menu-overlay.active {
+  transform: translateX(0);
+}
+
+.overlay-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.overlay-header img {
+  width: 39px;
+  height: 50px;
+  object-fit: cover;
+  display: block;
+}
+
+.closeMenu {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: inset 0 0 10px #050505;
+  border-radius: var(--radiusMedium);
+}
+
+.M_menuItems {
+  display: flex;
+  flex-direction: column;
+  gap: 4vw;
+}
+.menu-overlay .M_header_search_bar.always-open {
+  width: 100%;
+  margin-top: 5vw;
+}
+
+.menu-overlay .M_header_search_bar.always-open .A_header_search_input {
+  opacity: 1;
+  width: calc(100% - 30px);
+  padding: 0 12px;
+}
+
+.menu-overlay .W_header_search_icon {
+  background: transparent;
+  box-shadow: inset 0 0 10px #050505;
+}
+
+.menu-overlay .W_search_results_dropdown {
+  width: 100%;
+  left: 0;
+  max-height: 40vh;
+  overflow-y: auto;
+}
+
+body.menu-open .O_Header.mobile {
+  pointer-events: none;
+  opacity: 0.5;
+}
+.M_cardArticles .A_h3 {
+  width: 28rem;
+}
+
 .M_mainText {
   display: flex;
   flex-direction: column;
@@ -139,15 +299,125 @@
   width: 100%;
 }
 
+/* ___________________article___________________ */
+
+.M_IconHeadingLeft {
+  flex: 1;
+  min-width: 300px;
+}
+
+.M_PersonProfileArticle {
+  display: flex;
+  gap: 16px;
+  width: 279px;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.M_NamePersonArticle {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.M_NavigationStory {
+  flex: 0 0 429px;
+  width: 429px;
+  height: fit-content;
+  background: transparent;
+  border-radius: var(--radiusBig);
+  box-shadow: inset 0 0 25px #050505;
+  padding: 32px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: sticky;
+  top: 32px;
+}
+
+.M_TwoPhotoArticle {
+  display: flex;
+  gap: 20px;
+  max-width: 675px;
+  margin: 20px 0;
+}
+
+.M_TwoPhotoArticle .photo {
+  flex: 1 1 326px;
+  max-width: 326px;
+  height: 271px;
+  border-radius: var(--radiusMedium);
+  overflow: hidden;
+}
+
+.M_TwoPhotoArticle .photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.M_BulletList {
+  list-style: none;
+  padding: 0;
+  margin: 0.2rem 0 0.2rem 0;
+}
+
+.M_BulletList li {
+  position: relative;
+  padding-left: 2.5rem;
+  margin-bottom: 0.8rem;
+  font-family: "SuisseIntl-Book", sans-serif;
+  font-size: 1.1rem;
+  color: var(--white);
+  line-height: 1.5;
+}
+
+.M_BulletList li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.15rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url("/src/images/articles/Q_radioButton.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 @media only screen and (max-width: 1720px) and (min-width: 1300px) {
   .M_TagDate {
     margin-bottom: 1rem;
+  }
+
+  /* ___________________article___________________ */
+
+  .M_NavigationStory {
+    flex-basis: 360px;
+    width: 360px;
   }
 }
 
 @media only screen and (max-width: 1300px) and (min-width: 1024px) {
   .M_TagDate {
     margin-bottom: 0.75rem;
+  }
+
+  /* ___________________article___________________ */
+
+  .M_NavigationStory {
+    flex-basis: 300px;
+    width: 300px;
+    padding: 24px 16px;
+  }
+
+  .M_BulletList li {
+    font-size: 1rem;
+    padding-left: 2.2rem;
+  }
+  .M_BulletList li::before {
+    width: 1.3rem;
+    height: 1.3rem;
   }
 }
 
@@ -175,9 +445,27 @@
   .M_TagDateSmall {
     margin-bottom: 0.5rem;
   }
+
+  /* ___________________article___________________ */
+
+  .M_NavigationStory {
+    flex-basis: 260px;
+    width: 260px;
+    padding: 20px 12px;
+  }
+
+  .M_PersonProfileArticle {
+    width: auto;
+  }
+
+  .M_TwoPhotoArticle .photo {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 326/271;
+  }
 }
 
-@media only screen and (max-width: 767px) and (min-width: 360px) {
+@media only screen and (max-width: 767px) {
   .M_TagDate {
     margin-bottom: 0.5rem;
   }
@@ -221,6 +509,42 @@
     gap: 3vw;
     width: 100%;
     padding: 18.4vw 0;
+  }
+
+  /* ___________________article___________________ */
+  .M_NavigationStory {
+    display: none;
+  }
+
+  .M_PersonProfileArticle {
+    width: 100%;
+  }
+
+  .M_IconHeadingLeft {
+    width: 100%;
+  }
+
+  .M_TwoPhotoArticle {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .M_TwoPhotoArticle .photo {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 326/271;
+  }
+
+  .M_BulletList li {
+    padding-left: 2rem;
+    font-size: 0.95rem;
+    margin-bottom: 0.6rem;
+  }
+  .M_BulletList li::before {
+    width: 1.2rem;
+    height: 1.2rem;
+    top: 0.1rem;
   }
 }
 

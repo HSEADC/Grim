@@ -13,22 +13,22 @@ const htmlPages = [
   createPages(
     "./src/pages/articles/big_articles/philosophy-of-the-saw.html",
     "./pages/articles/big_articles/philosophy-of-the-saw.html",
-    ["index", "b_article"],
+    ["index"],
   ),
   createPages(
     "./src/pages/articles/big_articles/running-man.html",
     "./pages/articles/big_articles/running-man.html",
-    ["index", "b_article"],
+    ["index"],
   ),
   createPages(
     "./src/pages/articles/big_articles/joyce-st.html",
     "./pages/articles/big_articles/joyce-st.html",
-    ["index", "b_article"],
+    ["index"],
   ),
   createPages(
     "./src/pages/articles/big_articles/hereditary.html",
     "./pages/articles/big_articles/hereditary.html",
-    ["b_article"],
+    ["index"],
   ),
   createPages("./src/pages/articles.html", "./pages/articles.html", [
     "index",
@@ -38,8 +38,20 @@ const htmlPages = [
   createPages(
     "./src/pages/articles/short_articles/it.html",
     "./pages/articles/short_articles/it.html",
-    ["s_article"],
+    ["index"],
   ),
+  createPages(
+    "./src/pages/articles/short_articles/getout.html",
+    "./pages/articles/short_articles/getout.html",
+    ["index"],
+  ),
+
+  createPages(
+    "./src/pages/articles/short_articles/max-st.html",
+    "./pages/articles/short_articles/max-st.html",
+    ["index"],
+  ),
+
   createPages("./src/pages/about.html", "./pages/about.html", ["index"]),
   createPages("./src/pages/cards.html", "./pages/cards.html", [
     "index",
@@ -66,7 +78,12 @@ const htmlPages = [
     "./pages/tests/easy-to-dive-in.html",
     ["index", "test4"],
   ),
+  createPages("./src/pages/errors/404.html", "./pages/errors/404.html", [
+    "index",
+  ]),
+
   createPages("./src/pages/styleguide.html", "./pages/styleguide.html", [
+    "index",
     "styleguide",
   ]),
   createPages("./src/pages/randomizer.html", "./pages/randomizer.html", [

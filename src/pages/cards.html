@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
     <title>Grim — Медиа про лор крупных хоррор фандомов</title>
@@ -55,62 +55,80 @@
   </head>
   <body>
     <header>
+      <!-- Десктопная версия -->
       <div class="O_Header desktop">
-          <nav>
-            <a class="A_logoHeader" href="../index.html">
-              <img src="../images/A_logoHeader.webp" alt="" />
-            </a>
-            <div class="M_Navigation">
-              <a class="A_navigationHeader" href="about.html">О нас</a>
-              <a class="A_navigationHeader" href="articles.html">Статьи</a>
-              <a class="A_navigationHeader" href="cards.html">Карточки</a>
-              <a class="A_navigationHeader" href="tests.html">Тесты</a>
-            </div>
-            <div class="M_header_search_bar">
-              <input type="text" class="A_header_search_input" />
-              <div class="W_search_results_dropdown"></div>
-              <div class="W_header_search_icon">
-                <div class="Q_iconSearch"></div>
-              </div>
-            </div>
-          </nav>
-      </div>
-        <!-- Мобильное меню -->
-        <!-- <div class="O_Header mobile">
-          <a class="A_logoHeader_mobile" href="../index.html">
+        <nav>
+          <a class="A_logoHeader" href="../index.html">
             <img src="../images/A_logoHeader.webp" alt="Логотип" />
           </a>
-          
-       
-          <div class="hamMenu">
-            <div class="Q_menuIcon"></div>
-            <div class="Q_menuIcon"></div>
-            <div class="Q_menuIcon"></div>
+          <div class="M_Navigation">
+            <a class="A_navigationHeader" href="about.html">О нас</a>
+            <a class="A_navigationHeader" href="articles.html">Статьи</a>
+            <a class="A_navigationHeader" href="cards.html">Карточки</a>
+            <a class="A_navigationHeader" href="tests.html">Тесты</a>
           </div>
-          
-        
-          <div class="menu-overlay">
-            <div class="overlay-header">
-              <img src="../images/A_logoHeader.webp" alt="Логотип" />
-              <div class="closeMenu">
-                <div class="Q_closeButton">×</div>
-              </div>
+          <!-- Десктопный поиск (скрытое поле, появляется по клику) -->
+          <div class="M_header_search_bar desktop-search">
+            <input
+              type="text"
+              class="A_header_search_input"
+              placeholder="Найти"
+            />
+            <div class="W_header_search_icon">
+              <div class="Q_iconSearch"></div>
             </div>
-            
-            <div class="A_inputHeader">
-              <nav class="M_menuItems">
-                <a class="A_navigationHeader_mobile" href="articles.html" class="A_H1">Статьи</a>
-                <a class="A_navigationHeader_mobile" href="cards.html" class="A_H1">Карточки</a>
-                <a class="A_navigationHeader_mobile" href="about.html" class="A_H1">О нас</a>
-              </nav>
-            </div>
+            <div class="W_search_results_dropdown"></div>
           </div>
-        </div> -->
+        </nav>
+      </div>
+
+      <!-- Мобильная версия (бургер) -->
+      <div class="O_Header mobile">
+        <a class="A_logoHeader_mobile" href="../index.html">
+          <img src="../images/A_logoHeader.webp" alt="Логотип" />
+        </a>
+        <div class="hamMenu">
+          <div class="Q_menuIcon"></div>
+          <div class="Q_menuIcon"></div>
+          <div class="Q_menuIcon"></div>
+        </div>
+      </div>
+
+      <!-- Оверлей мобильного меню -->
+      <div class="menu-overlay">
+        <div class="overlay-header">
+          <img src="../images/A_logoHeader.webp" alt="Логотип" />
+          <div class="closeMenu">
+            <span class="Q_closeButton">×</span>
+          </div>
+        </div>
+        <div class="M_menuItems">
+          <a class="A_navigationHeader_mobile" href="about.html">О нас</a>
+          <a class="A_navigationHeader_mobile" href="articles.html">Статьи</a>
+          <a class="A_navigationHeader_mobile" href="cards.html">Карточки</a>
+          <a class="A_navigationHeader_mobile" href="tests.html">Тесты</a>
+        </div>
+        <!-- Мобильный поиск (всегда открыт) -->
+        <div class="M_header_search_bar mobile-search always-open">
+          <input
+            type="text"
+            class="A_header_search_input"
+            placeholder="Найти"
+          />
+          <div class="W_header_search_icon">
+            <div class="Q_iconSearch"></div>
+          </div>
+          <div class="W_search_results_dropdown"></div>
+        </div>
       </div>
     </header>
     <section class="S_MainBannerCards">
       <div class="W_BannerContainer">
-        <h1 class="A_h1">Основано <br> на реальных<br> событиях?</h1>
+        <h1 class="A_h1">
+          Основано <br />
+          на реальных<br />
+          событиях?
+        </h1>
       </div>
     </section>
     <div class="С_ArticleCategoryTags">
@@ -146,9 +164,9 @@
           <div class="M_CardArticleInfo">
             <h3 class="A_CardName">Дастин Хендерсон</h3>
             <p class="A_CardNameDescription">
-              Уникальная внешность Дастина обусловлена <br />
-              редким генетическим заболеванием актёра —
-              <br />ключично-черепной дисплазией
+              Внешность Дастина обусловлена редким
+              <br />генетическим заболеванием актёра — <br />ключично-черепной
+              дисплазией
             </p>
             <div class="A_CardTagProtagonist">
               <div class="A_CardTag">Протагонист</div>
@@ -163,8 +181,8 @@
             <h3 class="A_CardName">Ганнибал Лектер</h3>
             <p class="A_CardNameDescription">
               Прототип персонажа хирург-убийца <br />
-              Альфредо Балли Тревино, с которым писатель <br />
-              познакомился в тюрьме в 1960-х
+              Альфредо Балли Тревино, с которым <br />писатель познакомился в
+              тюрьме
             </p>
             <div class="A_CardTagAntagonist">
               <div class="A_CardTag">Антагонист</div>
@@ -175,22 +193,24 @@
       <div class="S_Randomizer">
         <div id="B_Randomizer"></div>
         <div class="M_RandomizerContent">
-           <div class="A_Randomizer_title">
-              <img src="../images/cards/Q_HeadingGrimoire.webp" alt="Гримуар" class="A_interactives_generator_logo">
-           </div>
+          <div class="A_Randomizer_title">
+            <img
+              src="../images/cards/Q_HeadingGrimoire.webp"
+              alt="Гримуар"
+              class="A_interactives_generator_logo"
+            />
+          </div>
           <div class="A_Randomizer_description">
             <p class="A_p">
-              Накопали фактов про твоих<br>
-              любимых персонажей.<br>
-              Тяни карточку дня 
+              Накопали фактов про твоих<br />
+              любимых персонажей.<br />
+              Тяни карточку дня
             </p>
           </div>
           <div class="A_Randomizer_button">
-            <a href="randomizer.html"
-              >Вытянуть карту</a
-            >
+            <a href="randomizer.html">Вытянуть карту</a>
+          </div>
         </div>
-      </div>
       </div>
       <div class="C_CardsRow">
         <a class="O_Card" data-tags="Антагонист">
@@ -200,8 +220,8 @@
           <div class="M_CardArticleInfo">
             <h3 class="A_CardName">Пеннивайз</h3>
             <p class="A_CardNameDescription">
-              Автор придумал персонажа когда <br> 
-              спросил себя, кого боятся дети «больше, <br>
+              Автор придумал персонажа когда <br />
+              спросил себя, кого боятся дети «больше, <br />
               чем что-либо другое в мире»
             </p>
             <div class="A_CardTagAntagonist">
@@ -216,8 +236,8 @@
           <div class="M_CardArticleInfo">
             <h3 class="A_CardName">Сабрина Спеллман</h3>
             <p class="A_CardNameDescription">
-              У актрисы аллергия на кошек, <br> 
-              поэтому контакт с Салемом в кадре <br>
+              У актрисы аллергия на кошек, <br />
+              поэтому контакт с Салемом в кадре <br />
               свели к минимуму
             </p>
             <div class="A_CardTagProtagonist">
@@ -232,8 +252,8 @@
           <div class="M_CardArticleInfo">
             <h3 class="A_CardName">Беверли Марш</h3>
             <p class="A_CardNameDescription">
-              Персонаж поднимает проблему того, <br> 
-              как детская травма формирует <br>
+              Персонаж поднимает проблему того, <br />
+              как детская травма формирует <br />
               судьбу взрослой женщины
             </p>
             <div class="A_CardTagProtagonist">
@@ -252,10 +272,10 @@
           Медиа про лор <br />крупных хоррор фандомов
         </p>
         <div class="M_NavigationFooter">
-          <a class="A_navigationFooter" href="pages/about.html">О нас</a>
-          <a class="A_navigationFooter" href="pages/articles.html">Статьи</a>
-          <a class="A_navigationFooter" href="pages/cards.html">Карточки</a>
-          <a class="A_navigationFooter" href="pages/tests.html">Тесты</a>
+          <a class="A_navigationFooter" href="about.html">О нас</a>
+          <a class="A_navigationFooter" href="articles.html">Статьи</a>
+          <a class="A_navigationFooter" href="cards.html">Карточки</a>
+          <a class="A_navigationFooter" href="tests.html">Тесты</a>
         </div>
       </div>
     </footer>

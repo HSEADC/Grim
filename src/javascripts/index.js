@@ -1,186 +1,168 @@
 import "../stylesheets/style.css";
 
 document.addEventListener("DOMContentLoaded", () => {
-  const navButtons = document.querySelectorAll(".A_header_search_input");
-  const currentPath = window.location.pathname;
+  // --- Мобильное меню ---
+  const hamMenu = document.querySelector(".hamMenu");
+  const menuOverlay = document.querySelector(".menu-overlay");
+  const closeBtn = document.querySelector(".closeMenu");
+  const menuLinks = document.querySelectorAll(".A_navigationHeader_mobile");
 
-  navButtons.forEach((button) => {
-    if (button.getAttribute("href") === currentPath) {
-      button.style.background = "var(--grey)";
-    }
-  });
+  if (hamMenu && menuOverlay && closeBtn) {
+    hamMenu.addEventListener("click", () => {
+      menuOverlay.classList.add("active");
+      document.body.classList.add("menu-open");
+    });
 
+    closeBtn.addEventListener("click", () => {
+      menuOverlay.classList.remove("active");
+      document.body.classList.remove("menu-open");
+    });
+
+    menuLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        menuOverlay.classList.remove("active");
+        document.body.classList.remove("menu-open");
+      });
+    });
+
+    // Закрытие по клику вне оверлея (на подложку)
+    menuOverlay.addEventListener("click", (e) => {
+      if (e.target === menuOverlay) {
+        menuOverlay.classList.remove("active");
+        document.body.classList.remove("menu-open");
+      }
+    });
+  }
+
+  // --- Данные для поиска (ваши статьи) ---
   const articleData = [
     {
       title: "Джойс Байерс: плохая мать или жертва обстоятельств?",
       url: "pages/articles/big_articles/joyce-st.html",
-      description: "Почему осуждение Джойс Байерс несправедливо.",
+      description: "Почему осуждение Джойс Байерс несправедливо",
     },
     {
       title: "Философия Пилы: Почему Джон Крамер – не просто злодей.",
       url: "pages/articles/big_articles/philosophy-of-the-saw.html",
-      description: "Разбираем искалеченную трагедией философию Джона Крамера.",
+      description: "Разбираем искалеченную трагедией философию Джона Крамера",
     },
     {
       title: "Почему «Return to Silent Hill» оказался пустой оболочкой.",
       url: "pages/articles/big_articles/return-to-silent-hill.html",
-      description: "Бездушная копия культовой игры.",
+      description: "Бездушная копия культовой игры",
     },
     {
       title: "Они не могли иначе: фатализм «Реинкарнации»",
       url: "pages/articles/big_articles/hereditary.html",
-      description: "Трагедия отсутствия свободы воли.",
+      description: "Трагедия отсутствия свободы воли",
     },
     {
       title: "«Бегущий человек» как антиутопия эпохи алгоритмов",
       url: "pages/articles/big_articles/running-man.html",
       description:
-        "Антиутопия, где человеческое внимание стало валютой алгоритмов.",
+        "Антиутопия, где человеческое внимание стало валютой алгоритмов",
     },
     {
       title: "Почему мы боимся клоунов? Разбор феномена Пеннивайза.",
       url: "pages/articles/short_articles/it.html",
-      description: "Почему мы боимся клоунов после «Оно».",
+      description: "Почему мы боимся клоунов после «Оно»",
     },
   ];
 
-  const searchIcon = document.querySelector(".W_header_search_icon");
-  const searchInput = document.querySelector(".A_header_search_input");
-  const searchResults = document.querySelector(".W_search_results_dropdown");
-  let isOpen = false;
+  // --- Универсальная функция инициализации поиска ---
+  function initSearch(containerSelector, alwaysOpen = false) {
+    const container = document.querySelector(containerSelector);
+    if (!container) return;
 
-  if (!searchIcon || !searchInput || !searchResults) return;
+    const searchIcon = container.querySelector(".W_header_search_icon");
+    const searchInput = container.querySelector(".A_header_search_input");
+    const searchResults = container.querySelector(".W_search_results_dropdown");
+    let isOpen = alwaysOpen; // для мобильного поиска всегда true, но не используется для управления классом
 
-  searchIcon.addEventListener("click", (e) => {
-    e.stopPropagation();
+    if (!searchIcon || !searchInput || !searchResults) return;
 
-    if (!isOpen) {
-      searchInput.style.width = "280px";
-      searchInput.style.padding = "0 12px";
-      searchInput.style.opacity = "1";
-      searchInput.style.border = "none";
-      searchInput.style.right = "30px";
+    function showResults(results) {
+      searchResults.innerHTML = "";
+      if (results.length === 0) {
+        searchResults.innerHTML =
+          '<div class="M_search_result_item"><p class="text_medium_description_text">Ничего не найдено</p></div>';
+      } else {
+        results.slice(0, 5).forEach((item) => {
+          const result = document.createElement("a");
+          result.className = "M_search_result_item";
+          result.href = item.url;
+          result.innerHTML = `
+            <h4 class="text_medium_description_text">${item.title}</h4>
+            <p class="text_small_description_text">${item.description}</p>
+          `;
+          searchResults.appendChild(result);
+        });
+      }
+      searchResults.classList.add("show");
+    }
+
+    function hideResults() {
+      searchResults.classList.remove("show");
+    }
+
+    function openSearch() {
+      container.classList.add("open");
       searchInput.focus();
-      searchIcon.style.background = "var(--black)"; // или любой цвет при открытии
       isOpen = true;
-    } else {
-      closeSearch();
     }
-  });
 
-  searchInput.addEventListener("input", () => {
-    const query = searchInput.value.trim();
-    if (query.length > 0) {
-      const filteredResults = articleData.filter((article) => {
-        const lowerQuery = query.toLowerCase();
-        return (
-          article.title.toLowerCase().includes(lowerQuery) ||
-          article.description.toLowerCase().includes(lowerQuery)
-        );
-      });
-      showResults(filteredResults);
-    } else {
+    function closeSearch() {
+      container.classList.remove("open");
+      searchInput.value = "";
       hideResults();
+      isOpen = false;
     }
-  });
 
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && isOpen) {
-      closeSearch();
-    }
-  });
+    // Для десктопа (не alwaysOpen) обрабатываем клик по иконке
+    if (!alwaysOpen) {
+      searchIcon.addEventListener("click", (e) => {
+        e.stopPropagation();
+        if (!isOpen) {
+          openSearch();
+        } else {
+          closeSearch();
+        }
+      });
 
-  document.addEventListener("click", (e) => {
-    if (isOpen && !e.target.closest(".M_header_search_bar")) {
-      closeSearch();
-    }
-  });
+      // Закрытие по Escape и клику вне
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && isOpen) {
+          closeSearch();
+        }
+      });
 
-  function showResults(results) {
-    searchResults.innerHTML = "";
-
-    if (results.length === 0) {
-      searchResults.innerHTML = `
-        <div class="M_search_result_item">
-          <p class="text_medium_description_text">Ничего не найдено</p>
-        </div>
-      `;
-    } else {
-      results.slice(0, 5).forEach((item) => {
-        const result = document.createElement("a");
-        result.className = "M_search_result_item";
-        result.href = item.url;
-        result.innerHTML = `
-          <h4 class="text_medium_description_text">${item.title}</h4>
-          <p class="text_small_description_text">${item.description}</p>
-        `;
-        searchResults.appendChild(result);
+      document.addEventListener("click", (e) => {
+        if (isOpen && !container.contains(e.target)) {
+          closeSearch();
+        }
       });
     }
 
-    searchResults.style.display = "block";
-    setTimeout(() => (searchResults.style.opacity = "1"), 10);
+    // Обработка ввода (для всех)
+    searchInput.addEventListener("input", () => {
+      const query = searchInput.value.trim().toLowerCase();
+      if (query.length > 0) {
+        const filtered = articleData.filter(
+          (article) =>
+            article.title.toLowerCase().includes(query) ||
+            article.description.toLowerCase().includes(query),
+        );
+        showResults(filtered);
+      } else {
+        hideResults();
+      }
+    });
+
+    // Не закрывать список при клике на него
+    searchResults.addEventListener("click", (e) => e.stopPropagation());
   }
 
-  function hideResults() {
-    searchResults.style.opacity = "0";
-    setTimeout(() => (searchResults.style.display = "none"), 200);
-  }
-
-  function closeSearch() {
-    searchInput.style.width = "0";
-    searchInput.style.padding = "0";
-    searchInput.style.opacity = "0";
-    searchInput.style.border = "none";
-    searchInput.value = "";
-    searchInput.style.right = "30px";
-
-    searchIcon.style.background = "var(--black)";
-
-    hideResults();
-    isOpen = false;
-  }
+  // Инициализация поиска для десктопа и мобильной версии
+  initSearch(".desktop-search", false);
+  initSearch(".mobile-search", true);
 });
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   // Получаем элементы
-//   const hamMenu = document.querySelector(".hamMenu");
-//   const closeMenu = document.querySelector(".closeMenu");
-//   const menuOverlay = document.querySelector(".menu-overlay");
-
-//   // Проверяем, есть ли элементы на странице
-//   if (!hamMenu || !closeMenu || !menuOverlay) {
-//     console.log("Не все элементы меню найдены на странице");
-//     return;
-//   }
-
-//   // Открываем меню
-//   hamMenu.addEventListener("click", function (e) {
-//     e.stopPropagation(); // Останавливаем всплытие события
-//     menuOverlay.classList.add("active");
-//     document.body.style.overflow = "hidden"; // Блокируем скролл страницы
-//   });
-
-//   // Закрываем меню
-//   closeMenu.addEventListener("click", function () {
-//     menuOverlay.classList.remove("active");
-//     document.body.style.overflow = ""; // Разблокируем скролл
-//   });
-
-//   // Закрываем меню при клике на ссылку
-//   const menuLinks = document.querySelectorAll(".C_menuItems .A_H1");
-//   menuLinks.forEach((link) => {
-//     link.addEventListener("click", () => {
-//       menuOverlay.classList.remove("active");
-//       document.body.style.overflow = "";
-//     });
-//   });
-
-//   // Закрываем меню при клике вне его
-//   menuOverlay.addEventListener("click", (e) => {
-//     if (e.target === menuOverlay) {
-//       menuOverlay.classList.remove("active");
-//       document.body.style.overflow = "";
-//     }
-//   });
-// });
