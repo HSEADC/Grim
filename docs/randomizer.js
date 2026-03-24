@@ -141,15 +141,6 @@ document.addEventListener("DOMContentLoaded", function () {
     startCardsBlock.style.display = "none";
     resultContainer.style.display = "block";
   });
-
-  // Кнопка «На главную»
-  // resultContainer.addEventListener("click", function (e) {
-  //   if (e.target.classList.contains("back-button")) {
-  //     resultContainer.style.display = "none";
-  //     startTitle.style.display = "";
-  //     startCardsBlock.style.display = "";
-  //   }
-  // });
   resultContainer.addEventListener("click", function (e) {
     if (e.target.classList.contains("back-button")) {
       window.location.href = "../index.html";

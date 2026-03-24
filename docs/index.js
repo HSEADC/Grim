@@ -2,7 +2,6 @@
 /******/ 	"use strict";
 
 document.addEventListener("DOMContentLoaded", function () {
-  // --- Мобильное меню ---
   var hamMenu = document.querySelector(".hamMenu");
   var menuOverlay = document.querySelector(".menu-overlay");
   var closeBtn = document.querySelector(".closeMenu");
@@ -31,8 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
-
-  // --- Данные для поиска (ваши статьи) ---
   var articleData = [{
     title: "Джойс Байерс: плохая мать или жертва обстоятельств?",
     url: "pages/articles/big_articles/joyce-st.html",
