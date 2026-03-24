@@ -55,58 +55,480 @@
   </head>
   <body>
     <header>
+      <!-- Десктопная версия -->
       <div class="O_Header desktop">
-          <nav>
-            <a class="A_logoHeader" href="/index.html">
-              <img src="../../../images/A_logoHeader.webp" alt="" />
-            </a>
-            <div class="M_Navigation">
-              <a class="A_navigationHeader" href="/pages/about.html">О нас</a>
-              <a class="A_navigationHeader" href="/pages/articles.html">Статьи</a>
-              <a class="A_navigationHeader" href="/pages/cards.html">Карточки</a>
-              <a class="A_navigationHeader" href="/pages/tests.html">Тесты</a>
-            </div>
-            <div class="M_header_search_bar">
-              <input type="text" class="A_header_search_input" />
-              <div class="W_search_results_dropdown"></div>
-              <div class="W_header_search_icon">
-                <div class="Q_iconSearch"></div>
-              </div>
-            </div>
-          </nav>
-      </div>
-        <!-- Мобильное меню -->
-        <!-- <div class="O_Header mobile">
-          <a class="A_logoHeader_mobile" href="../index.html">
-            <img src="../images/A_logoHeader.webp" alt="Логотип" />
+        <nav>
+          <a class="A_logoHeader" href="/index.html">
+            <img src="../../../images/A_logoHeader.webp" alt="Логотип" />
           </a>
-          
-       
-          <div class="hamMenu">
-            <div class="Q_menuIcon"></div>
-            <div class="Q_menuIcon"></div>
-            <div class="Q_menuIcon"></div>
+          <div class="M_Navigation">
+            <a class="A_navigationHeader" href="/pages/about.html">О нас</a>
+            <a class="A_navigationHeader" href="/pages/articles.html">Статьи</a>
+            <a class="A_navigationHeader" href="/pages/cards.html">Карточки</a>
+            <a class="A_navigationHeader" href="/pages/tests.html">Тесты</a>
           </div>
-          
-        
-          <div class="menu-overlay">
-            <div class="overlay-header">
-              <img src="../images/A_logoHeader.webp" alt="Логотип" />
-              <div class="closeMenu">
-                <div class="Q_closeButton">×</div>
-              </div>
+          <!-- Десктопный поиск (скрытое поле, появляется по клику) -->
+          <div class="M_header_search_bar desktop-search">
+            <input
+              type="text"
+              class="A_header_search_input"
+              placeholder="Найти"
+            />
+            <div class="W_header_search_icon">
+              <div class="Q_iconSearch"></div>
             </div>
-            
-            <div class="A_inputHeader">
-              <nav class="M_menuItems">
-                <a class="A_navigationHeader_mobile" href="articles.html" class="A_H1">Статьи</a>
-                <a class="A_navigationHeader_mobile" href="cards.html" class="A_H1">Карточки</a>
-                <a class="A_navigationHeader_mobile" href="about.html" class="A_H1">О нас</a>
-              </nav>
-            </div>
+            <div class="W_search_results_dropdown"></div>
           </div>
-        </div> -->
+        </nav>
+      </div>
+
+      <!-- Мобильная версия (бургер) -->
+      <div class="O_Header mobile">
+        <a class="A_logoHeader_mobile" href="/index.html">
+          <img src="../../../images/A_logoHeader.webp" alt="Логотип" />
+        </a>
+        <div class="hamMenu">
+          <div class="Q_menuIcon"></div>
+          <div class="Q_menuIcon"></div>
+          <div class="Q_menuIcon"></div>
+        </div>
+      </div>
+
+      <!-- Оверлей мобильного меню -->
+      <div class="menu-overlay">
+        <div class="overlay-header">
+          <img src="../../../images/A_logoHeader.webp" alt="Логотип" />
+          <div class="closeMenu">
+            <span class="Q_closeButton">×</span>
+          </div>
+        </div>
+        <div class="M_menuItems">
+          <a class="A_navigationHeader_mobile" href="/pages/about.html"
+            >О нас</a
+          >
+          <a class="A_navigationHeader_mobile" href="/pages/articles.html"
+            >Статьи</a
+          >
+          <a class="A_navigationHeader_mobile" href="/pages/cards.html"
+            >Карточки</a
+          >
+          <a class="A_navigationHeader_mobile" href="/pages/tests.html"
+            >Тесты</a
+          >
+        </div>
+        <!-- Мобильный поиск (всегда открыт) -->
+        <div class="M_header_search_bar mobile-search always-open">
+          <input
+            type="text"
+            class="A_header_search_input"
+            placeholder="Найти"
+          />
+          <div class="W_header_search_icon">
+            <div class="Q_iconSearch"></div>
+          </div>
+          <div class="W_search_results_dropdown"></div>
+        </div>
       </div>
     </header>
+    <section class="W_HomeScreenArticle">
+      <div class="S_ArticlePreview">
+        <div class="O_HeadingArticle">
+          <div class="M_IconHeadingLeft">
+            <h1 class="A_TitleSuisse">
+              «Бегущий человек» эталонная <br />
+              антиутопия эпохи алгоритмов
+            </h1>
+          </div>
+          <div class="A_TagArticleSocialCriticism align-bottom">
+            <p class="A_p_tag">Социальная критика</p>
+          </div>
+        </div>
+
+        <div class="Q_ImageWide">
+          <img src="../../../images/articles/Q_imagebigsaw.webp" />
+        </div>
+
+        <div class="O_ArticleAuthorDescription">
+          <div class="M_PersonProfileArticle">
+            <div class="Q_PersonArticlePic">
+              <img src="../../../images/articles/Q_PersonArticlePic.webp" />
+            </div>
+            <div class="M_NamePersonArticle">
+              <p class="A_AuthorArticle">Элина<br />Баштарова</p>
+              <p class="A_NameDescArticle">Автор статьи</p>
+            </div>
+          </div>
+          <div class="A_ArticleDescription">
+            <h3>
+              На&nbsp;первый взгляд, &laquo;Бегущий человек&raquo; кажется
+              типичным боевиком, возможно, лишь отдалённо основанным
+              на&nbsp;романе, но&nbsp;на&nbsp;самом деле это&nbsp;самый
+              настоящий антиутопический хоррор с&nbsp;элементами триллера.
+            </h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ОСНОВНОЙ КОНТЕНТ С НАВИГАЦИЕЙ -->
+    <main class="O_StoryMain">
+      <!-- Навигация (только на десктопе) -->
+      <aside class="M_NavigationStory">
+        <a href="#mirror" class="A_ArticleNavLink">Зеркало цифровой эпохи</a>
+        <a href="#attention" class="A_ArticleNavLink">Внимание — валюта</a>
+        <a href="#content" class="A_ArticleNavLink"
+          >Культура человека — контент</a
+        >
+        <a href="#algorithm" class="A_ArticleNavLink">Невидимый алгоритм</a>
+        <a href="#innocence" class="A_ArticleNavLink">Невиновность зрителя?</a>
+        <a href="#hunters" class="A_ArticleNavLink">Охотники как медиабренды</a>
+        <a href="#struggle" class="A_ArticleNavLink">Борьба за себя</a>
+        <a href="#conclusion" class="A_ArticleNavLink">Итог</a>
+      </aside>
+
+      <!-- Секции текста -->
+      <div class="C_StorySections">
+        <!-- 1. Зеркало цифровой эпохи -->
+        <section class="O_BlockStoryText" id="mirror">
+          <h2 class="A_TitleShitArticle">Фильм как зеркало цифровой эпохи</h2>
+          <div class="W_TextStory">
+            <div class="A_Text">
+              Эта кинолента&nbsp;&mdash; не&nbsp;просто развлекательная фантазия
+              о&nbsp;далёком будущем; это&nbsp;своего рода зеркало, отражающее
+              современную цифровую действительность,&nbsp; с&nbsp;которой
+              мы&nbsp;сталкиваемся каждый день, листая ленты TikTok,
+              просматривая видео на&nbsp;YouTube или выбирая, что посмотреть
+              на&nbsp;стриминговых платформах.
+            </div>
+            <div class="M_TwoPhotoArticle">
+              <div class="photo">
+                <img src="../../../images/articles/Q_RunOne.webp" />
+              </div>
+              <div class="photo">
+                <img src="../../../images/articles/Q_RunTwo.webp" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 2. Внимание — валюта -->
+        <section class="O_BlockStoryText" id="attention">
+          <h2 class="A_TitleShitArticle">Мир, где внимание стало валютой</h2>
+          <div class="W_TextStory">
+            <div class="Q_ImageFullWidthArticle">
+              <img src="../../../images/articles/Q_RunThree.webp" />
+            </div>
+            <div class="A_Text">
+              Фильм, снятый по&nbsp;мотивам рассказа Стивена Кинга, затрагивает
+              темы зависимости от&nbsp;развлечений, манипулирования общественным
+              мнением и&nbsp;размытия границ между реальностью и&nbsp;экранным
+              образом. В&nbsp;антиутопичном мире будущего, где реальность все
+              больше контролируется медиакорпорациями, главный герой становится
+              невольным участником смертельного телешоу.
+            </div>
+            <div class="A_Text">
+              Бегущий человек поднимает вопросы о&nbsp;том, как легко отвлечь
+              людей, предложив им&nbsp;захватывающее зрелище, даже если оно
+              аморально или жестоко. В&nbsp;контексте современных социальных
+              сетей и&nbsp;онлайн-платформ, где&nbsp;контент постоянно борется
+              за&nbsp;наше внимание, этот фильм становится особенно актуальным.
+              Мы&nbsp;видим, как алгоритмы определяют, что мы&nbsp;смотрим, что
+              читаем и&nbsp;во&nbsp;что верим. Наше внимание стало товаром,
+              который продаётся рекламодателям, а&nbsp;наша способность
+              критически мыслить притупляется из-за постоянного потока
+              информации.
+            </div>
+            <div class="Q_ImageFullWidthArticle">
+              <img src="../../../images/articles/Q_Runfour.webp" />
+            </div>
+            <div class="A_Text">
+              Стоит задуматься, не&nbsp;стали&nbsp;ли мы&nbsp;сами
+              в&nbsp;какой-то степени участниками подобного телешоу, где нашу
+              жизнь формируют лайки, репосты и&nbsp;комментарии. &laquo;Бегущий
+              человек&raquo; предостерегает нас от&nbsp;слепого подчинения
+              алгоритмам и&nbsp;призывает к&nbsp;осознанному потреблению
+              информации, чтобы не&nbsp;стать жертвами манипуляций
+              и&nbsp;сохранить свою индивидуальность в&nbsp;эпоху цифрового
+              контроля.
+            </div>
+          </div>
+        </section>
+
+        <!-- 3. Культура человека — контент -->
+        <section class="O_BlockStoryText" id="content">
+          <h2 class="A_TitleShitArticle">
+            Когда человек превращается <br />в контент
+          </h2>
+          <div class="W_TextStory">
+            <div class="A_Text">
+              Здесь твою ценность определяют не&nbsp;дела, а&nbsp;то, насколько
+              долго ты&nbsp;удерживаешь внимание зрителя.
+            </div>
+            <div class="A_Text">
+              В&nbsp;этом шоу люди&nbsp;&mdash; это просто контент.
+              Их&nbsp;страхи, слабости, ошибки и&nbsp;редкие проявления силы
+              превращаются в&nbsp;товар. Побеждает не&nbsp;тот, кто честен
+              или&nbsp; прав, а&nbsp;тот, кто умеет оставаться интересным дольше
+              всех.
+            </div>
+            <div class="A_Text">
+              Это очень похоже на&nbsp;то, как работают соцсети:
+              главное&nbsp;&mdash; не&nbsp;смысл, а&nbsp;статистика.
+            </div>
+          </div>
+        </section>
+
+        <!-- 4. Невидимый алгоритм -->
+        <section class="O_BlockStoryText" id="algorithm">
+          <h2 class="A_TitleShitArticle">
+            Невидимый алгоритм, который пишет историю
+          </h2>
+          <div class="W_TextStory">
+            <div class="A_Text">
+              В&nbsp;фильме нет конкретного человека, который управляет
+              алгоритмом, но&nbsp;его присутствие ощущается постоянно.
+            </div>
+            <div class="A_Text">Алгоритм решает:</div>
+            <ul class="M_BulletList">
+              <li>кого показывать крупным планом;</li>
+              <li>кому достанется роль героя;</li>
+              <li>кого выставить злодеем;</li>
+              <li>кого просто вырезать из истории.</li>
+            </ul>
+            <div class="A_Text">
+              Алгоритм не&nbsp;плохой. Он&nbsp;просто работает так, чтобы
+              показывать нужную информацию. Точно так&nbsp;же сегодня
+              формируются наши ленты рекомендаций. То, что вызывает сильные
+              эмоции&nbsp;&mdash; страх, злость, отвращение,&nbsp;&mdash;
+              появляется в&nbsp;ленте первым. Не&nbsp;потому, что это важнее,
+              а&nbsp;потому, что это заставляет нас смотреть дальше.
+            </div>
+          </div>
+        </section>
+
+        <!-- 5. Невиновность зрителя? -->
+        <section class="O_BlockStoryText" id="innocence">
+          <h2 class="A_TitleShitArticle">Зрители и иллюзия невиновности</h2>
+          <div class="W_TextStory">
+            <div class="A_Text">
+              В&nbsp;фильме важно&nbsp;то, как ведут себя зрители. Люди
+              по&nbsp;ту&nbsp;сторону экрана не&nbsp;чувствуют себя виноватыми.
+              Они не&nbsp;участвуют в&nbsp;играх,не нажимают на&nbsp;курок,
+              ничего не&nbsp;решают. Они просто смотрят. Эта идея о&nbsp;том,
+              что мы&nbsp;ни&nbsp;в&nbsp;чём не&nbsp;виноваты, очень точно
+              описывает современное медиапространство. Ответственность теряется
+              в&nbsp;толпе, но&nbsp;система продолжает работать, потому что
+              мы&nbsp;её&nbsp;смотрим.
+            </div>
+            <div class="Q_ImageFullWidthArticle">
+              <img src="../../../images/articles/Q_Runfive.webp" />
+            </div>
+          </div>
+        </section>
+
+        <!-- 6. Охотники как медиабренды -->
+        <section class="O_BlockStoryText" id="hunters">
+          <h2 class="A_TitleShitArticle">Охотники как медиабренды</h2>
+          <div class="W_TextStory">
+            <div class="A_Text">
+              Охотники за&nbsp;участниками, которых показывают в&nbsp;шоу, тоже
+              хорошо отражают реальность.
+            </div>
+            <div class="A_Text">Это не просто злодеи, а бренды:</div>
+            <ul class="M_BulletList">
+              <li>у них узнаваемый внешний вид;</li>
+              <li>они ведут себя предсказуемо;</li>
+              <li>у них чёткая роль в истории;</li>
+              <li>их мораль может меняться.</li>
+            </ul>
+            <div class="A_Text">
+              Они существуют только до&nbsp;тех пор, пока их&nbsp;смотрят.
+              Их&nbsp;популярность&nbsp;&mdash; не&nbsp;из-за силы или
+              убеждений, а&nbsp;потому, что они хорошо вписываются
+              в&nbsp;формат. В&nbsp;этом плане фильм жёстко, но&nbsp;честно
+              показывает, как сегодня работает медийная власть.
+            </div>
+          </div>
+        </section>
+
+        <!-- 7. Борьба за себя -->
+        <section class="O_BlockStoryText" id="struggle">
+          <h2 class="A_TitleShitArticle">
+            Борьба не против системы, <br />а за себя
+          </h2>
+          <div class="Q_ImageFullWidthArticle">
+            <img src="../../../images/articles/Q_Runsix.webp" />
+          </div>
+          <div class="W_TextStory">
+            <div class="A_Text">
+              Главный герой не&nbsp;становится бунтарём. Он&nbsp;борется
+              не&nbsp;за&nbsp;то, чтобы изменить систему или ради какой-то идеи,
+              а&nbsp;за&nbsp;то, чтобы остаться собой в&nbsp;мире, который
+              хочет, чтобы он&nbsp;был просто функцией. Это похоже на&nbsp;то,
+              как чувствует себя любой, кто пользуется соцсетями: хочешь, чтобы
+              тебя видели&nbsp;&mdash; играй по&nbsp;правилам. Сделаешь шаг
+              в&nbsp;сторону&nbsp;&mdash; и&nbsp;тебя больше нет в&nbsp;ленте.
+            </div>
+          </div>
+        </section>
+
+        <!-- 8. Итог -->
+        <section class="O_BlockStoryText" id="conclusion">
+          <h2 class="A_TitleShitArticle">Итог</h2>
+          <div class="W_TextStory">
+            <div class="A_Text">
+              В&nbsp;фильме нет счастливого конца. Он&nbsp;не&nbsp;учит, как
+              сломать алгоритм или победить. Вместо этого он&nbsp;делает кое‑что
+              более неприятное&nbsp;&mdash; заставляет нас узнать себя.
+              Мы&nbsp;видим не&nbsp;далёкое будущее, а&nbsp;немного
+              преувеличенную версию настоящего, где нами управляют
+              не&nbsp;запретами, а&nbsp;рекомендациями.
+            </div>
+            <div class="A_Text">
+              Вот почему Бегущий человек так цепляет. Он&nbsp;пугает
+              не&nbsp;жестокостью, а&nbsp;тем, что мы&nbsp;узнаём в&nbsp;нём
+              себя. Это история о&nbsp;мире, где&nbsp;развлечения важнее морали,
+              алгоритмы заменяют ответственность, а&nbsp;участие становится
+              добровольным. И&nbsp;главный вопрос, который остаётся после
+              просмотра, звучит просто и&nbsp;неприятно: если арена уже вокруг
+              нас, то&nbsp;на&nbsp;какой стадии просмотра находимся&nbsp;мы?
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <div class="W_PreferenceFooter">
+      <div class="S_Phreference">
+        <div class="W_Phreference">
+          <h1 class="A_TitleSuisse"><em>Вам может понравиться</em></h1>
+          <div class="C_ArticlesRowThird">
+            <a
+              class="O_CardArticle"
+              href="/pages/articles/big_articles/joyce-st.html"
+              data-tags="Анализ персонажа"
+            >
+              <div class="Q_ImageSmall">
+                <img
+                  src="/src/images/articles/Q_ImageArticlesMainJoyce.webp"
+                  alt=""
+                />
+              </div>
+              <div class="M_ArticleInfo">
+                <div class="M_TagDateSmall">
+                  <div class="A_Date">18.12.2025</div>
+                </div>
+                <h2 class="A_ArticleNameSmall">
+                  Джойс Байерс: плохая мать <br />или жертва обстоятельств?
+                </h2>
+                <div class="A_TagArticleCharacterAnalysis">
+                  <p class="A_p_tag_small">Анализ персонажа</p>
+                </div>
+              </div>
+            </a>
+            <a
+              class="O_CardArticle"
+              href="/pages/articles/short_articles/it.html"
+              data-tags="Психология хоррора"
+            >
+              <div class="Q_ImageSmall">
+                <img
+                  src="/src/images/articles/Q_ImageArticlesMainIt.webp"
+                  alt=""
+                />
+              </div>
+              <div class="M_ArticleInfo">
+                <div class="M_TagDateSmall">
+                  <div class="A_Date">10.02.2026</div>
+                </div>
+                <h2 class="A_ArticleNameSmall">
+                  Почему мы боимся клоунов? <br />Разбор феномена Пеннивайза
+                </h2>
+                <div class="A_TagArticlePsychologyOfHorror">
+                  <p class="A_p_tag_small">Психология хоррора</p>
+                </div>
+              </div>
+            </a>
+            <a
+              class="O_CardArticle"
+              href="/pages/articles/big_articles/hereditary.html"
+              data-tags="Концептуальный разбор"
+            >
+              <div class="Q_ImageSmall">
+                <img
+                  src="/src/images/articles/Q_ImageArticlesMainHereditary.webp"
+                  alt=""
+                />
+              </div>
+              <div class="M_ArticleInfo">
+                <div class="M_TagDateSmall">
+                  <div class="A_Date">13.12.2025</div>
+                </div>
+                <h2 class="A_ArticleNameSmall">
+                  Они не могли иначе: <br />фатализм «Реинкарнации»
+                </h2>
+                <div class="A_TagArticleConceptualAnalysis">
+                  <p class="A_p_tag_small">Концептуальный разбор</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="S_Footer">
+      <div class="W_footer-content">
+        <a href="index.html" class="A_footer-logo">
+          <img src="/src/images/A_logoFooter.webp" alt="Логотип" />
+        </a>
+        <p class="A_footer-description">
+          Медиа про лор <br />крупных хоррор фандомов
+        </p>
+        <div class="M_NavigationFooter">
+          <a class="A_navigationFooter" href="/pages/about.html">О нас</a>
+          <a class="A_navigationFooter" href="/pages/articles.html">Статьи</a>
+          <a class="A_navigationFooter" href="/pages/cards.html">Карточки</a>
+          <a class="A_navigationFooter" href="/pages/tests.html">Тесты</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const navLinks = document.querySelectorAll(
+          ".M_NavigationStory .A_ArticleNavLink",
+        );
+        const sections = document.querySelectorAll(".O_BlockStoryText");
+
+        function setActiveLink(link) {
+          navLinks.forEach((l) => l.classList.remove("active"));
+          if (link) link.classList.add("active");
+        }
+
+        navLinks.forEach((link) => {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute("href");
+            const targetSection = document.querySelector(targetId);
+
+            if (targetSection) {
+              setActiveLink(this);
+
+              const headerOffset = 100;
+              const elementPosition = targetSection.getBoundingClientRect().top;
+              const offsetPosition =
+                elementPosition + window.pageYOffset - headerOffset;
+
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth",
+              });
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>

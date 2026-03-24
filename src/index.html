@@ -52,67 +52,76 @@
 
   <body>
     <header>
+      <!-- Десктопная версия -->
       <div class="O_Header desktop">
         <nav>
           <a class="A_logoHeader" href="index.html">
             <img src="images/A_logoHeader.webp" alt="Логотип" />
           </a>
           <div class="M_Navigation">
-            <a class="A_navigationHeader" class="A_p" href="pages/about.html"
-              >О нас</a
-            >
-            <a class="A_navigationHeader" class="A_p" href="pages/articles.html"
-              >Статьи</a
-            >
-            <a class="A_navigationHeader" class="A_p" href="pages/cards.html"
-              >Карточки</a
-            >
-            <a class="A_navigationHeader" class="A_p" href="pages/tests.html"
-              >Тесты</a
-            >
+            <a class="A_navigationHeader" href="pages/about.html">О нас</a>
+            <a class="A_navigationHeader" href="pages/articles.html">Статьи</a>
+            <a class="A_navigationHeader" href="pages/cards.html">Карточки</a>
+            <a class="A_navigationHeader" href="pages/tests.html">Тесты</a>
           </div>
-          <div class="M_header_search_bar">
-            <input type="text" class="A_header_search_input" />
-            <div class="W_search_results_dropdown"></div>
+          <!-- Десктопный поиск (скрытое поле, появляется по клику) -->
+          <div class="M_header_search_bar desktop-search">
+            <input
+              type="text"
+              class="A_header_search_input"
+              placeholder="Найти"
+            />
             <div class="W_header_search_icon">
               <div class="Q_iconSearch"></div>
             </div>
+            <div class="W_search_results_dropdown"></div>
           </div>
         </nav>
       </div>
 
-      <!-- Мобильное меню -->
-      <!-- <div class="O_Header mobile">
-          <a class="A_logoHeader_mobile" href="index.html">
-            <img src="images/A_logoHeader.webp" alt="Логотип" />
-          </a>
-          
-          
-          <div class="hamMenu">
-            <div class="Q_menuIcon"></div>
-            <div class="Q_menuIcon"></div>
-            <div class="Q_menuIcon"></div>
-          </div>
-          
-        
-          <div class="menu-overlay">
-            <div class="overlay-header">
-              <img src="images/A_logoHeader.webp" alt="Логотип" />
-              <div class="closeMenu">
-                <div class="Q_closeButton">×</div>
-              </div>
-            </div>
-            
-            <div class="A_inputHeader">
-              <nav class="M_menuItems">
-                <a class="A_navigationHeader_mobile" href="pages/articles.html" class="A_H1">Статьи</a>
-                <a class="A_navigationHeader_mobile" href="pages/cards.html" class="A_H1">Карточки</a>
-                <a class="A_navigationHeader_mobile" href="pages/about.html" class="A_H1">О нас</a>
-              </nav>
-            </div>
+      <!-- Мобильная версия (бургер) -->
+      <div class="O_Header mobile">
+        <a class="A_logoHeader_mobile" href="index.html">
+          <img src="images/A_logoHeader.webp" alt="Логотип" />
+        </a>
+        <div class="hamMenu">
+          <div class="Q_menuIcon"></div>
+          <div class="Q_menuIcon"></div>
+          <div class="Q_menuIcon"></div>
+        </div>
+      </div>
+
+      <!-- Оверлей мобильного меню -->
+      <div class="menu-overlay">
+        <div class="overlay-header">
+          <img src="images/A_logoHeader.webp" alt="Логотип" />
+          <div class="closeMenu">
+            <span class="Q_closeButton">×</span>
           </div>
         </div>
-      </div> -->
+        <div class="M_menuItems">
+          <a class="A_navigationHeader_mobile" href="pages/about.html">О нас</a>
+          <a class="A_navigationHeader_mobile" href="pages/articles.html"
+            >Статьи</a
+          >
+          <a class="A_navigationHeader_mobile" href="pages/cards.html"
+            >Карточки</a
+          >
+          <a class="A_navigationHeader_mobile" href="pages/tests.html">Тесты</a>
+        </div>
+        <!-- Мобильный поиск (всегда открыт) -->
+        <div class="M_header_search_bar mobile-search always-open">
+          <input
+            type="text"
+            class="A_header_search_input"
+            placeholder="Найти"
+          />
+          <div class="W_header_search_icon">
+            <div class="Q_iconSearch"></div>
+          </div>
+          <div class="W_search_results_dropdown"></div>
+        </div>
+      </div>
     </header>
     <div class="M_mainText">
       <h1 class="A_h1 desktop">Запутались в лоре <br />и фанатских теориях?</h1>
@@ -153,7 +162,7 @@
                 <div class="A_Date">20.02.2026</div>
               </div>
               <h2 class="A_ArticleName">
-                «Бегущий человек» <br />
+                «Бегущий человек» эталонная <br />
                 антиутопия эпохи алгоритмов
               </h2>
               <div class="A_TagArticleBigSocialCriticism">
@@ -218,9 +227,9 @@
             <div class="M_CardArticleInfo">
               <h3 class="A_CardName">Дастин Хендерсон</h3>
               <p class="A_CardNameDescription">
-                Уникальная внешность Дастина обусловлена <br />
-                редким генетическим заболеванием актёра —
-                <br />ключично-черепной дисплазией
+                Внешность Дастина обусловлена редким<br />
+                генетическим заболеванием актёра — <br />ключично-черепной
+                дисплазией
               </p>
               <div class="A_CardTagProtagonist">
                 <div class="A_CardTag">Протагонист</div>
@@ -235,8 +244,8 @@
               <h3 class="A_CardName">Ганнибал Лектер</h3>
               <p class="A_CardNameDescription">
                 Прототип персонажа хирург-убийца <br />
-                Альфредо Балли Тревино, с которым писатель <br />
-                познакомился в тюрьме в 1960-х
+                Альфредо Балли Тревино, с которым
+                <br />писатель познакомился в тюрьме
               </p>
               <div class="A_CardTagAntagonist">
                 <div class="A_CardTag">Антагонист</div>

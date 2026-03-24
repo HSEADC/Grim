@@ -56,10 +56,11 @@
 
   <body>
     <header>
+      <!-- Десктопная версия -->
       <div class="O_Header desktop">
         <nav>
           <a class="A_logoHeader" href="../index.html">
-            <img src="../images/A_logoHeader.webp" alt="" />
+            <img src="../images/A_logoHeader.webp" alt="Логотип" />
           </a>
           <div class="M_Navigation">
             <a class="A_navigationHeader" href="about.html">О нас</a>
@@ -67,48 +68,60 @@
             <a class="A_navigationHeader" href="cards.html">Карточки</a>
             <a class="A_navigationHeader" href="tests.html">Тесты</a>
           </div>
-          <div class="M_header_search_bar">
-            <input type="text" class="A_header_search_input" />
-            <div class="W_search_results_dropdown"></div>
+          <!-- Десктопный поиск (скрытое поле, появляется по клику) -->
+          <div class="M_header_search_bar desktop-search">
+            <input
+              type="text"
+              class="A_header_search_input"
+              placeholder="Найти"
+            />
             <div class="W_header_search_icon">
               <div class="Q_iconSearch"></div>
             </div>
+            <div class="W_search_results_dropdown"></div>
           </div>
         </nav>
       </div>
 
-      <!-- Мобильное меню -->
-      <!-- <div class="O_Header mobile">
-          <a class="A_logoHeader_mobile" href="../index.html">
-            <img src="../images/A_logoHeader.webp" alt="Логотип" />
-          </a>
-          
-          
-          <div class="hamMenu">
-            <div class="Q_menuIcon"></div>
-            <div class="Q_menuIcon"></div>
-            <div class="Q_menuIcon"></div>
-          </div>
-          
-          
-          <div class="menu-overlay">
-            <div class="overlay-header">
-              <img src="../images/A_logoHeader.webp" alt="Логотип" />
-              <div class="closeMenu">
-                <div class="Q_closeButton">×</div>
-              </div>
-            </div>
-            
-            <div class="A_inputHeader">
-              <nav class="M_menuItems">
-                <a class="A_navigationHeader_mobile" href="articles.html" class="A_H1">Статьи</a>
-                <a class="A_navigationHeader_mobile" href="cards.html" class="A_H1">Карточки</a>
-                <a class="A_navigationHeader_mobile" href="about.html" class="A_H1">О нас</a>
-              </nav>
-            </div>
+      <!-- Мобильная версия (бургер) -->
+      <div class="O_Header mobile">
+        <a class="A_logoHeader_mobile" href="../index.html">
+          <img src="../images/A_logoHeader.webp" alt="Логотип" />
+        </a>
+        <div class="hamMenu">
+          <div class="Q_menuIcon"></div>
+          <div class="Q_menuIcon"></div>
+          <div class="Q_menuIcon"></div>
+        </div>
+      </div>
+
+      <!-- Оверлей мобильного меню -->
+      <div class="menu-overlay">
+        <div class="overlay-header">
+          <img src="../images/A_logoHeader.webp" alt="Логотип" />
+          <div class="closeMenu">
+            <span class="Q_closeButton">×</span>
           </div>
         </div>
-      </div> -->
+        <div class="M_menuItems">
+          <a class="A_navigationHeader_mobile" href="about.html">О нас</a>
+          <a class="A_navigationHeader_mobile" href="articles.html">Статьи</a>
+          <a class="A_navigationHeader_mobile" href="cards.html">Карточки</a>
+          <a class="A_navigationHeader_mobile" href="tests.html">Тесты</a>
+        </div>
+        <!-- Мобильный поиск (всегда открыт) -->
+        <div class="M_header_search_bar mobile-search always-open">
+          <input
+            type="text"
+            class="A_header_search_input"
+            placeholder="Найти"
+          />
+          <div class="W_header_search_icon">
+            <div class="Q_iconSearch"></div>
+          </div>
+          <div class="W_search_results_dropdown"></div>
+        </div>
+      </div>
     </header>
     <section class="S_MainBannerArticle">
       <div class="W_BannerContainer">
@@ -132,10 +145,61 @@
     </div>
     <!-- -----------------Allarticles-------------------- -->
     <div class="C_AllArticles">
+      <div class="C_ArticlesRow">
+        <a
+          class="O_CardArticleBig"
+          href="articles/big_articles/hereditary.html"
+          data-tags="Концептуальный разбор"
+        >
+          <div class="Q_Image">
+            <img
+              src="/src/images/articles/Q_ImageArticlesMainHereditary.webp"
+              alt=""
+            />
+          </div>
+          <div class="M_ArticleInfo">
+            <div class="M_TagDate">
+              <div class="A_Date">13.12.2025</div>
+            </div>
+            <h2 class="A_ArticleName">
+              Они не могли иначе: <br />
+              фатализм «Реинкарнации»
+            </h2>
+
+            <div class="A_TagArticleBigConceptualAnalysis">
+              <p class="A_p_tag">Концептуальный разбор</p>
+            </div>
+          </div>
+        </a>
+        <a
+          class="O_CardArticleBig"
+          href="articles/short_articles/max-st.html"
+          data-tags="Анализ персонажа"
+        >
+          <div class="Q_Image">
+            <img
+              src="/src/images/articles/Q_ImageArticlesMainMax.webp"
+              alt=""
+            />
+          </div>
+          <div class="M_ArticleInfo">
+            <div class="M_TagDate">
+              <div class="A_Date">15.12.2025</div>
+            </div>
+            <h2 class="A_ArticleName">
+              Вина выжившего и утрата <br />
+              в истории Макс Мэйфилд
+            </h2>
+            <div class="A_TagArticleBigCharacterAnalysis">
+              <p class="A_p_tag">Анализ персонажа</p>
+            </div>
+          </div>
+        </a>
+      </div>
       <div class="C_ArticlesRowThird">
         <a
           class="O_CardArticle"
-          href="pages/articles/big_articles/philosophy-of-the-saw.html"
+          href="articles/big_articles/joyce-st.html"
           data-tags="Анализ персонажа"
         >
           <div class="Q_ImageSmall">
@@ -152,13 +216,13 @@
               Джойс Байерс: плохая мать <br />или жертва обстоятельств?
             </h2>
             <div class="A_TagArticleCharacterAnalysis">
-              <p class="A_p_tag">Анализ персонажа</p>
+              <p class="A_p_tag_small">Анализ персонажа</p>
             </div>
           </div>
         </a>
         <a
           class="O_CardArticle"
-          href="pages/articles/big_articles/philosophy-of-the-saw.html"
+          href="articles/short_articles/it.html"
           data-tags="Психология хоррора"
         >
           <div class="Q_ImageSmall">
@@ -172,13 +236,13 @@
               Почему мы боимся клоунов? <br />Разбор феномена Пеннивайза
             </h2>
             <div class="A_TagArticlePsychologyOfHorror">
-              <p class="A_p_tag">Психология хоррора</p>
+              <p class="A_p_tag_small">Психология хоррора</p>
             </div>
           </div>
         </a>
         <a
           class="O_CardArticle"
-          href="pages/articles/big_articles/philosophy-of-the-saw.html"
+          href="articles/short_articles/getout.html"
           data-tags="Концептуальный разбор"
         >
           <div class="Q_ImageSmall">
@@ -195,7 +259,7 @@
               Символика «Sunken Place» <br />в фильме «Прочь»
             </h2>
             <div class="A_TagArticleConceptualAnalysis">
-              <p class="A_p_tag">Концептуальный разбор</p>
+              <p class="A_p_tag_small">Концептуальный разбор</p>
             </div>
           </div>
         </a>
@@ -203,7 +267,7 @@
       <div class="C_ArticlesRow">
         <a
           class="O_CardArticleBig"
-          href="pages/articles/big_articles/running-man.html"
+          href="articles/big_articles/running-man.html"
           data-tags="Социальная критика"
         >
           <div class="Q_Image">
@@ -214,7 +278,7 @@
               <div class="A_Date">20.02.2026</div>
             </div>
             <h2 class="A_ArticleName">
-              «Бегущий человек» <br />
+              «Бегущий человек» эталонная <br />
               антиутопия эпохи алгоритмов
             </h2>
             <div class="A_TagArticleBigSocialCriticism">
@@ -224,7 +288,7 @@
         </a>
         <a
           class="O_CardArticleBig"
-          href="pages/articles/big_articles/philosophy-of-the-saw.html"
+          href="articles/big_articles/philosophy-of-the-saw.html"
           data-tags="Анализ персонажа"
         >
           <div class="Q_Image">
@@ -253,10 +317,10 @@
           Медиа про лор <br />крупных хоррор фандомов
         </p>
         <div class="M_NavigationFooter">
-          <a class="A_navigationFooter" href="pages/about.html">О нас</a>
-          <a class="A_navigationFooter" href="pages/articles.html">Статьи</a>
-          <a class="A_navigationFooter" href="pages/cards.html">Карточки</a>
-          <a class="A_navigationFooter" href="pages/tests.html">Тесты</a>
+          <a class="A_navigationFooter" href="about.html">О нас</a>
+          <a class="A_navigationFooter" href="articles.html">Статьи</a>
+          <a class="A_navigationFooter" href="cards.html">Карточки</a>
+          <a class="A_navigationFooter" href="tests.html">Тесты</a>
         </div>
       </div>
     </footer>

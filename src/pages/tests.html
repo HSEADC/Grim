@@ -56,65 +56,76 @@
   </head>
   <body>
     <header>
+      <!-- Десктопная версия -->
       <div class="O_Header desktop">
-          <nav>
-            <a class="A_logoHeader" href="../index.html">
-              <img src="../images/A_logoHeader.webp" alt="" />
-            </a>
-            <div class="M_Navigation">
-              <a class="A_navigationHeader" href="about.html">О нас</a>
-              <a class="A_navigationHeader" href="articles.html">Статьи</a>
-              <a class="A_navigationHeader" href="cards.html">Карточки</a>
-              <a class="A_navigationHeader" href="tests.html">Тесты</a>
-            </div>
-            <div class="M_header_search_bar">
-              <input type="text" class="A_header_search_input" />
-              <div class="W_search_results_dropdown"></div>
-              <div class="W_header_search_icon">
-                <div class="Q_iconSearch"></div>
-              </div>
-            </div>
-          </nav>
-      </div>
-      
-        <!-- Мобильное меню -->
-        <!-- <div class="O_Header mobile">
-          <a class="A_logoHeader_mobile" href="../index.html">
+        <nav>
+          <a class="A_logoHeader" href="../index.html">
             <img src="../images/A_logoHeader.webp" alt="Логотип" />
           </a>
-          
-          
-          <div class="hamMenu">
-            <div class="Q_menuIcon"></div>
-            <div class="Q_menuIcon"></div>
-            <div class="Q_menuIcon"></div>
+          <div class="M_Navigation">
+            <a class="A_navigationHeader" href="about.html">О нас</a>
+            <a class="A_navigationHeader" href="articles.html">Статьи</a>
+            <a class="A_navigationHeader" href="cards.html">Карточки</a>
+            <a class="A_navigationHeader" href="tests.html">Тесты</a>
           </div>
-          
-          
-          <div class="menu-overlay">
-            <div class="overlay-header">
-              <img src="../images/A_logoHeader.webp" alt="Логотип" />
-              <div class="closeMenu">
-                <div class="Q_closeButton">×</div>
-              </div>
+          <!-- Десктопный поиск (скрытое поле, появляется по клику) -->
+          <div class="M_header_search_bar desktop-search">
+            <input
+              type="text"
+              class="A_header_search_input"
+              placeholder="Найти"
+            />
+            <div class="W_header_search_icon">
+              <div class="Q_iconSearch"></div>
             </div>
-            
-            <div class="A_inputHeader">
-              <nav class="M_menuItems">
-                <a class="A_navigationHeader_mobile" href="articles.html">Статьи</a>
-                <a class="A_navigationHeader_mobile" href="cards.html">Карточки</a>
-                <a class="A_navigationHeader_mobile" href="about.html">О нас</a>
-              </nav>
-            </div>
+            <div class="W_search_results_dropdown"></div>
           </div>
-        </div> -->
+        </nav>
+      </div>
+
+      <!-- Мобильная версия (бургер) -->
+      <div class="O_Header mobile">
+        <a class="A_logoHeader_mobile" href="../index.html">
+          <img src="../images/A_logoHeader.webp" alt="Логотип" />
+        </a>
+        <div class="hamMenu">
+          <div class="Q_menuIcon"></div>
+          <div class="Q_menuIcon"></div>
+          <div class="Q_menuIcon"></div>
+        </div>
+      </div>
+
+      <!-- Оверлей мобильного меню -->
+      <div class="menu-overlay">
+        <div class="overlay-header">
+          <img src="../images/A_logoHeader.webp" alt="Логотип" />
+          <div class="closeMenu">
+            <span class="Q_closeButton">×</span>
+          </div>
+        </div>
+        <div class="M_menuItems">
+          <a class="A_navigationHeader_mobile" href="about.html">О нас</a>
+          <a class="A_navigationHeader_mobile" href="articles.html">Статьи</a>
+          <a class="A_navigationHeader_mobile" href="cards.html">Карточки</a>
+          <a class="A_navigationHeader_mobile" href="tests.html">Тесты</a>
+        </div>
+        <!-- Мобильный поиск (всегда открыт) -->
+        <div class="M_header_search_bar mobile-search always-open">
+          <input
+            type="text"
+            class="A_header_search_input"
+            placeholder="Найти"
+          />
+          <div class="W_header_search_icon">
+            <div class="Q_iconSearch"></div>
+          </div>
+          <div class="W_search_results_dropdown"></div>
+        </div>
       </div>
     </header>
     <section class="S_MainBannerTests">
       <div class="W_BannerContainer">
-        <h1 class="A_h1">
-          Какие скелеты <br />спрятаны в твоём <br />шкафу?
-        </h1>
+        <h1 class="A_h1">Какие скелеты <br />спрятаны в твоём <br />шкафу?</h1>
       </div>
     </section>
     <div class="C_AllTests">
@@ -127,13 +138,14 @@
               Какой поджанр <br />хоррора тебе <br />подходит?
             </h3>
           </div>
-          <a href="tests/suitable-horror-subgenre.html" class="A_TestButton">Пройти</a>
+          <a href="tests/suitable-horror-subgenre.html" class="A_TestButton"
+            >Пройти</a
+          >
         </div>
         <div class="Q_CardTestImg">
           <img src="../images/tests/Q_CardTestImgAlien.webp" alt="Тест" />
         </div>
       </div>
-
       <!-- Карточка 2 -->
       <div class="O_CardTest">
         <div class="O_CardTextGroup">
@@ -143,13 +155,14 @@
               Насколько хорошо <br />ты разбираешься <br />в хоррорах?
             </h3>
           </div>
-          <a href="tests/knowledge-popular-horrors.html" class="A_TestButton">Пройти</a>
+          <a href="tests/knowledge-popular-horrors.html" class="A_TestButton"
+            >Пройти</a
+          >
         </div>
         <div class="Q_CardTestImg">
           <img src="../images/tests/Q_cardTextImgShining.webp" alt="Тест" />
         </div>
       </div>
-
       <!-- Карточка 3 -->
       <div class="O_CardTest">
         <div class="O_CardTextGroup">
@@ -162,10 +175,12 @@
           <a href="tests/final-destination.html" class="A_TestButton">Пройти</a>
         </div>
         <div class="Q_CardTestImg">
-          <img src="../images/tests/Q_CardTestImgFinalDestination.webp" alt="Тест" />
+          <img
+            src="../images/tests/Q_CardTestImgFinalDestination.webp"
+            alt="Тест"
+          />
         </div>
       </div>
-
       <!-- Карточка 4 -->
       <div class="O_CardTest">
         <div class="O_CardTextGroup">
@@ -191,12 +206,12 @@
           Медиа про лор <br />крупных хоррор фандомов
         </p>
         <div class="M_NavigationFooter">
-          <a class="A_navigationFooter" href="pages/about.html">О нас</a>
-          <a class="A_navigationFooter" href="pages/articles.html">Статьи</a>
-          <a class="A_navigationFooter" href="pages/cards.html">Карточки</a>
-          <a class="A_navigationFooter" href="pages/tests.html">Тесты</a>
+          <a class="A_navigationFooter" href="about.html">О нас</a>
+          <a class="A_navigationFooter" href="articles.html">Статьи</a>
+          <a class="A_navigationFooter" href="cards.html">Карточки</a>
+          <a class="A_navigationFooter" href="tests.html">Тесты</a>
         </div>
       </div>
-    </footer>  
+    </footer>
   </body>
 </html>

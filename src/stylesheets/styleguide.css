@@ -14,7 +14,7 @@
   --spacing-10: 1rem;
   --spacing-15: 1.5rem;
   --spacing-35: 3.5rem;
-  --spacing-50: 2rem;
+  --spacing-50: 3rem;
   --spacing-60: 6rem;
   --spacing-100: 10rem;
 }
@@ -28,7 +28,9 @@ html {
 }
 
 body {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
   background-color: #11141b;
   overflow-x: hidden;
 }
@@ -41,27 +43,33 @@ body {
   font-size: 1.25rem;
 }
 
-.A_h2 {
+.A_H2 {
   font-family: "SuisseIntl-Book";
-  font-size: 3.1rem;
+  color: var(--white);
+  font-size: 2rem;
 }
 
 .A_h1_style {
   font-family: "SuisseIntl-Book";
   color: var(--white);
   text-transform: uppercase;
+  font-size: 3.12rem;
+  line-height: 110%;
+  /* font-family: "SuisseIntl-Book";
+  color: var(--white);
+  text-transform: uppercase;
   letter-spacing: 0.1rem;
-  font-size: 4.37rem;
+  font-size: 4.37rem; */
 }
 
 .A_p_style {
   font-family: "SuisseIntl-Book";
   font-size: 1.25rem;
   color: var(--white);
-  line-height: 1.3rem;
+  line-height: 1.2rem;
 }
 
-.W_preview {
+/* .W_preview {
   padding-top: 0;
   align-items: center;
   display: flex;
@@ -73,22 +81,60 @@ body {
   padding: var(--spacing-35);
   position: relative;
   width: 100%;
+} */
+.W_preview {
+  background: url("/src/images/styleguide/M_StyleguideBackground.webp")
+    no-repeat center/cover;
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.W_styleguide_content {
+/* .W_styleguide_content {
   display: flex;
   height: fit-content;
   justify-content: space-between;
-  padding: var(--spacing-60);
+  padding: 5rem 2.3rem 0rem 2.3rem;
   position: relative;
-  gap: 5rem;
+} */
+
+/* .W_style_guide_content {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+} */
+
+/* .W_styleguide_menu {
+
+  height: fit-content;
+  position: sticky;
+  top: 10rem;
+} */
+
+.W_styleguide_content {
+  display: flex;
+  gap: 4rem; /* фиксированный отступ между меню и контентом */
+  padding: 5rem;
+  position: relative;
 }
 
 .W_styleguide_menu {
+  flex-shrink: 0; /* не сжимается */
+  width: 250px; /* фиксированная ширина меню */
   position: sticky;
-  top: var(--spacing-100);
-
+  top: 10rem;
   height: fit-content;
+}
+
+.W_style_guide_content {
+  flex: 1; /* занимает всё оставшееся место */
+  min-width: 0; /* разрешаем сжиматься */
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
 }
 
 .W_styleguide_menu_ul {
@@ -107,7 +153,8 @@ body {
 .W_styleguide_about_us {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-50);
+  /* gap: var(--spacing-50); */
+  gap: 2rem;
 }
 
 .W_styleguide_about_us_text {
@@ -117,17 +164,27 @@ body {
 }
 
 .W_styleguide_about_us_values_image {
-  width: 63.4rem;
+  width: 42rem;
 
-  height: 34rem;
+  height: 22rem;
 
-  background: url("/src/images/M_values.webp") no-repeat center/100%;
+  background: url("/src/images/styleguide/M_Values.webp") no-repeat center/100%;
 }
 
 .W_styleguide_about_us_values {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-50);
+}
+
+.W_styleguide_about_us_mission_image {
+  width: 56rem;
+
+  height: 36rem;
+  border-radius: var(--radiusBig);
+
+  background: url("/src/images/styleguide/M_OurMission.webp") no-repeat
+    center/100%;
 }
 
 .A_styleguide_image {
@@ -157,6 +214,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-100);
+  /* margin-left: 4rem; */
 }
 
 .W_styleguide_image_logo_two {
@@ -298,6 +356,22 @@ body {
   background: url("/src/images/A_logoHeader.webp") no-repeat center/100%;
 }
 
+@media (max-width: 1200px) {
+  .W_styleguide_content {
+    gap: 2rem;
+    padding: 3rem;
+  }
+  .W_styleguide_menu {
+    width: 220px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .W_style_guide_content {
+    gap: 6rem;
+  }
+}
+
 @media (max-width: 960px) {
   .A_styleguide_image,
   .W_styleguide_image,
@@ -371,13 +445,26 @@ body {
     background: url("/src/images/Mockup3_small.webp") no-repeat center/100%;
   }
 
-  .W_styleguide_content {
+  /* .W_styleguide_content {
     display: flex;
     height: fit-content;
     justify-content: space-between;
     padding: var(--spacing-50);
     position: relative;
     gap: 2rem;
+  } */
+
+  .W_styleguide_menu {
+    display: none;
+  }
+
+  .W_styleguide_content {
+    gap: 0;
+    padding: 3rem;
+  }
+
+  .W_style_guide_content {
+    gap: 6rem;
   }
 
   .A_h1_style {
