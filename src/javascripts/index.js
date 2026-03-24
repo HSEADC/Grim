@@ -1,7 +1,6 @@
 import "../stylesheets/style.css";
 
 document.addEventListener("DOMContentLoaded", () => {
-  // --- Мобильное меню ---
   const hamMenu = document.querySelector(".hamMenu");
   const menuOverlay = document.querySelector(".menu-overlay");
   const closeBtn = document.querySelector(".closeMenu");
@@ -34,7 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // --- Данные для поиска (ваши статьи) ---
   const articleData = [
     {
       title: "Джойс Байерс: плохая мать или жертва обстоятельств?",

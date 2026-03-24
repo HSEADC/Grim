@@ -7,18 +7,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   filterTags.forEach((tag) => {
     tag.addEventListener("click", function () {
-      const selectedTag = this.innerText.trim(); // текст тега (например, "Анализ персонажа")
+      const selectedTag = this.innerText.trim();
 
-      // Если текущий тег уже активен — сбрасываем фильтр
       if (this.classList.contains("active")) {
         this.classList.remove("active");
-        articles.forEach((article) => (article.style.display = "")); // показываем все статьи
+        articles.forEach((article) => (article.style.display = ""));
       } else {
-        // Иначе активируем этот тег и деактивируем все остальные
         filterTags.forEach((t) => t.classList.remove("active"));
         this.classList.add("active");
 
-        // Фильтруем статьи
         articles.forEach((article) => {
           const articleTags = article.getAttribute("data-tags");
           if (
