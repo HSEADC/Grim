@@ -2,158 +2,150 @@
 /******/ 	"use strict";
 
 document.addEventListener("DOMContentLoaded", function () {
-  var navButtons = document.querySelectorAll(".A_header_search_input");
-  var currentPath = window.location.pathname;
-  navButtons.forEach(function (button) {
-    if (button.getAttribute("href") === currentPath) {
-      button.style.background = "var(--grey)";
-    }
-  });
+  // --- Мобильное меню ---
+  var hamMenu = document.querySelector(".hamMenu");
+  var menuOverlay = document.querySelector(".menu-overlay");
+  var closeBtn = document.querySelector(".closeMenu");
+  var menuLinks = document.querySelectorAll(".A_navigationHeader_mobile");
+  if (hamMenu && menuOverlay && closeBtn) {
+    hamMenu.addEventListener("click", function () {
+      menuOverlay.classList.add("active");
+      document.body.classList.add("menu-open");
+    });
+    closeBtn.addEventListener("click", function () {
+      menuOverlay.classList.remove("active");
+      document.body.classList.remove("menu-open");
+    });
+    menuLinks.forEach(function (link) {
+      link.addEventListener("click", function () {
+        menuOverlay.classList.remove("active");
+        document.body.classList.remove("menu-open");
+      });
+    });
+
+    // Закрытие по клику вне оверлея (на подложку)
+    menuOverlay.addEventListener("click", function (e) {
+      if (e.target === menuOverlay) {
+        menuOverlay.classList.remove("active");
+        document.body.classList.remove("menu-open");
+      }
+    });
+  }
+
+  // --- Данные для поиска (ваши статьи) ---
   var articleData = [{
     title: "Джойс Байерс: плохая мать или жертва обстоятельств?",
     url: "pages/articles/big_articles/joyce-st.html",
-    description: "Почему осуждение Джойс Байерс несправедливо."
+    description: "Почему осуждение Джойс Байерс несправедливо"
   }, {
     title: "Философия Пилы: Почему Джон Крамер – не просто злодей.",
     url: "pages/articles/big_articles/philosophy-of-the-saw.html",
-    description: "Разбираем искалеченную трагедией философию Джона Крамера."
+    description: "Разбираем искалеченную трагедией философию Джона Крамера"
   }, {
     title: "Почему «Return to Silent Hill» оказался пустой оболочкой.",
     url: "pages/articles/big_articles/return-to-silent-hill.html",
-    description: "Бездушная копия культовой игры."
+    description: "Бездушная копия культовой игры"
   }, {
     title: "Они не могли иначе: фатализм «Реинкарнации»",
     url: "pages/articles/big_articles/hereditary.html",
-    description: "Трагедия отсутствия свободы воли."
+    description: "Трагедия отсутствия свободы воли"
   }, {
     title: "«Бегущий человек» как антиутопия эпохи алгоритмов",
     url: "pages/articles/big_articles/running-man.html",
-    description: "Антиутопия, где человеческое внимание стало валютой алгоритмов."
+    description: "Антиутопия, где человеческое внимание стало валютой алгоритмов"
   }, {
     title: "Почему мы боимся клоунов? Разбор феномена Пеннивайза.",
     url: "pages/articles/short_articles/it.html",
-    description: "Почему мы боимся клоунов после «Оно»."
+    description: "Почему мы боимся клоунов после «Оно»"
   }];
-  var searchIcon = document.querySelector(".W_header_search_icon");
-  var searchInput = document.querySelector(".A_header_search_input");
-  var searchResults = document.querySelector(".W_search_results_dropdown");
-  var isOpen = false;
-  if (!searchIcon || !searchInput || !searchResults) return;
-  searchIcon.addEventListener("click", function (e) {
-    e.stopPropagation();
-    if (!isOpen) {
-      searchInput.style.width = "280px";
-      searchInput.style.padding = "0 12px";
-      searchInput.style.opacity = "1";
-      searchInput.style.border = "none";
-      searchInput.style.right = "30px";
+
+  // --- Универсальная функция инициализации поиска ---
+  function initSearch(containerSelector) {
+    var alwaysOpen = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+    var container = document.querySelector(containerSelector);
+    if (!container) return;
+    var searchIcon = container.querySelector(".W_header_search_icon");
+    var searchInput = container.querySelector(".A_header_search_input");
+    var searchResults = container.querySelector(".W_search_results_dropdown");
+    var isOpen = alwaysOpen; // для мобильного поиска всегда true, но не используется для управления классом
+
+    if (!searchIcon || !searchInput || !searchResults) return;
+    function showResults(results) {
+      searchResults.innerHTML = "";
+      if (results.length === 0) {
+        searchResults.innerHTML = '<div class="M_search_result_item"><p class="text_medium_description_text">Ничего не найдено</p></div>';
+      } else {
+        results.slice(0, 5).forEach(function (item) {
+          var result = document.createElement("a");
+          result.className = "M_search_result_item";
+          result.href = item.url;
+          result.innerHTML = "\n            <h4 class=\"text_medium_description_text\">".concat(item.title, "</h4>\n            <p class=\"text_small_description_text\">").concat(item.description, "</p>\n          ");
+          searchResults.appendChild(result);
+        });
+      }
+      searchResults.classList.add("show");
+    }
+    function hideResults() {
+      searchResults.classList.remove("show");
+    }
+    function openSearch() {
+      container.classList.add("open");
       searchInput.focus();
-      searchIcon.style.background = "var(--black)"; // или любой цвет при открытии
       isOpen = true;
-    } else {
-      closeSearch();
     }
-  });
-  searchInput.addEventListener("input", function () {
-    var query = searchInput.value.trim();
-    if (query.length > 0) {
-      var filteredResults = articleData.filter(function (article) {
-        var lowerQuery = query.toLowerCase();
-        return article.title.toLowerCase().includes(lowerQuery) || article.description.toLowerCase().includes(lowerQuery);
-      });
-      showResults(filteredResults);
-    } else {
+    function closeSearch() {
+      container.classList.remove("open");
+      searchInput.value = "";
       hideResults();
+      isOpen = false;
     }
-  });
-  document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape" && isOpen) {
-      closeSearch();
-    }
-  });
-  document.addEventListener("click", function (e) {
-    if (isOpen && !e.target.closest(".M_header_search_bar")) {
-      closeSearch();
-    }
-  });
-  function showResults(results) {
-    searchResults.innerHTML = "";
-    if (results.length === 0) {
-      searchResults.innerHTML = "\n        <div class=\"M_search_result_item\">\n          <p class=\"text_medium_description_text\">\u041D\u0438\u0447\u0435\u0433\u043E \u043D\u0435 \u043D\u0430\u0439\u0434\u0435\u043D\u043E</p>\n        </div>\n      ";
-    } else {
-      results.slice(0, 5).forEach(function (item) {
-        var result = document.createElement("a");
-        result.className = "M_search_result_item";
-        result.href = item.url;
-        result.innerHTML = "\n          <h4 class=\"text_medium_description_text\">".concat(item.title, "</h4>\n          <p class=\"text_small_description_text\">").concat(item.description, "</p>\n        ");
-        searchResults.appendChild(result);
+
+    // Для десктопа (не alwaysOpen) обрабатываем клик по иконке
+    if (!alwaysOpen) {
+      searchIcon.addEventListener("click", function (e) {
+        e.stopPropagation();
+        if (!isOpen) {
+          openSearch();
+        } else {
+          closeSearch();
+        }
+      });
+
+      // Закрытие по Escape и клику вне
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && isOpen) {
+          closeSearch();
+        }
+      });
+      document.addEventListener("click", function (e) {
+        if (isOpen && !container.contains(e.target)) {
+          closeSearch();
+        }
       });
     }
-    searchResults.style.display = "block";
-    setTimeout(function () {
-      return searchResults.style.opacity = "1";
-    }, 10);
+
+    // Обработка ввода (для всех)
+    searchInput.addEventListener("input", function () {
+      var query = searchInput.value.trim().toLowerCase();
+      if (query.length > 0) {
+        var filtered = articleData.filter(function (article) {
+          return article.title.toLowerCase().includes(query) || article.description.toLowerCase().includes(query);
+        });
+        showResults(filtered);
+      } else {
+        hideResults();
+      }
+    });
+
+    // Не закрывать список при клике на него
+    searchResults.addEventListener("click", function (e) {
+      return e.stopPropagation();
+    });
   }
-  function hideResults() {
-    searchResults.style.opacity = "0";
-    setTimeout(function () {
-      return searchResults.style.display = "none";
-    }, 200);
-  }
-  function closeSearch() {
-    searchInput.style.width = "0";
-    searchInput.style.padding = "0";
-    searchInput.style.opacity = "0";
-    searchInput.style.border = "none";
-    searchInput.value = "";
-    searchInput.style.right = "30px";
-    searchIcon.style.background = "var(--black)";
-    hideResults();
-    isOpen = false;
-  }
+
+  // Инициализация поиска для десктопа и мобильной версии
+  initSearch(".desktop-search", false);
+  initSearch(".mobile-search", true);
 });
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   // Получаем элементы
-//   const hamMenu = document.querySelector(".hamMenu");
-//   const closeMenu = document.querySelector(".closeMenu");
-//   const menuOverlay = document.querySelector(".menu-overlay");
-
-//   // Проверяем, есть ли элементы на странице
-//   if (!hamMenu || !closeMenu || !menuOverlay) {
-//     console.log("Не все элементы меню найдены на странице");
-//     return;
-//   }
-
-//   // Открываем меню
-//   hamMenu.addEventListener("click", function (e) {
-//     e.stopPropagation(); // Останавливаем всплытие события
-//     menuOverlay.classList.add("active");
-//     document.body.style.overflow = "hidden"; // Блокируем скролл страницы
-//   });
-
-//   // Закрываем меню
-//   closeMenu.addEventListener("click", function () {
-//     menuOverlay.classList.remove("active");
-//     document.body.style.overflow = ""; // Разблокируем скролл
-//   });
-
-//   // Закрываем меню при клике на ссылку
-//   const menuLinks = document.querySelectorAll(".C_menuItems .A_H1");
-//   menuLinks.forEach((link) => {
-//     link.addEventListener("click", () => {
-//       menuOverlay.classList.remove("active");
-//       document.body.style.overflow = "";
-//     });
-//   });
-
-//   // Закрываем меню при клике вне его
-//   menuOverlay.addEventListener("click", (e) => {
-//     if (e.target === menuOverlay) {
-//       menuOverlay.classList.remove("active");
-//       document.body.style.overflow = "";
-//     }
-//   });
-// });
 /******/ })()
 ;
