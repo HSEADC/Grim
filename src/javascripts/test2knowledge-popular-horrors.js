@@ -165,7 +165,7 @@ function renderQuestion() {
   // Обработчики для левой кнопки
   if (currentQuestionIndex === 0) {
     document.getElementById("backButton").addEventListener("click", () => {
-      window.location.href = "/pages/tests.html"; // путь к странице со списком тестов
+      window.location.href = "../../pages/tests.html"; // путь к странице со списком тестов
     });
   } else {
     document
@@ -225,7 +225,7 @@ function showResults() {
         <p class="A_ResultCaption text_body_text">${result.caption}</p>
       </div>
       <div class="W_ResultButtons">
-        <a href="/pages/tests.html" class="A_BackToTestsButton text_button_text">Пройти другие тесты</a>
+        <a href="../../pages/tests.html" class="A_BackToTestsButton text_button_text">Пройти другие тесты</a>
       </div>
     </div>
   `;

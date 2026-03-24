@@ -11,7 +11,6 @@ module.exports = {
     index: "./src/javascripts/index.js",
     filterTags: "./src/javascripts/filterTags.js",
     filterArticles: "./src/javascripts/filterArticles.js",
-    articles: "./src/javascripts/articles.js",
     tests: "./src/javascripts/tests.js",
     test1: "./src/javascripts/test1suitable-horror-subgenre.js",
     test2: "./src/javascripts/test2knowledge-popular-horrors.js",
