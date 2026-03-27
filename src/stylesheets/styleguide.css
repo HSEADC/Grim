@@ -800,14 +800,8 @@ body {
   }
 
   /* .A_styleguide_image, */
-  .W_styleguide_image_logo_two,
+  /* .W_styleguide_image_logo_two, */
   .W_styleguide_about_us_mission_image,
-  .W_styleguide_color_palette,
-  .W_styleguide_font_image,
-  .W_styleguide_image_image,
-  .A_styleguide_media_image,
-  .A_styleguide_media_image_one,
-  .A_styleguide_media_image_two,
   .A_styleguide_media_image_three,
   .W_styleguide_image_color_logo,
   .W_styleguide_image_only_logo,
@@ -820,9 +814,33 @@ body {
     aspect-ratio: 9 / 16;
   }
 
+  .W_styleguide_image_image,
+  .A_styleguide_media_image,
+  .A_styleguide_media_image_one,
+  .A_styleguide_media_image_two,
+  .W_styleguide_image_logo_two {
+    aspect-ratio: 9 / 14;
+  }
+
+  .W_styleguide_image_logo_two {
+    aspect-ratio: 8 / 11;
+  }
+
   .W_styleguide_two_columns {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+
+  .W_styleguide_about_us_values_image {
+    aspect-ratio: 10 / 18;
+  }
+
+  .W_styleguide_color_palette {
+    aspect-ratio: 8 / 18;
+  }
+
+  .W_styleguide_font_image {
+    aspect-ratio: 9 / 15;
   }
 
   /* Дополнительная настройка отступов для текстовых блоков */
