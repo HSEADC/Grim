@@ -567,19 +567,25 @@ body {
   gap: var(--spacing-10);
 }
 
+.W_styleguide_two_columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  width: 100%;
+}
+
 /* === ИСПРАВЛЕНИЕ ДЛЯ БЛОКОВ ЦЕННОСТИ И МИССИИ === */
 .W_styleguide_about_us_values,
 .W_styleguide_about_us_mission {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-50);
-  width: 100%; /* принудительная одинаковая ширина */
+  width: 100%;
 }
 
 /* Общие правила для всех изображений */
 .A_styleguide_image,
 .W_styleguide_image_logo_two,
-.W_styleguide_about_us_values_image,
 .W_styleguide_about_us_mission_image,
 .W_styleguide_color_palette,
 .W_styleguide_font_image,
@@ -600,27 +606,36 @@ body {
   background-repeat: no-repeat;
 }
 
+.W_styleguide_about_us_values_image {
+  display: block;
+  width: 80%;
+  height: auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 /* Пропорции (aspect-ratio) */
 .A_styleguide_image {
-  aspect-ratio: 63 / 34;
+  aspect-ratio: 70 / 34;
 }
 .W_styleguide_image_logo_two {
-  aspect-ratio: 64 / 18;
+  aspect-ratio: 56 / 18;
 }
 .W_styleguide_about_us_values_image {
-  aspect-ratio: 42 / 22;
+  aspect-ratio: 41 / 22;
 }
 .W_styleguide_about_us_mission_image {
   aspect-ratio: 56 / 36;
 }
 .W_styleguide_color_palette {
-  aspect-ratio: 63 / 36;
+  aspect-ratio: 78 / 36;
 }
 .W_styleguide_font_image {
-  aspect-ratio: 63 / 34;
+  aspect-ratio: 62 / 34;
 }
 .W_styleguide_image_image {
-  aspect-ratio: 63 / 24;
+  aspect-ratio: 78 / 25;
 }
 .A_styleguide_media_image {
   aspect-ratio: 63 / 34;
@@ -649,7 +664,7 @@ body {
 
 /* Индивидуальные фоны */
 .W_styleguide_about_us_values_image {
-  background: url("/src/images/styleguide/M_Values.webp") no-repeat center/cover;
+  background: url("/src/images/styleguide/M_Values.svg") no-repeat center/cover;
 }
 .W_styleguide_about_us_mission_image {
   border-radius: var(--radiusBig);
@@ -657,22 +672,26 @@ body {
     center/cover;
 }
 .A_styleguide_logo_image {
-  background: url("/src/images/A_logos.webp") no-repeat center/cover;
+  background: url("/src/images/styleguide/M_Logo.webp") no-repeat center/cover;
 }
 .W_styleguide_image_logo_two {
-  background: url("/src/images/M_logos.webp") no-repeat center/cover;
+  background: url("/src/images/styleguide/M_SmallLogos.webp") no-repeat
+    center/cover;
 }
 .W_styleguide_color_palette_one {
-  background: url("/src/images/M_colors.webp") no-repeat center/cover;
+  background: url("/src/images/styleguide/M_ColorGrid.png") no-repeat
+    center/cover;
 }
 .W_styleguide_font_image_one {
-  background: url("/src/images/M_typography.webp") no-repeat center/cover;
+  background: url("/src/images/styleguide/M_Table.webp") no-repeat center/cover;
 }
 .W_styleguide_image_image_one {
-  background: url("/src/images/M_style.webp") no-repeat center/cover;
+  background: url("/src/images/styleguide/M_GraphicsLine1.webp") no-repeat
+    center/cover;
 }
 .W_styleguide_image_image_two {
-  background: url("/src/images/M_style_second.webp") no-repeat center/cover;
+  background: url("/src/images/styleguide/M_GraphicsLine2.webp") no-repeat
+    center/cover;
 }
 .A_styleguide_media_image_one {
   background: url("/src/images/mocup1.webp") no-repeat center/cover;
@@ -715,28 +734,36 @@ body {
 
   /* Замена фонов для мобильных */
   .A_styleguide_logo_image {
-    background: url("/src/images/A_logos_small_mobile.webp") no-repeat
-      center/cover;
+    background: url("/src/images/styleguide/M_Logo.webp") no-repeat center/cover;
   }
   .W_styleguide_image_logo_two {
-    background: url("/src/images/M_logos_small.webp") no-repeat center/cover;
+    background: url("/src/images/styleguide/M_SmallLogosMobile.webp") no-repeat
+      center/cover;
   }
   .W_styleguide_about_us_values_image {
-    background: url("/src/images/A_values_small.webp") no-repeat center/cover;
+    background: url("/src/images/styleguide/M_ValuesMobile.webp") no-repeat
+      center/cover;
   }
+  .W_styleguide_about_us_mission_image {
+    background: url("/src/images/styleguide/M_OurMissionMobile.webp") no-repeat
+      center/cover;
+  }
+
   .W_styleguide_color_palette_one {
-    background: url("/src/images/M_colors_small.webp") no-repeat center/cover;
+    background: url("/src/images/styleguide/M_ColorGridMobile.webp") no-repeat
+      center/cover;
   }
   .W_styleguide_image_image_one {
-    background: url("/src/images/M_style_small.webp") no-repeat center/cover;
+    background: url("/src/images/styleguide/M_GraphicsLine1Mobile.webp")
+      no-repeat center/cover;
   }
   .W_styleguide_font_image_one {
-    background: url("/src/images/M_typography_small.webp") no-repeat
+    background: url("/src/images/styleguide/M_TableMobile.webp") no-repeat
       center/cover;
   }
   .W_styleguide_image_image_two {
-    background: url("/src/images/M_style_small_second.webp") no-repeat
-      center/cover;
+    background: url("/src/images/styleguide/M_GraphicsLine2Mobile.webp")
+      no-repeat center/cover;
   }
   .A_styleguide_media_image_one {
     background: url("/src/images/Mockup1_small.webp") no-repeat center/cover;
@@ -746,6 +773,10 @@ body {
   }
   .A_styleguide_media_image_three {
     background: url("/src/images/Mockup3_small.webp") no-repeat center/cover;
+  }
+
+  .W_styleguide_about_us_values_image {
+    width: 100%;
   }
 
   /* Типографика */
@@ -766,5 +797,49 @@ body {
   }
   .A_p_style {
     font-size: 1.3rem;
+  }
+
+  /* .A_styleguide_image, */
+  .W_styleguide_image_logo_two,
+  .W_styleguide_about_us_mission_image,
+  .W_styleguide_color_palette,
+  .W_styleguide_font_image,
+  .W_styleguide_image_image,
+  .A_styleguide_media_image,
+  .A_styleguide_media_image_one,
+  .A_styleguide_media_image_two,
+  .A_styleguide_media_image_three,
+  .W_styleguide_image_color_logo,
+  .W_styleguide_image_only_logo,
+  .A_styleguide_sticker_image,
+  .W_styleguide_font_image_big,
+  .A_styleguide_media_image_one,
+  .W_styleguide_about_us_values_image,
+  .A_styleguide_media_image_two,
+  .A_styleguide_media_image_three {
+    aspect-ratio: 9 / 16;
+  }
+
+  .W_styleguide_two_columns {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  /* Дополнительная настройка отступов для текстовых блоков */
+  .W_styleguide_about_us_text {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .W_preview {
+    background: url("/src/images/styleguide/M_StyleguideBackgroundMobile.webp")
+      no-repeat center/cover;
+    min-height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
