@@ -1,444 +1,3 @@
-/* :root {
-  --white: #ffffff;
-  --red: #bc0101;
-  --black: #11141b;
-  --grey: #9494a0;
-  --silver: silver;
-  --shadow: 0px 0px 16px 0px rgba(255, 0, 4, 0.7);
-  --radiusBig: 0.9rem;
-  --radiusMedium: 0.6rem;
-  --radiusSmall: 0.5rem;
-  --fontP: 400 1rem / 1rem "SuisseIntl", sans-serif;
-  --fontLevelTags: 450 0.9rem / 0.8rem "SuisseIntl", sans-serif;
-  --fontMainButton: 550 1.3rem / 1.5rem "SuisseIntl", sans-serif;
-  --spacing-10: 1rem;
-  --spacing-15: 1.5rem;
-  --spacing-35: 3.5rem;
-  --spacing-50: 3rem;
-  --spacing-60: 6rem;
-  --spacing-100: 10rem;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 16px;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  background-color: #11141b;
-  overflow-x: hidden;
-}
-
-.A_h3 {
-  font-family: "SuisseIntl-Book";
-  letter-spacing: -0.02rem;
-  text-align: center;
-  color: var(--grey);
-  font-size: 1.25rem;
-}
-
-.A_H2 {
-  font-family: "SuisseIntl-Book";
-  color: var(--white);
-  font-size: 2rem;
-}
-
-.A_h1_style {
-  font-family: "SuisseIntl-Book";
-  color: var(--white);
-  text-transform: uppercase;
-  font-size: 3.12rem;
-  line-height: 110%;
-}
-
-.A_p_style {
-  font-family: "SuisseIntl-Book";
-  font-size: 1.25rem;
-  color: var(--white);
-  line-height: 1.2rem;
-}
-
-.W_preview {
-  background: url("/src/images/styleguide/M_StyleguideBackground.webp")
-    no-repeat center/cover;
-  min-height: 100vh;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.W_styleguide_content {
-  display: flex;
-  gap: 4rem;
-  padding: 5rem;
-  position: relative;
-}
-
-.W_styleguide_menu {
-  width: 250px;
-  position: sticky;
-  top: 10rem;
-  height: fit-content;
-}
-
-.W_style_guide_content {
-  flex: 1;
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 10rem;
-}
-
-.W_styleguide_menu_ul {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-15);
-}
-
-.W_styleguide_text {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-10);
-  max-width: 49rem;
-}
-
-.W_styleguide_about_us {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.W_styleguide_about_us_text {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-10);
-}
-
-.W_styleguide_about_us_values_image {
-  width: 42rem;
-
-  height: 22rem;
-
-  background: url("/src/images/styleguide/M_Values.webp") no-repeat center/100%;
-}
-
-.W_styleguide_about_us_values {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-50);
-}
-
-.W_styleguide_about_us_mission_image {
-  width: 56rem;
-
-  height: 36rem;
-  border-radius: var(--radiusBig);
-
-  background: url("/src/images/styleguide/M_OurMission.webp") no-repeat
-    center/100%;
-}
-
-.A_styleguide_image {
-  width: 63rem;
-  height: 34rem;
-  align-self: flex-start;
-}
-
-.W_styleguide_image {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--spacing-10);
-}
-
-.W_styleguide_about_us_mission {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-50);
-}
-
-.A_styleguide_logo_image {
-  background: url("/src/images/A_logos.webp") no-repeat center/100%;
-}
-
-.W_style_guide_content {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-100);
-}
-
-.W_styleguide_image_logo_two {
-  width: 64rem;
-
-  height: 18rem;
-
-  background: url("/src/images/M_logos.webp") no-repeat center/100%;
-}
-
-.W_styleguide_image_only_logo {
-  width: 57.6rem;
-
-  height: 18rem;
-
-  background: url("/src/images/A_logoHeader.webp") no-repeat center/100%;
-}
-
-.A_styleguide_logo_three_image {
-  background: url("/src/images/A_logoHeader.webp") no-repeat center/100%;
-}
-
-.W_styleguide_image_color_logo {
-  width: 91.8rem;
-
-  height: 38.5rem;
-}
-
-.W_styleguide_image_color_logo_one {
-  background: url("/src/images/A_logoHeader.webp") no-repeat center/100%;
-}
-
-.W_styleguide_image_color_logo_two {
-  background: url("/src/images/A_logoHeader.webp") no-repeat center/100%;
-}
-
-.W_styleguide_image_color_logo_three {
-  width: 60.9rem;
-
-  height: 22.5rem;
-
-  background: url("/src/images/A_logoHeader.webp") no-repeat center/100%;
-}
-
-.W_styleguide_color_palette {
-  width: 63rem;
-
-  height: 36rem;
-}
-
-.W_styleguide_color_palette_one {
-  background: url("/src/images/M_colors.webp") no-repeat center/100%;
-}
-
-.W_styleguide_color_palette_two {
-  background: url("/src/images/A_logoHeader.webp") no-repeat center/100%;
-}
-
-.A_styleguide_stickers_image {
-  background: url("/src/images/A_logoHeader.webp") no-repeat center/100%;
-}
-
-.A_styleguide_sticker_image {
-  width: 91.8rem;
-
-  height: 29.7rem;
-}
-
-.W_styleguide_color_palette_three {
-  background: url("/src/images/A_logoHeader.webp") no-repeat center/100%;
-}
-
-.W_styleguide_font_image {
-  width: 63rem;
-
-  height: 34rem;
-}
-
-.W_styleguide_font_image_one {
-  background: url("/src/images/M_typography.webp") no-repeat center/100%;
-}
-
-.W_styleguide_font_image_two {
-  background: url("/src/images/A_logoHeader.webp") no-repeat center/100%;
-}
-
-.W_styleguide_font_image_three {
-  background: url("/src/images/A_logoHeader.webp") no-repeat center/100%;
-}
-
-.W_styleguide_font_image_four {
-  background: url("/src/images/A_logoHeader.webp") no-repeat center/100%;
-}
-
-.A_styleguide_media_image {
-  width: 63rem;
-  height: 34rem;
-}
-
-.A_styleguide_media_image_one {
-  background: url("/src/images/mocup1.webp") no-repeat center/100%;
-  border-radius: var(--radiusBig);
-}
-
-.A_styleguide_media_image_two {
-  background: url("/src/images/mockup2.webp") no-repeat center/100%;
-  border-radius: var(--radiusBig);
-}
-
-.A_styleguide_media_image_three {
-  background: url("/src/images/mockup3.webp") no-repeat center/100%;
-  border-radius: var(--radiusBig);
-}
-
-.W_styleguide_font_image_big {
-  width: 63rem;
-
-  height: 34rem;
-
-  background: url("/src/images/A_logoHeader.webp") no-repeat center/100%;
-}
-
-.W_styleguide_image_image {
-  width: 63rem;
-
-  height: 24rem;
-  align-self: flex-start;
-}
-
-.W_styleguide_image_image_one {
-  background: url("/src/images/M_style.webp") no-repeat center/100%;
-}
-
-.W_styleguide_image_image_two {
-  background: url("/src/images/M_style_second.webp") no-repeat center/100%;
-}
-
-.A_styleguide_colors_palette_image {
-  background: url("/src/images/A_logoHeader.webp") no-repeat center/100%;
-}
-
-@media (max-width: 1200px) {
-  .W_styleguide_content {
-    gap: 2rem;
-    padding: 3rem;
-  }
-  .W_styleguide_menu {
-    width: 220px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .W_style_guide_content {
-    gap: 6rem;
-  }
-}
-
-@media (max-width: 960px) {
-  .A_styleguide_image,
-  .W_styleguide_image,
-  .W_styleguide_content,
-  .W_styleguide_about_us,
-  .W_style_guide_content,
-  .W_styleguide_image_color_logo,
-  .W_styleguide_image_color_logo_three,
-  .W_styleguide_image_only_logo,
-  .W_styleguide_image_logo_two,
-  .W_styleguide_color_palette,
-  .W_styleguide_about_us_values_image,
-  .A_styleguide_sticker_image,
-  .W_styleguide_font_image,
-  .W_styleguide_font_image_big,
-  .W_styleguide_image_image,
-  .A_styleguide_media_image,
-  .A_styleguide_media_image_one,
-  .A_styleguide_media_image_two,
-  .A_styleguide_media_image_three {
-    width: 100%;
-  }
-
-  .A_styleguide_logo_image {
-    background: url("/src/images/A_logos_small_mobile.webp") no-repeat
-      center/cover;
-  }
-
-  .A_styleguide_logo_three_image {
-    background: url("/src/images/A_logoHeader.webp") no-repeat center/cover;
-  }
-
-  .A_styleguide_colors_palette_image {
-    background: url("/src/images/A_logoHeader.webp") no-repeat center/cover;
-  }
-
-  .W_styleguide_image_logo_two {
-    background: url("/src/images/M_logos_small.webp") no-repeat center/cover;
-  }
-
-  .W_styleguide_about_us_values_image {
-    background: url("/src/images/A_values_small.webp") no-repeat center/cover;
-  }
-
-  .W_styleguide_color_palette_one {
-    background: url("/src/images/M_colors_small.webp") no-repeat center/100%;
-  }
-
-  .W_styleguide_image_image_one {
-    background: url("/src/images/M_style_small.webp") no-repeat center/100%;
-  }
-
-  .W_styleguide_font_image_one {
-    background: url("/src/images/M_typography_small.webp") no-repeat center/100%;
-  }
-
-  .W_styleguide_image_image_two {
-    background: url("/src/images/M_style_small_second.webp") no-repeat
-      center/100%;
-  }
-
-  .A_styleguide_media_image_one {
-    background: url("/src/images/Mockup1_small.webp") no-repeat center/100%;
-  }
-
-  .A_styleguide_media_image_two {
-    background: url("/src/images/Mockup2_small.webp") no-repeat center/100%;
-  }
-
-  .A_styleguide_media_image_three {
-    background: url("/src/images/Mockup3_small.webp") no-repeat center/100%;
-  }
-
-  .W_styleguide_menu {
-    display: none;
-  }
-
-  .W_styleguide_content {
-    gap: 0;
-    padding: 3rem;
-  }
-
-  .W_style_guide_content {
-    gap: 6rem;
-  }
-
-  .A_h1_style {
-    font-size: 7vw;
-    line-height: 100%;
-  }
-
-  .A_h2 {
-    font-size: 8.5vw;
-  }
-
-  .A_h3 {
-    line-height: 100%;
-    font-size: 5.3vw;
-  }
-
-  .A_h4 {
-    font-size: 4.3vw;
-    line-height: 130%;
-  }
-
-  .A_p_style {
-    font-size: 1.3rem;
-  }
-} */
 :root {
   --white: #ffffff;
   --red: #bc0101;
@@ -516,7 +75,6 @@ body {
   align-items: center;
 }
 
-/* ========== МЕНЮ И КОНТЕНТ ========== */
 .W_styleguide_content {
   display: flex;
   gap: 4rem;
@@ -546,7 +104,6 @@ body {
   gap: 10rem;
 }
 
-/* ========== БЛОКИ КОНТЕНТА ========== */
 .W_styleguide_text {
   display: flex;
   flex-direction: column;
@@ -558,7 +115,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  width: 100%; /* чтобы все блоки были одинаковой ширины */
+  width: 100%;
 }
 
 .W_styleguide_about_us_text {
@@ -574,7 +131,6 @@ body {
   width: 100%;
 }
 
-/* === ИСПРАВЛЕНИЕ ДЛЯ БЛОКОВ ЦЕННОСТИ И МИССИИ === */
 .W_styleguide_about_us_values,
 .W_styleguide_about_us_mission {
   display: flex;
@@ -604,6 +160,12 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.A_styleguide_media_image_one,
+.A_styleguide_media_image_two,
+.A_styleguide_media_image_three {
+  border-radius: var(--radiusBig);
 }
 
 .W_styleguide_about_us_values_image {
@@ -694,16 +256,15 @@ body {
     center/cover;
 }
 .A_styleguide_media_image_one {
-  background: url("/src/images/mocup1.webp") no-repeat center/cover;
+  background: url("/src/images/styleguide/Mockup1.webp") no-repeat center/cover;
 }
 .A_styleguide_media_image_two {
-  background: url("/src/images/mockup2.webp") no-repeat center/cover;
+  background: url("/src/images/styleguide/Mockup2.webp") no-repeat center/cover;
 }
 .A_styleguide_media_image_three {
-  background: url("/src/images/mockup3.webp") no-repeat center/cover;
+  background: url("/src/images/styleguide/Mockup3.webp") no-repeat center/cover;
 }
 
-/* ========== АДАПТИВНОСТЬ ========== */
 @media (max-width: 1200px) {
   .W_styleguide_content {
     gap: 2rem;
@@ -766,13 +327,16 @@ body {
       no-repeat center/cover;
   }
   .A_styleguide_media_image_one {
-    background: url("/src/images/Mockup1_small.webp") no-repeat center/cover;
+    background: url("/src/images/styleguide/Mockup1Mobile.webp") no-repeat
+      center/cover;
   }
   .A_styleguide_media_image_two {
-    background: url("/src/images/Mockup2_small.webp") no-repeat center/cover;
+    background: url("/src/images/styleguide/Mockup2Mobile.webp") no-repeat
+      center/cover;
   }
   .A_styleguide_media_image_three {
-    background: url("/src/images/Mockup3_small.webp") no-repeat center/cover;
+    background: url("/src/images/styleguide/Mockup3Mobile.webp") no-repeat
+      center/cover;
   }
 
   .W_styleguide_about_us_values_image {
@@ -799,8 +363,6 @@ body {
     font-size: 1.3rem;
   }
 
-  /* .A_styleguide_image, */
-  /* .W_styleguide_image_logo_two, */
   .W_styleguide_about_us_mission_image,
   .A_styleguide_media_image_three,
   .W_styleguide_image_color_logo,
@@ -843,7 +405,6 @@ body {
     aspect-ratio: 9 / 15;
   }
 
-  /* Дополнительная настройка отступов для текстовых блоков */
   .W_styleguide_about_us_text {
     max-width: 100%;
   }
