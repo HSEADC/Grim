@@ -102,17 +102,6 @@
 
 /* ___________________about.html___________________ */
 
-.W_AboutWrapper {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  max-width: calc(134rem + 5rem * 2);
-  padding: 4rem 5rem;
-  position: relative;
-  width: 100%;
-}
-
 .W_AboutContent {
   display: flex;
   flex-direction: column;
@@ -228,10 +217,6 @@
 }
 
 @media (max-width: 1024px) {
-  .W_AboutWrapper {
-    padding: 3rem 2.5rem;
-  }
-
   .W_AboutContent {
     max-width: 40rem;
   }
@@ -246,10 +231,6 @@
   }
 }
 @media (max-width: 768px) {
-  .W_AboutWrapper {
-    padding: 2rem 1.5rem;
-  }
-
   .W_AboutContent {
     max-width: 100%;
   }

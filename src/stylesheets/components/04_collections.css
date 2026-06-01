@@ -66,6 +66,19 @@
   box-sizing: border-box;
 }
 
+/* ___________________cards.filter.html___________________ */
+
+.C_FilteredCardsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+}
+
+.C_FilteredCardsRow .O_Card {
+  width: calc(33.333% - 14px);
+}
+
 /* ___________________tests.html___________________ */
 
 .C_AllTests {
@@ -167,5 +180,14 @@
   /* ___________________article___________________ */
   .C_ArticlesRow {
     flex-direction: column;
+  }
+
+  /* ___________________cards.filter___________________ */
+  .C_FilteredCardsRow {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .C_FilteredCardsRow .O_Card {
+    width: 100%;
   }
 }

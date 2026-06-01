@@ -56,6 +56,18 @@
   align-items: center;
 }
 
+/* ___________________about.html___________________ */
+.S_AboutWrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: calc(134rem + 5rem * 2);
+  padding: 4rem 5rem;
+  position: relative;
+  width: 100%;
+}
+
 /* ___________________articles.html___________________ */
 .S_MainBannerArticle {
   position: relative;
@@ -208,7 +220,11 @@
   }
 }
 
-@media only screen and (max-width: 1024px) and (min-width: 768px) {
+@media only screen and (max-width: 1024px) {
+  .S_AboutWrapper {
+    padding: 3rem 2.5rem;
+  }
+
   .S_CommunitySection::before {
     background-image: url(/src/images/M_CommunityTablet.webp);
   }
@@ -225,7 +241,11 @@
   }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
+  .S_AboutWrapper {
+    padding: 2rem 1.5rem;
+  }
+
   .S_ArticlesHeading {
     margin-top: 2rem;
     padding: 7vw 0vw 14vw;
