@@ -9,23 +9,23 @@ const webpack = require("webpack");
 const path = require("path");
 
 const paths = [
-  "Grim/index.html",
-  "Grim/pages/randomizer.html",
-  "Grim/pages/styleguide.html",
-  "Grim/pages/errors/404.html",
-  "Grim/pages/tests/easy-to-dive-in.html",
-  "Grim/pages/tests/final-destination.html",
-  "Grim/pages/tests/knowledge-popular-horrors.html",
-  "Grim/pages/tests/suitable-horror-subgenre.html",
-  "Grim/pages/cards.html",
-  "Grim/pages/about.html",
-  "Grim/pages/articles/short_articles/max-st.html",
-  "Grim/pages/articles/short_articles/getout.html",
-  "Grim/pages/articles/short_articles/it.html",
-  "Grim/pages/articles/big_articles/hereditary.html",
-  "Grim/pages/articles/big_articles/joyce-st.html",
-  "Grim/pages/articles/big_articles/running-man.html",
-  "Grim/pages/articles/big_articles/philosophy-of-the-saw.html",
+  "index.html",
+  "pages/randomizer.html",
+  "pages/styleguide.html",
+  "pages/errors/404.html",
+  "pages/tests/easy-to-dive-in.html",
+  "pages/tests/final-destination.html",
+  "pages/tests/knowledge-popular-horrors.html",
+  "pages/tests/suitable-horror-subgenre.html",
+  "pages/cards.html",
+  "pages/about.html",
+  "pages/articles/short_articles/max-st.html",
+  "pages/articles/short_articles/getout.html",
+  "pages/articles/short_articles/it.html",
+  "pages/articles/big_articles/hereditary.html",
+  "pages/articles/big_articles/joyce-st.html",
+  "pages/articles/big_articles/running-man.html",
+  "pages/articles/big_articles/philosophy-of-the-saw.html",
 ];
 
 module.exports = {
@@ -84,7 +84,7 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin(),
     ...htmlPages,
-    new SitemapPlugin({ base: "https://hseadc.github.io/Grim/", paths }),
+    new SitemapPlugin({ base: "https://grim.adc.ac/", paths }),
     new CopyWebpackPlugin({
       patterns: [
         {
@@ -93,10 +93,17 @@ module.exports = {
         },
       ],
     }),
+    // new CopyWebpackPlugin({
+    //   patterns: [
+    //     {
+    //       from: path.resolve(__dirname, "../src/share/CNAME"),
+    //       to: path.resolve(__dirname, "../dev_build"),
+    //     },
+    //   ],
+    // }),
   ],
 
   optimization: {
     minimizer: [new CssMinimizerPlugin()],
   },
-  plugins: [new MiniCssExtractPlugin(), ...htmlPages],
 };
