@@ -30,6 +30,21 @@ const htmlPages = [
     "./pages/articles/big_articles/hereditary.html",
     ["index"],
   ),
+  createPages(
+    "./src/pages/articles/big_articles/upside-down.html",
+    "./pages/articles/big_articles/upside-down.html",
+    ["index"],
+  ),
+  createPages(
+    "./src/pages/articles/big_articles/smile.html",
+    "./pages/articles/big_articles/smile.html",
+    ["index"],
+  ),
+  createPages(
+    "./src/pages/articles/big_articles/ring.html",
+    "./pages/articles/big_articles/ring.html",
+    ["index"],
+  ),
   createPages("./src/pages/articles.html", "./pages/articles.html", [
     "index",
     "articles",
@@ -51,7 +66,61 @@ const htmlPages = [
     "./pages/articles/short_articles/max-st.html",
     ["index"],
   ),
-
+  createPages(
+    "./src/pages/articles/short_articles/babadook.html",
+    "./pages/articles/short_articles/babadook.html",
+    ["index"],
+  ),
+  createPages(
+    "./src/pages/articles/short_articles/birdbox.html",
+    "./pages/articles/short_articles/birdbox.html",
+    ["index"],
+  ),
+  createPages(
+    "./src/pages/articles/short_articles/derry.html",
+    "./pages/articles/short_articles/derry.html",
+    ["index"],
+  ),
+  createPages(
+    "./src/pages/articles/short_articles/lighthouse.html",
+    "./pages/articles/short_articles/lighthouse.html",
+    ["index"],
+  ),
+  createPages(
+    "./src/pages/articles/short_articles/midsommar.html",
+    "./pages/articles/short_articles/midsommar.html",
+    ["index"],
+  ),
+  createPages(
+    "./src/pages/articles/short_articles/sabrina.html",
+    "./pages/articles/short_articles/sabrina.html",
+    ["index"],
+  ),
+  createPages(
+    "./src/pages/articles/short_articles/silent-hill.html",
+    "./pages/articles/short_articles/silent-hill.html",
+    ["index"],
+  ),
+  createPages(
+    "./src/pages/articles/short_articles/twoderry.html",
+    "./pages/articles/short_articles/twoderry.html",
+    ["index"],
+  ),
+  createPages(
+    "./src/pages/articles/short_articles/visit.html",
+    "./pages/articles/short_articles/visit.html",
+    ["index"],
+  ),
+  createPages(
+    "./src/pages/articles/short_articles/wednesday-school.html",
+    "./pages/articles/short_articles/wednesday-school.html",
+    ["index"],
+  ),
+  createPages(
+    "./src/pages/articles/short_articles/wednesday.html",
+    "./pages/articles/short_articles/wednesday.html",
+    ["index"],
+  ),
   createPages("./src/pages/about.html", "./pages/about.html", ["index"]),
   createPages("./src/pages/cards.html", "./pages/cards.html", [
     "index",

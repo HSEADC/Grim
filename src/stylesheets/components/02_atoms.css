@@ -215,10 +215,32 @@
   background-size: contain;
 }
 
+.A_TagArticleBigAnatomyOfSpecialEffects {
+  background: var(--black);
+  box-shadow: inset 0 0 15px #050505;
+  padding: 0.8rem 1.2rem;
+  border-radius: var(--radiusSmall);
+  display: flex;
+  align-self: flex-start;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.A_TagArticleBigAnatomyOfSpecialEffects::before {
+  content: "";
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.6rem;
+  background-image: url(/src/images/Q_IconBigAnatomyOfSpecialEffects.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 .A_TagArticleCharacterAnalysis,
 .A_TagArticlePsychologyOfHorror,
 .A_TagArticleConceptualAnalysis,
-.A_TagArticleSocialCriticism {
+.A_TagArticleSocialCriticism,
+.A_TagArticleAnatomyOfSpecialEffects {
   background: var(--black);
   box-shadow: inset 0 0 15px #050505;
   padding: 0.6rem 1rem;
@@ -232,7 +254,8 @@
 .A_TagArticleCharacterAnalysis::before,
 .A_TagArticlePsychologyOfHorror::before,
 .A_TagArticleConceptualAnalysis::before,
-.A_TagArticleSocialCriticism::before {
+.A_TagArticleSocialCriticism::before,
+.A_TagArticleAnatomyOfSpecialEffects::before {
   content: "";
   display: inline-block;
   width: 1.2rem;
@@ -252,6 +275,9 @@
 }
 .A_TagArticleSocialCriticism::before {
   background-image: url(/src/images/Q_IconBigSocialCriticism.svg);
+}
+.A_TagArticleAnatomyOfSpecialEffects::before {
+  background-image: url(/src/images/Q_IconBigAnatomyOfSpecialEffects.svg);
 }
 
 /* __Card__ */
@@ -471,6 +497,10 @@
   background-image: url(/src/images/Q_IconBigSocialCriticism.svg);
 }
 
+.A_FilterTag--anatomyofSpecialEffects::before {
+  background-image: url(/src/images/Q_IconBigSocialCriticism.svg);
+}
+
 /* __Randomizer__ */
 
 .A_Randomizer_button a {
@@ -638,7 +668,8 @@ a {
 .A_TagArticleCharacterAnalysis.align-bottom,
 .A_TagArticleConceptualAnalysis.align-bottom,
 .A_TagArticlePsychologyOfHorror.align-bottom,
-.A_TagArticleSocialCriticism.align-bottom {
+.A_TagArticleSocialCriticism.align-bottom,
+.A_TagArticleAnatomyOfSpecialEffects.align-bottom {
   align-self: flex-end;
 }
 
