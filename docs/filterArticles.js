@@ -57,6 +57,9 @@ document.addEventListener("DOMContentLoaded", function () {
       case "Социальная критика":
         categoryClass = "A_TagArticleSocialCriticism";
         break;
+      case "Анатомия спецэффектов":
+        categoryClass = "A_TagArticleAnatomyOfSpecialEffects";
+        break;
     }
 
     // Очищаем контейнер и убираем лишний gap
