@@ -41,93 +41,93 @@
 /******/ 	
 /************************************************************************/
 
-;// ./src/images/tests/Q_FD1.webp
-const Q_FD1_namespaceObject = __webpack_require__.p + "images/42ebddda105661102f1c.webp";
-;// ./src/images/tests/Q_FD2.webp
-const Q_FD2_namespaceObject = __webpack_require__.p + "images/189a4a568fbfbcb28cee.webp";
-;// ./src/javascripts/test3final-destination.js
+;// ./src/images/tests/Q_Substance_correct.webp
+const Q_Substance_correct_namespaceObject = __webpack_require__.p + "images/f264dab0119ce378846e.webp";
+;// ./src/images/tests/Q_Substance_incorrect.webp
+const Q_Substance_incorrect_namespaceObject = __webpack_require__.p + "images/3f51e4dfbeed3d8b6189.webp";
+;// ./src/javascripts/test6substance.js
 
 
 
 var testData = {
   questions: [{
     id: 1,
-    text: "В первом фильме «Пункт назначения» у героя возникает видение катастрофы какого транспорта?",
+    text: "Какую проблему пытается решить главная героиня с помощью «субстанции»?",
     answers: [{
-      text: "Поезд",
+      text: "Потерю памяти",
       isCorrect: false
     }, {
-      text: "Корабль",
+      text: "Финансовые долги",
       isCorrect: false
     }, {
-      text: "Самолет",
+      text: "Болезнь сердца",
+      isCorrect: false
+    }, {
+      text: "Страх старения и утраты популярности",
       isCorrect: true
-    }, {
-      text: "Автобус",
-      isCorrect: false
     }]
   }, {
     id: 2,
-    text: "В начале фильма «Пункт назначения 2» происходит массовая авария на…",
+    text: "Какое главное правило использования вещества нарушается в фильме?",
     answers: [{
-      text: "Гоночной трассе",
+      text: "Нельзя использовать его ночью",
       isCorrect: false
     }, {
-      text: "Городской улице",
+      text: "Нельзя рассказывать о нём другим",
       isCorrect: false
     }, {
-      text: "Парковке",
-      isCorrect: false
-    }, {
-      text: "Шоссе",
+      text: "Соблюдать баланс времени между телами",
       isCorrect: true
+    }, {
+      text: "Нужно принимать его только с едой",
+      isCorrect: false
     }]
   }, {
     id: 3,
-    text: "В «Пункт назначения 3» предчувствие главной героини связано с какой катастрофой?",
+    text: "Что символизирует образ молодой версии героини?",
     answers: [{
-      text: "Обрушение моста",
+      text: "Свободу от общества",
       isCorrect: false
     }, {
-      text: "Авария на американских горках",
+      text: "Абсолютное зло",
+      isCorrect: false
+    }, {
+      text: "Идеализированную внешность",
       isCorrect: true
     }, {
-      text: "Взрыв самолёта",
-      isCorrect: false
-    }, {
-      text: "Пожар в школе",
+      text: "Детские воспоминания героини",
       isCorrect: false
     }]
   }, {
     id: 4,
-    text: "Какой катастрофой начинается фильм «Пункт назначения 5»?",
+    text: "Какие темы поднимает фильм «Субстанция»?",
     answers: [{
-      text: "Крушение самолёта",
+      text: "Развитие технологий",
       isCorrect: false
     }, {
-      text: "Крушение поезда",
-      isCorrect: false
-    }, {
-      text: "Пожар в здании",
-      isCorrect: false
-    }, {
-      text: "Обрушение моста",
+      text: "Культ молодости, сексизм и давление",
       isCorrect: true
+    }, {
+      text: "Семейные конфликты",
+      isCorrect: false
+    }, {
+      text: "Политическую цензуру",
+      isCorrect: false
     }]
   }, {
     id: 5,
-    text: "Кто является главным «антагонистом» всей серии фильмов?",
+    text: "Почему финал фильма можно назвать гротескным и гиперболизированным?",
     answers: [{
-      text: "Смерть и её план",
+      text: "Так как телесный ужас доведён до абсурда",
       isCorrect: true
     }, {
-      text: "Маньяк",
+      text: "Потому что он полностью реалистичен",
       isCorrect: false
     }, {
-      text: "Демон",
+      text: "Потому что он снят как комедия",
       isCorrect: false
     }, {
-      text: "Тайная организация",
+      text: "Так как героиня спокойно принимает судьбу",
       isCorrect: false
     }]
   }],
@@ -135,20 +135,20 @@ var testData = {
     minScore: 0,
     maxScore: 2,
     title: "Большинство ответов неверны",
-    description: "Вам стоит получше разобраться \nво вселенной Пункта назначения, в чём \nмы с удовольствием поможем!",
-    image: Q_FD2_namespaceObject,
-    caption: "«Пункт назначения 2» (Final Destination 2, 2003)"
+    description: "Вам стоит повнимательнее \nизучить данный фильм, в чём \nмы с удовольствием поможем!",
+    image: Q_Substance_incorrect_namespaceObject,
+    caption: "«Субстанция» (The Substance, 2024)"
   }, {
     minScore: 3,
     maxScore: 5,
     title: "Большинство ответов верны",
-    description: "Вы определённо хорошо разбираетесь \nв данной франшизе, продолжайте \nв том же духе!",
-    image: Q_FD1_namespaceObject,
-    caption: "«Пункт назначения» (Final Destination, 2000)"
+    description: "Вы определённо хорошо знаете \nданный фильм, продолжайте \nв том же духе!",
+    image: Q_Substance_correct_namespaceObject,
+    caption: "«Субстанция» (The Substance, 2024)"
   }]
 };
 var currentQuestionIndex = 0;
-var userAnswers = []; // здесь будем хранить объекты с questionId и isCorrect
+var userAnswers = [];
 var selectedAnswerIndex = null;
 function renderQuestion() {
   var question = testData.questions[currentQuestionIndex];
@@ -176,7 +176,7 @@ function renderQuestion() {
   document.getElementById("nextButton").addEventListener("click", goToNextQuestion);
   if (currentQuestionIndex === 0) {
     document.getElementById("backButton").addEventListener("click", function () {
-      window.location.href = "../../pages/tests.html"; // путь к списку тестов
+      window.location.href = "../../pages/tests.html";
     });
   } else {
     document.getElementById("prevButton").addEventListener("click", goToPreviousQuestion);
@@ -200,7 +200,6 @@ function goToNextQuestion() {
 }
 function goToPreviousQuestion() {
   if (currentQuestionIndex > 0) {
-    // Удаляем последний сохранённый ответ (он относится к текущему вопросу)
     if (userAnswers.length > currentQuestionIndex) {
       userAnswers.pop();
     }

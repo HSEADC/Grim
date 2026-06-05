@@ -41,90 +41,90 @@
 /******/ 	
 /************************************************************************/
 
-;// ./src/images/tests/Q_FD1.webp
-const Q_FD1_namespaceObject = __webpack_require__.p + "images/42ebddda105661102f1c.webp";
-;// ./src/images/tests/Q_FD2.webp
-const Q_FD2_namespaceObject = __webpack_require__.p + "images/189a4a568fbfbcb28cee.webp";
-;// ./src/javascripts/test3final-destination.js
+;// ./src/images/tests/Q_Saw3.webp
+const Q_Saw3_namespaceObject = __webpack_require__.p + "images/a0629f4c55e02cf00390.webp";
+;// ./src/images/tests/Q_Saw2.webp
+const Q_Saw2_namespaceObject = __webpack_require__.p + "images/942916002dd63434b7bc.webp";
+;// ./src/javascripts/test5test-saw.js
 
 
 
 var testData = {
   questions: [{
     id: 1,
-    text: "В первом фильме «Пункт назначения» у героя возникает видение катастрофы какого транспорта?",
+    text: "Как зовут главного создателя «игр» в кинофраншизе?",
     answers: [{
-      text: "Поезд",
+      text: "Марк Хоффман",
       isCorrect: false
     }, {
-      text: "Корабль",
+      text: "Эрик Мэттьюс",
       isCorrect: false
     }, {
-      text: "Самолет",
+      text: "Джон Крамер",
       isCorrect: true
     }, {
-      text: "Автобус",
+      text: "Лоуренс Гордон",
       isCorrect: false
     }]
   }, {
     id: 2,
-    text: "В начале фильма «Пункт назначения 2» происходит массовая авария на…",
+    text: "Как называется кукла, через которую передаются послания участникам?",
     answers: [{
-      text: "Гоночной трассе",
-      isCorrect: false
-    }, {
-      text: "Городской улице",
-      isCorrect: false
-    }, {
-      text: "Парковке",
-      isCorrect: false
-    }, {
-      text: "Шоссе",
+      text: "Билли",
       isCorrect: true
+    }, {
+      text: "Чаки",
+      isCorrect: false
+    }, {
+      text: "Тобин",
+      isCorrect: false
+    }, {
+      text: "Зеп",
+      isCorrect: false
     }]
   }, {
     id: 3,
-    text: "В «Пункт назначения 3» предчувствие главной героини связано с какой катастрофой?",
+    text: "Кто была одной из первых учениц маньяка, которой тот пытался передать своё видение мира?",
     answers: [{
-      text: "Обрушение моста",
+      text: "Джилл Так",
       isCorrect: false
     }, {
-      text: "Авария на американских горках",
+      text: "Линдси Перес",
+      isCorrect: false
+    }, {
+      text: "Памела Дженкинс",
+      isCorrect: false
+    }, {
+      text: "Аманда Янг",
       isCorrect: true
-    }, {
-      text: "Взрыв самолёта",
-      isCorrect: false
-    }, {
-      text: "Пожар в школе",
-      isCorrect: false
     }]
   }, {
     id: 4,
-    text: "Какой катастрофой начинается фильм «Пункт назначения 5»?",
+    text: "Что обычно должны были сделать участники игры, чтобы выжить?",
     answers: [{
-      text: "Крушение самолёта",
+      text: "Дождаться полиции",
       isCorrect: false
     }, {
-      text: "Крушение поезда",
+      text: "Найти спрятанный маньяком предмет",
       isCorrect: false
     }, {
-      text: "Пожар в здании",
+      text: "Искренне просить пощады",
       isCorrect: false
     }, {
-      text: "Обрушение моста",
+      text: "Пройти испытания",
       isCorrect: true
     }]
   }, {
     id: 5,
-    text: "Кто является главным «антагонистом» всей серии фильмов?",
+    text: "Что часто является особенностью кинофраншизы «Пила»?",
     answers: [{
-      text: "Смерть и её план",
+      text: "Нелинейный монтаж и финальный твист",
       isCorrect: true
     }, {
-      text: "Маньяк",
+      text: "Жестокие вставки после каждой ловушки",
       isCorrect: false
     }, {
-      text: "Демон",
+      text: "Завязка на длинных диалогах",
       isCorrect: false
     }, {
       text: "Тайная организация",
@@ -135,20 +135,20 @@ var testData = {
     minScore: 0,
     maxScore: 2,
     title: "Большинство ответов неверны",
-    description: "Вам стоит получше разобраться \nво вселенной Пункта назначения, в чём \nмы с удовольствием поможем!",
-    image: Q_FD2_namespaceObject,
-    caption: "«Пункт назначения 2» (Final Destination 2, 2003)"
+    description: "Вам стоит получше разобраться \nво вселенной Пилы, в чём \nмы с удовольствием поможем!",
+    image: Q_Saw2_namespaceObject,
+    caption: "«Пила 2» (Saw II, 2005)"
   }, {
     minScore: 3,
     maxScore: 5,
     title: "Большинство ответов верны",
     description: "Вы определённо хорошо разбираетесь \nв данной франшизе, продолжайте \nв том же духе!",
-    image: Q_FD1_namespaceObject,
-    caption: "«Пункт назначения» (Final Destination, 2000)"
+    image: Q_Saw3_namespaceObject,
+    caption: "«Пила 3» (Saw III, 2006)"
   }]
 };
 var currentQuestionIndex = 0;
-var userAnswers = []; // здесь будем хранить объекты с questionId и isCorrect
+var userAnswers = [];
 var selectedAnswerIndex = null;
 function renderQuestion() {
   var question = testData.questions[currentQuestionIndex];
@@ -200,7 +200,6 @@ function goToNextQuestion() {
 }
 function goToPreviousQuestion() {
   if (currentQuestionIndex > 0) {
-    // Удаляем последний сохранённый ответ (он относится к текущему вопросу)
     if (userAnswers.length > currentQuestionIndex) {
       userAnswers.pop();
     }
