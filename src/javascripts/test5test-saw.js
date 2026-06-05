@@ -1,56 +1,57 @@
 import "../stylesheets/test1.css";
 
-import fd1Image from "../images/tests/Q_FD1.webp";
-import fd2Image from "../images/tests/Q_FD2.webp";
+import saw3Image from "../images/tests/Q_Saw3.webp";
+import saw2Image from "../images/tests/Q_Saw2.webp";
+
 const testData = {
   questions: [
     {
       id: 1,
-      text: "В первом фильме «Пункт назначения» у героя возникает видение катастрофы какого транспорта?",
+      text: "Как зовут главного создателя «игр» в кинофраншизе?",
       answers: [
-        { text: "Поезд", isCorrect: false },
-        { text: "Корабль", isCorrect: false },
-        { text: "Самолет", isCorrect: true },
-        { text: "Автобус", isCorrect: false },
+        { text: "Марк Хоффман", isCorrect: false },
+        { text: "Эрик Мэттьюс", isCorrect: false },
+        { text: "Джон Крамер", isCorrect: true },
+        { text: "Лоуренс Гордон", isCorrect: false },
       ],
     },
     {
       id: 2,
-      text: "В начале фильма «Пункт назначения 2» происходит массовая авария на…",
+      text: "Как называется кукла, через которую передаются послания участникам?",
       answers: [
-        { text: "Гоночной трассе", isCorrect: false },
-        { text: "Городской улице", isCorrect: false },
-        { text: "Парковке", isCorrect: false },
-        { text: "Шоссе", isCorrect: true },
+        { text: "Билли", isCorrect: true },
+        { text: "Чаки", isCorrect: false },
+        { text: "Тобин", isCorrect: false },
+        { text: "Зеп", isCorrect: false },
       ],
     },
     {
       id: 3,
-      text: "В «Пункт назначения 3» предчувствие главной героини связано с какой катастрофой?",
+      text: "Кто была одной из первых учениц маньяка, которой тот пытался передать своё видение мира?",
       answers: [
-        { text: "Обрушение моста", isCorrect: false },
-        { text: "Авария на американских горках", isCorrect: true },
-        { text: "Взрыв самолёта", isCorrect: false },
-        { text: "Пожар в школе", isCorrect: false },
+        { text: "Джилл Так", isCorrect: false },
+        { text: "Линдси Перес", isCorrect: false },
+        { text: "Памела Дженкинс", isCorrect: false },
+        { text: "Аманда Янг", isCorrect: true },
       ],
     },
     {
       id: 4,
-      text: "Какой катастрофой начинается фильм «Пункт назначения 5»?",
+      text: "Что обычно должны были сделать участники игры, чтобы выжить?",
       answers: [
-        { text: "Крушение самолёта", isCorrect: false },
-        { text: "Крушение поезда", isCorrect: false },
-        { text: "Пожар в здании", isCorrect: false },
-        { text: "Обрушение моста", isCorrect: true },
+        { text: "Дождаться полиции", isCorrect: false },
+        { text: "Найти спрятанный маньяком предмет", isCorrect: false },
+        { text: "Искренне просить пощады", isCorrect: false },
+        { text: "Пройти испытания", isCorrect: true },
       ],
     },
     {
       id: 5,
-      text: "Кто является главным «антагонистом» всей серии фильмов?",
+      text: "Что часто является особенностью кинофраншизы «Пила»?",
       answers: [
-        { text: "Смерть и её план", isCorrect: true },
-        { text: "Маньяк", isCorrect: false },
-        { text: "Демон", isCorrect: false },
+        { text: "Нелинейный монтаж и финальный твист", isCorrect: true },
+        { text: "Жестокие вставки после каждой ловушки", isCorrect: false },
+        { text: "Завязка на длинных диалогах", isCorrect: false },
         { text: "Тайная организация", isCorrect: false },
       ],
     },
@@ -61,9 +62,9 @@ const testData = {
       maxScore: 2,
       title: "Большинство ответов неверны",
       description:
-        "Вам стоит получше разобраться \nво вселенной Пункта назначения, в чём \nмы с удовольствием поможем!",
-      image: fd2Image,
-      caption: "«Пункт назначения 2» (Final Destination 2, 2003)",
+        "Вам стоит получше разобраться \nво вселенной Пилы, в чём \nмы с удовольствием поможем!",
+      image: saw2Image,
+      caption: "«Пила 2» (Saw II, 2005)",
     },
     {
       minScore: 3,
@@ -71,14 +72,14 @@ const testData = {
       title: "Большинство ответов верны",
       description:
         "Вы определённо хорошо разбираетесь \nв данной франшизе, продолжайте \nв том же духе!",
-      image: fd1Image,
-      caption: "«Пункт назначения» (Final Destination, 2000)",
+      image: saw3Image,
+      caption: "«Пила 3» (Saw III, 2006)",
     },
   ],
 };
 
 let currentQuestionIndex = 0;
-let userAnswers = []; // здесь будем хранить объекты с questionId и isCorrect
+let userAnswers = [];
 let selectedAnswerIndex = null;
 
 function renderQuestion() {
@@ -178,7 +179,6 @@ function goToNextQuestion() {
 
 function goToPreviousQuestion() {
   if (currentQuestionIndex > 0) {
-    // Удаляем последний сохранённый ответ (он относится к текущему вопросу)
     if (userAnswers.length > currentQuestionIndex) {
       userAnswers.pop();
     }

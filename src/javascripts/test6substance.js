@@ -1,57 +1,58 @@
 import "../stylesheets/test1.css";
 
-import fd1Image from "../images/tests/Q_FD1.webp";
-import fd2Image from "../images/tests/Q_FD2.webp";
+import substanceCorrectImage from "../images/tests/Q_Substance_correct.webp";
+import substanceIncorrectImage from "../images/tests/Q_Substance_incorrect.webp";
+
 const testData = {
   questions: [
     {
       id: 1,
-      text: "В первом фильме «Пункт назначения» у героя возникает видение катастрофы какого транспорта?",
+      text: "Какую проблему пытается решить главная героиня с помощью «субстанции»?",
       answers: [
-        { text: "Поезд", isCorrect: false },
-        { text: "Корабль", isCorrect: false },
-        { text: "Самолет", isCorrect: true },
-        { text: "Автобус", isCorrect: false },
+        { text: "Потерю памяти", isCorrect: false },
+        { text: "Финансовые долги", isCorrect: false },
+        { text: "Болезнь сердца", isCorrect: false },
+        { text: "Страх старения и утраты популярности", isCorrect: true },
       ],
     },
     {
       id: 2,
-      text: "В начале фильма «Пункт назначения 2» происходит массовая авария на…",
+      text: "Какое главное правило использования вещества нарушается в фильме?",
       answers: [
-        { text: "Гоночной трассе", isCorrect: false },
-        { text: "Городской улице", isCorrect: false },
-        { text: "Парковке", isCorrect: false },
-        { text: "Шоссе", isCorrect: true },
+        { text: "Нельзя использовать его ночью", isCorrect: false },
+        { text: "Нельзя рассказывать о нём другим", isCorrect: false },
+        { text: "Соблюдать баланс времени между телами", isCorrect: true },
+        { text: "Нужно принимать его только с едой", isCorrect: false },
       ],
     },
     {
       id: 3,
-      text: "В «Пункт назначения 3» предчувствие главной героини связано с какой катастрофой?",
+      text: "Что символизирует образ молодой версии героини?",
       answers: [
-        { text: "Обрушение моста", isCorrect: false },
-        { text: "Авария на американских горках", isCorrect: true },
-        { text: "Взрыв самолёта", isCorrect: false },
-        { text: "Пожар в школе", isCorrect: false },
+        { text: "Свободу от общества", isCorrect: false },
+        { text: "Абсолютное зло", isCorrect: false },
+        { text: "Идеализированную внешность", isCorrect: true },
+        { text: "Детские воспоминания героини", isCorrect: false },
       ],
     },
     {
       id: 4,
-      text: "Какой катастрофой начинается фильм «Пункт назначения 5»?",
+      text: "Какие темы поднимает фильм «Субстанция»?",
       answers: [
-        { text: "Крушение самолёта", isCorrect: false },
-        { text: "Крушение поезда", isCorrect: false },
-        { text: "Пожар в здании", isCorrect: false },
-        { text: "Обрушение моста", isCorrect: true },
+        { text: "Развитие технологий", isCorrect: false },
+        { text: "Культ молодости, сексизм и давление", isCorrect: true },
+        { text: "Семейные конфликты", isCorrect: false },
+        { text: "Политическую цензуру", isCorrect: false },
       ],
     },
     {
       id: 5,
-      text: "Кто является главным «антагонистом» всей серии фильмов?",
+      text: "Почему финал фильма можно назвать гротескным и гиперболизированным?",
       answers: [
-        { text: "Смерть и её план", isCorrect: true },
-        { text: "Маньяк", isCorrect: false },
-        { text: "Демон", isCorrect: false },
-        { text: "Тайная организация", isCorrect: false },
+        { text: "Так как телесный ужас доведён до абсурда", isCorrect: true },
+        { text: "Потому что он полностью реалистичен", isCorrect: false },
+        { text: "Потому что он снят как комедия", isCorrect: false },
+        { text: "Так как героиня спокойно принимает судьбу", isCorrect: false },
       ],
     },
   ],
@@ -61,24 +62,24 @@ const testData = {
       maxScore: 2,
       title: "Большинство ответов неверны",
       description:
-        "Вам стоит получше разобраться \nво вселенной Пункта назначения, в чём \nмы с удовольствием поможем!",
-      image: fd2Image,
-      caption: "«Пункт назначения 2» (Final Destination 2, 2003)",
+        "Вам стоит повнимательнее \nизучить данный фильм, в чём \nмы с удовольствием поможем!",
+      image: substanceIncorrectImage,
+      caption: "«Субстанция» (The Substance, 2024)",
     },
     {
       minScore: 3,
       maxScore: 5,
       title: "Большинство ответов верны",
       description:
-        "Вы определённо хорошо разбираетесь \nв данной франшизе, продолжайте \nв том же духе!",
-      image: fd1Image,
-      caption: "«Пункт назначения» (Final Destination, 2000)",
+        "Вы определённо хорошо знаете \nданный фильм, продолжайте \nв том же духе!",
+      image: substanceCorrectImage,
+      caption: "«Субстанция» (The Substance, 2024)",
     },
   ],
 };
 
 let currentQuestionIndex = 0;
-let userAnswers = []; // здесь будем хранить объекты с questionId и isCorrect
+let userAnswers = [];
 let selectedAnswerIndex = null;
 
 function renderQuestion() {
@@ -149,7 +150,7 @@ function renderQuestion() {
 
   if (currentQuestionIndex === 0) {
     document.getElementById("backButton").addEventListener("click", () => {
-      window.location.href = "../../pages/tests.html"; // путь к списку тестов
+      window.location.href = "../../pages/tests.html";
     });
   } else {
     document
@@ -178,7 +179,6 @@ function goToNextQuestion() {
 
 function goToPreviousQuestion() {
   if (currentQuestionIndex > 0) {
-    // Удаляем последний сохранённый ответ (он относится к текущему вопросу)
     if (userAnswers.length > currentQuestionIndex) {
       userAnswers.pop();
     }

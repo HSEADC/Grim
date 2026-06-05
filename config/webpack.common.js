@@ -18,6 +18,8 @@ const paths = [
   "pages/tests/final-destination.html",
   "pages/tests/knowledge-popular-horrors.html",
   "pages/tests/suitable-horror-subgenre.html",
+  "pages/tests/test-saw.html",
+  "pages/tests/substance.html",
   "pages/cards.html",
   "pages/about.html",
   "pages/articles/short_articles/max-st.html",
@@ -41,6 +43,7 @@ const paths = [
   "pages/articles/big_articles/upside-down.html",
   "pages/articles/big_articles/smile.html",
   "pages/articles/big_articles/ring.html",
+  "pages/articles/big_articles/saw-two.html",
 ];
 
 module.exports = {
@@ -52,6 +55,8 @@ module.exports = {
     test2: "./src/javascripts/test2knowledge-popular-horrors.js",
     test3: "./src/javascripts/test3final-destination.js",
     test4: "./src/javascripts/test4easy-to-dive-in.js",
+    test5: "./src/javascripts/test5test-saw.js",
+    test6: "./src/javascripts/test6substance.js",
     randomizer: "./src/javascripts/randomizer.js",
     styleguide: "./src/javascripts/styleguide.js",
   },
