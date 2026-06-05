@@ -41,6 +41,11 @@ const htmlPages = [
     ["index"],
   ),
   createPages(
+    "./src/pages/articles/big_articles/saw-two.html",
+    "./pages/articles/big_articles/saw-two.html",
+    ["index"],
+  ),
+  createPages(
     "./src/pages/articles/big_articles/ring.html",
     "./pages/articles/big_articles/ring.html",
     ["index"],
@@ -146,6 +151,16 @@ const htmlPages = [
     "./src/pages/tests/easy-to-dive-in.html",
     "./pages/tests/easy-to-dive-in.html",
     ["index", "test4"],
+  ),
+  createPages(
+    "./src/pages/tests/test-saw.html",
+    "./pages/tests/test-saw.html",
+    ["index", "test5"],
+  ),
+  createPages(
+    "./src/pages/tests/substance.html",
+    "./pages/tests/substance.html",
+    ["index", "test6"],
   ),
   createPages("./src/pages/errors/404.html", "./pages/errors/404.html", [
     "index",
