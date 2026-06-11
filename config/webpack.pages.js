@@ -127,6 +127,11 @@ const htmlPages = [
     ["index"],
   ),
   createPages("./src/pages/about.html", "./pages/about.html", ["index"]),
+  createPages(
+    "./src/pages/specialproject.html",
+    "./pages/specialproject.html",
+    ["index", "player"],
+  ),
   createPages("./src/pages/cards.html", "./pages/cards.html", [
     "index",
     "filterTags",

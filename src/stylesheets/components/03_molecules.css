@@ -255,6 +255,35 @@ body.menu-open .O_Header.mobile {
   margin: 0 auto;
 }
 
+.M_SpecialProjectContent {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: calc(40.7rem + 2rem * 2);
+  padding: 0 2rem;
+  position: relative;
+  text-align: center;
+}
+
+/* Основные контролы */
+.M_Controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Нижняя панель */
+.M_BottomBar {
+  margin-top: 16px;
+}
+
+.M_ExtraControls {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
 /* ___________________cards.html___________________ */
 
 /* __Randomizer__ */
@@ -489,6 +518,16 @@ body.menu-open .O_Header.mobile {
     border-radius: var(--radiusMedium);
   }
 
+  .M_SpecialProjectContent {
+    align-items: flex-start;
+    padding-left: 6.9vw;
+    padding-right: 6.9vw;
+    text-align: left;
+    gap: 0;
+    width: 100%;
+    max-width: none;
+  }
+
   /* ___________________cards.html___________________ */
 
   /* __Randomizer__ */
@@ -560,11 +599,25 @@ body.menu-open .O_Header.mobile {
     width: 18rem;
     margin-bottom: 2.5rem;
   }
+
+  .M_Controls {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .M_ExtraControls {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 360px) {
   .M_AboutLogo {
     width: 15rem;
     margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .M_BottomBar {
+    margin-top: 3vw;
   }
 }

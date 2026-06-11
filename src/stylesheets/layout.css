@@ -34,36 +34,3 @@ img {
   object-fit: cover;
   display: block;
 }
-
-/* Контейнер для отфильтрованных статей */
-.C_FilteredArticlesRow {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px; /* такой же, как у обычных рядов */
-  width: 100%;
-}
-
-/* Все карточки становятся как O_CardArticle, три в ряд */
-.C_FilteredArticlesRow .O_CardArticle {
-  width: calc(33.333% - 14px); /* 20px gap между тремя */
-}
-
-/* Адаптив */
-@media only screen and (max-width: 1024px) and (min-width: 768px) {
-  .C_FilteredArticlesRow {
-    gap: 12px;
-  }
-  .C_FilteredArticlesRow .O_CardArticle {
-    width: calc(33.333% - 8px);
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .C_FilteredArticlesRow {
-    flex-direction: column;
-    gap: 20px;
-  }
-  .C_FilteredArticlesRow .O_CardArticle {
-    width: 100%;
-  }
-}
