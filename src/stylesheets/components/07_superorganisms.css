@@ -143,6 +143,46 @@
   width: 100%;
 }
 
+/* __SpecialProject__ */
+
+.S_SpecialProject {
+  align-items: center;
+  background: var(--black);
+  border-radius: var(--radiusBig);
+  display: flex;
+  height: 28rem;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  box-shadow: inset 0 0 54px #050505;
+  z-index: 3;
+}
+
+#B_SpecialProject {
+  background-image: url(/src/images/M_SpecialProjectBackground.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.S_AudioPlayer {
+  background-color: var(--black);
+  box-shadow: inset 0 0 82px rgba(0, 0, 0, 0.6);
+  display: flex;
+  gap: 1.5rem;
+  max-width: 750px;
+  margin: 20px auto;
+  padding: 2rem;
+  border-radius: var(--radiusBig);
+  align-items: center;
+  color: var(--white);
+  font-family: "SuisseIntl-Book";
+}
+
 /* ___________________tests.html___________________ */
 
 .S_MainBannerTests {
@@ -221,6 +261,11 @@
 }
 
 @media only screen and (max-width: 1024px) {
+  .S_AudioPlayer {
+    padding: 1.5rem;
+    gap: 1.2rem;
+  }
+
   .S_AboutWrapper {
     padding: 3rem 2.5rem;
   }
@@ -269,6 +314,23 @@
     background-image: url(/src/images/M_CommunityMobile.webp);
   }
 
+  .S_SpecialProject {
+    height: 18.7rem;
+    justify-content: flex-start;
+  }
+
+  #B_SpecialProject {
+    background-image: url(/src/images/M_SpecialProjectBackgroundMobile.webp);
+    background-size: cover;
+  }
+
+  .S_AudioPlayer {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+
   .S_Footer {
     height: 43rem;
     background-image: url(/src/images/M_BackgroundFooterMobile.webp);
@@ -310,5 +372,14 @@
   .S_ArticlePreview {
     padding: 30px 16px 0;
     margin-bottom: 40px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .S_AudioPlayer {
+    padding: 4vw 3vw;
+    gap: 3vw;
+    margin: 3vw auto;
+    border-radius: var(--radiusMedium);
   }
 }

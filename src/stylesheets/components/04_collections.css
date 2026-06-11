@@ -45,6 +45,17 @@
   gap: 20px;
   width: 100%;
 }
+
+.C_FilteredArticlesRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+}
+
+.C_FilteredArticlesRow .O_CardArticle {
+  width: calc(33.333% - 14px);
+}
 /* ___________________cards.html___________________ */
 
 .С_ArticleCategoryTags {
@@ -135,6 +146,13 @@
     gap: 12px;
   }
 
+  .C_FilteredArticlesRow {
+    gap: 12px;
+  }
+  .C_FilteredArticlesRow .O_CardArticle {
+    width: calc(33.333% - 8px);
+  }
+
   /* ___________________tests.html___________________ */
   .C_AllTests {
     gap: 1rem 0.6rem;
@@ -167,6 +185,14 @@
 
   .С_ArticleCategoryTags {
     margin: 10vw auto 1.5rem;
+  }
+
+  .C_FilteredArticlesRow {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .C_FilteredArticlesRow .O_CardArticle {
+    width: 100%;
   }
 
   /* ___________________tests.html___________________ */

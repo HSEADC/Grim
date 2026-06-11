@@ -22,6 +22,7 @@ const paths = [
   "pages/tests/substance.html",
   "pages/cards.html",
   "pages/about.html",
+  "pages/specialproject.html",
   "pages/articles/short_articles/max-st.html",
   "pages/articles/short_articles/getout.html",
   "pages/articles/short_articles/it.html",
@@ -59,6 +60,7 @@ module.exports = {
     test6: "./src/javascripts/test6substance.js",
     randomizer: "./src/javascripts/randomizer.js",
     styleguide: "./src/javascripts/styleguide.js",
+    player: "./src/javascripts/player.js",
   },
   output: {
     filename: "[name].js",
