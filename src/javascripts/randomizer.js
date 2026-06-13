@@ -4,6 +4,10 @@ import hannibalImg from "../images/cards/Q_ImageCardsMainHannibal.gif";
 import itImg from "../images/cards/Q_ImageCardsMainIt.gif";
 import sabrinaImg from "../images/cards/Q_ImageCardsMainSabrina.gif";
 import beverlyImg from "../images/cards/Q_ImageCardsMainBeverly.gif";
+import gabrielImg from "../images/cards/Q_ImageCardsMainBeverly.gif";
+import reganImg from "../images/cards/Q_ImageCardsMainBeverly.gif";
+import ghostfaceImg from "../images/cards/Q_ImageCardsMainBeverly.gif";
+
 document.addEventListener("DOMContentLoaded", function () {
   // Массив данных карточек
   const cardsData = [
@@ -48,6 +52,27 @@ document.addEventListener("DOMContentLoaded", function () {
       description:
         "Персонаж поднимает проблему того, \nкак детская травма формирует \nсудьбу взрослой женщины",
       image: beverlyImg,
+    },
+    {
+      tag: "Антагонист",
+      title: "Гэбриел",
+      description:
+        "Идея о «близнеце», живущем внутри героини, <br />пришла сценаристам после изучения <br />реальных медицинских аномалий",
+      image: gabrielImg,
+    },
+    {
+      tag: "Протагонист",
+      title: "Риган Эббот",
+      description:
+        "Режиссёр принципиально взял на роль <br />глухой героини глухую актрису. Её личный опыт <br />сделал историю достоверной",
+      image: reganImg,
+    },
+    {
+      tag: "Антагонист",
+      title: "Призрачное лицо",
+      description:
+        "Прототип маньяка в маске — серийный <br />убийца Дэнни Роллинг, охотившийся <br />на студенток во Флориде",
+      image: ghostfaceImg,
     },
   ];
 

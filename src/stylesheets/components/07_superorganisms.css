@@ -339,18 +339,36 @@
   }
   /* _______________articles.html_______________ */
 
+  .S_MainBannerArticle {
+    padding: 0 1.2rem;
+  }
+
   .S_MainBannerArticle::before {
     background-image: url(/src/images/articles/S_MainBannerArticlesMobile.webp);
+    left: 1.2rem;
+    right: 1.2rem;
   }
 
   /* _______________cards.html_______________ */
+  .S_MainBannerCards {
+    padding: 0 1.2rem;
+  }
+
   .S_MainBannerCards::before {
     background-image: url(/src/images/cards/S_MainBannerCardsMobile.webp);
+    left: 1.2rem;
+    right: 1.2rem;
   }
 
   /* ___________________tests.html___________________ */
+  .S_MainBannerTests {
+    padding: 0 1.2rem;
+  }
+
   .S_MainBannerTests::before {
     background-image: url(/src/images/tests/S_MainBannerTestsMobile.webp);
+    left: 1.2rem;
+    right: 1.2rem;
   }
 
   /* ___________________cards.html___________________ */
@@ -379,7 +397,7 @@
   .S_AudioPlayer {
     padding: 4vw 3vw;
     gap: 3vw;
-    margin: 3vw auto;
+    margin: 3vw 1.2rem;
     border-radius: var(--radiusMedium);
   }
 }
