@@ -60,6 +60,9 @@ const Q_ImageCardsMainBeverly_namespaceObject = __webpack_require__.p + "images/
 
 
 
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
   // Массив данных карточек
   var cardsData = [{
@@ -91,6 +94,21 @@ document.addEventListener("DOMContentLoaded", function () {
     tag: "Протагонист",
     title: "Беверли Марш",
     description: "Персонаж поднимает проблему того, \nкак детская травма формирует \nсудьбу взрослой женщины",
+    image: Q_ImageCardsMainBeverly_namespaceObject
+  }, {
+    tag: "Антагонист",
+    title: "Гэбриел",
+    description: "Идея о «близнеце», живущем внутри героини, <br />пришла сценаристам после изучения <br />реальных медицинских аномалий",
+    image: Q_ImageCardsMainBeverly_namespaceObject
+  }, {
+    tag: "Протагонист",
+    title: "Риган Эббот",
+    description: "Режиссёр принципиально взял на роль <br />глухой героини глухую актрису. Её личный опыт <br />сделал историю достоверной",
+    image: Q_ImageCardsMainBeverly_namespaceObject
+  }, {
+    tag: "Антагонист",
+    title: "Призрачное лицо",
+    description: "Прототип маньяка в маске — серийный <br />убийца Дэнни Роллинг, охотившийся <br />на студенток во Флориде",
     image: Q_ImageCardsMainBeverly_namespaceObject
   }];
 
