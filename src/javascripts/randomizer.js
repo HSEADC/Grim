@@ -7,6 +7,9 @@ import beverlyImg from "../images/cards/Q_ImageCardsMainBeverly.gif";
 import gabrielImg from "../images/cards/Q_ImageCardsMainBeverly.gif";
 import reganImg from "../images/cards/Q_ImageCardsMainBeverly.gif";
 import ghostfaceImg from "../images/cards/Q_ImageCardsMainBeverly.gif";
+import kevincrumbImg from "../images/cards/Q_ImageCardsMainBeverly.gif";
+import elizabethsparkleImg from "../images/cards/Q_ImageCardsMainBeverly.gif";
+import wednesdayImg from "../images/cards/Q_ImageCardsMainBeverly.gif";
 
 document.addEventListener("DOMContentLoaded", function () {
   // Массив данных карточек
@@ -73,6 +76,27 @@ document.addEventListener("DOMContentLoaded", function () {
       description:
         "Прототип маньяка в маске — серийный <br />убийца Дэнни Роллинг, охотившийся <br />на студенток во Флориде",
       image: ghostfaceImg,
+    },
+    {
+      tag: "Антагонист",
+      title: "Кевин Крамб",
+      description:
+        "Прототип — преступник Билли Миллиган, <br />первый оправданный из-за диссоциативного <br />расстройства идентичности",
+      image: kevincrumbImg,
+    },
+    {
+      tag: "Протагонист",
+      title: "Элизабет Спаркл",
+      description:
+        "Образ героини вырос из личных переживаний <br />режиссёра о старении и давлении общества <br />на женщин после 40 лет",
+      image: elizabethsparkleImg,
+    },
+    {
+      tag: "Протагонист",
+      title: "Уэнздей",
+      description:
+        "Немигающий взгляд появился случайно: <br />Дженна Ортега не моргнула в одном дубле, <br />и Тим Бёртон сделал это частью образа",
+      image: wednesdayImg,
     },
   ];
 

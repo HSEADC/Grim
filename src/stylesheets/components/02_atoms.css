@@ -645,7 +645,7 @@
 
 .A_Randomizer_button a,
 .A_SpecialProject_button a {
-  padding: 1rem 1.8rem;
+  padding: 1.1rem 1.8rem 1rem;
   color: var(--white);
   background: var(--black);
   border-radius: var(--radiusGiant);
@@ -890,6 +890,16 @@ a {
   color: var(--lightGrey);
   font-style: normal;
   font-weight: 600;
+}
+
+.A_Text a {
+  color: var(--white);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.A_Text a:hover {
+  opacity: 0.8;
 }
 
 /* ___________________404.html___________________ */
