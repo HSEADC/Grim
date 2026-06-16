@@ -151,7 +151,7 @@
         </div>
 
         <div class="Q_ImageWide">
-          <img src="../../../images/articles/Q_imagebiggetout.gif" />
+          <img src="../../../images/articles/Q_imagebigsawtwo.gif" />
         </div>
 
         <div class="O_ArticleAuthorDescription">
@@ -206,7 +206,8 @@
             <div class="A_Text">
               Если вы хотите подробнее ознакомиться с персонажем Пилы, очень
               советуем уделить время на прочтении нашей другой статьи:
-              <a href="../../../pages/articles/big_articles/saw-two.html"
+              <a
+                href="../../../pages/articles/big_articles/philosophy-of-the-saw.html"
                 >«Философия Пилы: Почему Джон Крамер – не просто злодей»</a
               >
             </div>
@@ -548,7 +549,7 @@
         <!-- 9. Итог: «Пила» страшна не кровью, а вопросом к человеку -->
         <section class="O_BlockStoryText" id="conclusion">
           <h2 class="A_TitleShitArticle">
-            Итог: «Пила» страшна не кровью, а вопросом к человеку
+            Итог: «Пила» страшна не кровью, <br />а вопросом к человеку
           </h2>
           <div class="W_TextStory">
             <div class="A_Text">
@@ -675,6 +676,42 @@
     </footer>
 
     <script>
+      // document.addEventListener("DOMContentLoaded", function () {
+      //   const navLinks = document.querySelectorAll(
+      //     ".M_NavigationStory .A_ArticleNavLink",
+      //   );
+      //   const sections = document.querySelectorAll(".O_BlockStoryText");
+
+      //   function setActiveLink(link) {
+      //     navLinks.forEach((l) => l.classList.remove("active"));
+      //     if (link) link.classList.add("active");
+      //   }
+
+      //   navLinks.forEach((link) => {
+      //     link.addEventListener("click", function (e) {
+      //       e.preventDefault();
+
+      //       const targetId = this.getAttribute("href");
+      //       const targetSection = document.querySelector(targetId);
+
+      //       if (targetSection) {
+      //         setActiveLink(this);
+
+      //         const headerOffset = 100;
+      //         const elementPosition = targetSection.getBoundingClientRect().top;
+      //         const offsetPosition =
+      //           elementPosition + window.pageYOffset - headerOffset;
+
+      //         window.scrollTo({
+      //           top: offsetPosition,
+      //           behavior: "smooth",
+      //         });
+      //       }
+      //     });
+      //   });
+      // });
+
+      // новое меню
       document.addEventListener("DOMContentLoaded", function () {
         const navLinks = document.querySelectorAll(
           ".M_NavigationStory .A_ArticleNavLink",
@@ -686,29 +723,83 @@
           if (link) link.classList.add("active");
         }
 
+        function highlightOnScroll() {
+          let currentId = "";
+          sections.forEach((section) => {
+            const sectionTop = section.getBoundingClientRect().top;
+            if (sectionTop <= 100) {
+              currentId = section.getAttribute("id");
+            }
+          });
+          if (currentId) {
+            navLinks.forEach((link) => {
+              link.classList.remove("active");
+              if (link.getAttribute("href") === `#${currentId}`) {
+                link.classList.add("active");
+              }
+            });
+          }
+        }
+
+        window.addEventListener("scroll", highlightOnScroll);
+
         navLinks.forEach((link) => {
           link.addEventListener("click", function (e) {
             e.preventDefault();
-
             const targetId = this.getAttribute("href");
             const targetSection = document.querySelector(targetId);
 
             if (targetSection) {
               setActiveLink(this);
 
-              const headerOffset = 100;
-              const elementPosition = targetSection.getBoundingClientRect().top;
-              const offsetPosition =
-                elementPosition + window.pageYOffset - headerOffset;
+              const rect = targetSection.getBoundingClientRect();
+              const absoluteTop = rect.top + window.pageYOffset;
+
+              const offset = 32;
 
               window.scrollTo({
-                top: offsetPosition,
+                top: absoluteTop - offset,
                 behavior: "smooth",
               });
             }
           });
         });
       });
+
+      // еще вариация нового меню
+      // document.addEventListener("DOMContentLoaded", function () {
+      //   const navLinks = document.querySelectorAll(
+      //     ".M_NavigationStory .A_ArticleNavLink",
+      //   );
+      //   const sections = document.querySelectorAll(".O_BlockStoryText");
+
+      //   function setActiveLink(link) {
+      //     navLinks.forEach((l) => l.classList.remove("active"));
+      //     if (link) link.classList.add("active");
+      //   }
+
+      //   navLinks.forEach((link) => {
+      //     link.addEventListener("click", function (e) {
+      //       e.preventDefault();
+
+      //       const targetId = this.getAttribute("href");
+      //       const targetSection = document.querySelector(targetId);
+
+      //       if (targetSection) {
+      //         setActiveLink(this);
+
+      //         const rect = targetSection.getBoundingClientRect();
+      //         const absoluteTop = rect.top + window.pageYOffset;
+      //         const offset = 32;
+
+      //         window.scrollTo({
+      //           top: absoluteTop - offset,
+      //           behavior: "smooth",
+      //         });
+      //       }
+      //     });
+      //   });
+      // });
     </script>
   </body>
 </html>
