@@ -33,11 +33,11 @@ document.addEventListener("DOMContentLoaded", function () {
     url: "/pages/articles/big_articles/joyce-st.html",
     description: "Почему осуждение Джойс Байерс несправедливо"
   }, {
-    title: "Философия Пилы: Почему Джон Крамер – не просто злодей.",
+    title: "Философия Пилы: Почему Джон Крамер – не просто злодей",
     url: "/pages/articles/big_articles/philosophy-of-the-saw.html",
     description: "Разбираем искалеченную трагедией философию Джона Крамера"
   }, {
-    title: "Почему «Return to Silent Hill» оказался пустой оболочкой.",
+    title: "Почему «Return to Silent Hill» оказался пустой оболочкой",
     url: "/pages/articles/big_articles/return-to-silent-hill.html",
     description: "Бездушная копия культовой игры"
   }, {
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
     url: "/pages/articles/big_articles/running-man.html",
     description: "Антиутопия, где человеческое внимание стало валютой алгоритмов"
   }, {
-    title: "Почему мы боимся клоунов? Разбор феномена Пеннивайза.",
+    title: "Почему мы боимся клоунов? Разбор феномена Пеннивайза",
     url: "/pages/articles/short_articles/it.html",
     description: "Почему мы боимся клоунов после «Оно»"
   },

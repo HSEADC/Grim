@@ -63,6 +63,9 @@ const Q_ImageCardsMainBeverly_namespaceObject = __webpack_require__.p + "images/
 
 
 
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
   // Массив данных карточек
   var cardsData = [{
@@ -109,6 +112,21 @@ document.addEventListener("DOMContentLoaded", function () {
     tag: "Антагонист",
     title: "Призрачное лицо",
     description: "Прототип маньяка в маске — серийный <br />убийца Дэнни Роллинг, охотившийся <br />на студенток во Флориде",
+    image: Q_ImageCardsMainBeverly_namespaceObject
+  }, {
+    tag: "Антагонист",
+    title: "Кевин Крамб",
+    description: "Прототип — преступник Билли Миллиган, <br />первый оправданный из-за диссоциативного <br />расстройства идентичности",
+    image: Q_ImageCardsMainBeverly_namespaceObject
+  }, {
+    tag: "Протагонист",
+    title: "Элизабет Спаркл",
+    description: "Образ героини вырос из личных переживаний <br />режиссёра о старении и давлении общества <br />на женщин после 40 лет",
+    image: Q_ImageCardsMainBeverly_namespaceObject
+  }, {
+    tag: "Протагонист",
+    title: "Уэнздей",
+    description: "Немигающий взгляд появился случайно: <br />Дженна Ортега не моргнула в одном дубле, <br />и Тим Бёртон сделал это частью образа",
     image: Q_ImageCardsMainBeverly_namespaceObject
   }];
 
