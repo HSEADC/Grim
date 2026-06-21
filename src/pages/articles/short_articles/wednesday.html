@@ -142,7 +142,8 @@
         <div class="O_HeadingArticle">
           <div class="M_IconHeadingLeft">
             <h1 class="A_TitleSuisse">
-              Осознанная инаковость <br />как форма силы в «Уэнсдей»
+              Осознанная инаковость <br />как форма силы
+              в&nbsp;&laquo;Уэнсдей&raquo;
             </h1>
           </div>
           <div class="A_TagArticleCharacterAnalysis align-bottom">
@@ -312,7 +313,8 @@
                   <div class="A_Date">19.05.2026</div>
                 </div>
                 <h2 class="A_ArticleNameSmall">
-                  Кто такая Сабрина: человек, <br />ведьма или ни то ни другое
+                  Кто такая Сабрина: человек, <br />ведьма или
+                  ни&nbsp;то&nbsp;ни&nbsp;другое
                 </h2>
                 <div class="A_TagArticleCharacterAnalysis">
                   <p class="A_p_tag_small">Анализ персонажа</p>
@@ -332,7 +334,8 @@
                   <div class="A_Date">26.02.2026</div>
                 </div>
                 <h2 class="A_ArticleNameSmall">
-                  Философия Пилы: Почему Джон <br />Крамер — не просто злодей
+                  Философия Пилы: Почему Джон <br />Крамер&nbsp;&mdash;
+                  не&nbsp;просто злодей
                 </h2>
                 <div class="A_TagArticleCharacterAnalysis">
                   <p class="A_p_tag_small">Анализ персонажа</p>
@@ -383,42 +386,5 @@
         </div>
       </div>
     </footer>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const navLinks = document.querySelectorAll(
-          ".M_NavigationStory .A_ArticleNavLink",
-        );
-        const sections = document.querySelectorAll(".O_BlockStoryText");
-
-        function setActiveLink(link) {
-          navLinks.forEach((l) => l.classList.remove("active"));
-          if (link) link.classList.add("active");
-        }
-
-        navLinks.forEach((link) => {
-          link.addEventListener("click", function (e) {
-            e.preventDefault();
-
-            const targetId = this.getAttribute("href");
-            const targetSection = document.querySelector(targetId);
-
-            if (targetSection) {
-              setActiveLink(this);
-
-              const headerOffset = 100;
-              const elementPosition = targetSection.getBoundingClientRect().top;
-              const offsetPosition =
-                elementPosition + window.pageYOffset - headerOffset;
-
-              window.scrollTo({
-                top: offsetPosition,
-                behavior: "smooth",
-              });
-            }
-          });
-        });
-      });
-    </script>
   </body>
 </html>

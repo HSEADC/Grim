@@ -4,12 +4,12 @@ import hannibalImg from "../images/cards/Q_ImageCardsMainHannibal.gif";
 import itImg from "../images/cards/Q_ImageCardsMainIt.gif";
 import sabrinaImg from "../images/cards/Q_ImageCardsMainSabrina.gif";
 import beverlyImg from "../images/cards/Q_ImageCardsMainBeverly.gif";
-import gabrielImg from "../images/cards/Q_ImageCardsMainBeverly.gif";
-import reganImg from "../images/cards/Q_ImageCardsMainBeverly.gif";
-import ghostfaceImg from "../images/cards/Q_ImageCardsMainBeverly.gif";
-import kevincrumbImg from "../images/cards/Q_ImageCardsMainBeverly.gif";
-import elizabethsparkleImg from "../images/cards/Q_ImageCardsMainBeverly.gif";
-import wednesdayImg from "../images/cards/Q_ImageCardsMainBeverly.gif";
+import gabrielImg from "../images/cards/Q_ImageCardsMainGabriel.gif";
+import reganImg from "../images/cards/Q_ImageCardsMainRegan.gif";
+import ghostfaceImg from "../images/cards/Q_ImageCardsMainGhostface.gif";
+import kevincrumbImg from "../images/cards/Q_ImageCardsMainKevin.gif";
+import elizabethsparkleImg from "../images/cards/Q_ImageCardsMainElizabethSparkle.gif";
+import wednesdayImg from "../images/cards/Q_ImageCardsMainWednesday.gif";
 
 document.addEventListener("DOMContentLoaded", function () {
   // Массив данных карточек

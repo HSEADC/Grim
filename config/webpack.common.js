@@ -61,6 +61,7 @@ module.exports = {
     randomizer: "./src/javascripts/randomizer.js",
     styleguide: "./src/javascripts/styleguide.js",
     player: "./src/javascripts/player.js",
+    scrollmenu: "./src/javascripts/scrollmenu.js",
   },
   output: {
     filename: "[name].js",

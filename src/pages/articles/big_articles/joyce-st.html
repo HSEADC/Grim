@@ -185,9 +185,7 @@
       <!-- Навигация (только на десктопе) -->
       <aside class="M_NavigationStory">
         <a href="#survival" class="A_ArticleNavLink">Survival parenting</a>
-        <a href="#parentification" class="A_ArticleNavLink"
-          >Родительфикация Джонатана</a
-        >
+        <a href="#parentification" class="A_ArticleNavLink">Родительфикация</a>
         <a href="#trauma" class="A_ArticleNavLink">Trauma-informed parenting</a>
         <a href="#hypervigilance" class="A_ArticleNavLink"
           >Травма гипербдительности</a
@@ -201,7 +199,7 @@
         <!-- 1. Survival parenting -->
         <section class="O_BlockStoryText" id="survival">
           <h2 class="A_TitleShitArticle">
-            Survival parenting: <br />воспитание в режиме выживания
+            Survival parenting: <br />воспитание в&nbsp;режиме выживания
           </h2>
           <div class="W_TextStory">
             <div class="A_Text">
@@ -276,7 +274,7 @@
         <!-- 3. Trauma-Informed Parenting -->
         <section class="O_BlockStoryText" id="trauma">
           <h2 class="A_TitleShitArticle">
-            Trauma-Informed Parenting: <br />вера в Уилла против всего мира
+            Trauma-Informed Parenting: <br />вера в&nbsp;Уилла против всего мира
           </h2>
           <div class="W_TextStory">
             <div class="A_Text">
@@ -411,7 +409,8 @@
                   <div class="A_Date">26.02.2026</div>
                 </div>
                 <h2 class="A_ArticleNameSmall">
-                  Философия Пилы: Почему Джон <br />Крамер — не просто злодей
+                  Философия Пилы: Почему Джон <br />Крамер&nbsp;&mdash;
+                  не&nbsp;просто злодей
                 </h2>
                 <div class="A_TagArticleCharacterAnalysis">
                   <p class="A_p_tag_small">Анализ персонажа</p>
@@ -434,7 +433,7 @@
                   <div class="A_Date">15.12.2025</div>
                 </div>
                 <h2 class="A_ArticleNameSmall">
-                  Вина выжившего и утрата <br />в истории Макс Мэйфилд
+                  Вина выжившего и&nbsp;утрата <br />в&nbsp;истории Макс Мэйфилд
                 </h2>
                 <div class="A_TagArticleCharacterAnalysis">
                   <p class="A_p_tag_small">Анализ персонажа</p>
@@ -493,42 +492,5 @@
         </div>
       </div>
     </footer>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const navLinks = document.querySelectorAll(
-          ".M_NavigationStory .A_ArticleNavLink",
-        );
-        const sections = document.querySelectorAll(".O_BlockStoryText");
-
-        function setActiveLink(link) {
-          navLinks.forEach((l) => l.classList.remove("active"));
-          if (link) link.classList.add("active");
-        }
-
-        navLinks.forEach((link) => {
-          link.addEventListener("click", function (e) {
-            e.preventDefault();
-
-            const targetId = this.getAttribute("href");
-            const targetSection = document.querySelector(targetId);
-
-            if (targetSection) {
-              setActiveLink(this);
-
-              const headerOffset = 100;
-              const elementPosition = targetSection.getBoundingClientRect().top;
-              const offsetPosition =
-                elementPosition + window.pageYOffset - headerOffset;
-
-              window.scrollTo({
-                top: offsetPosition,
-                behavior: "smooth",
-              });
-            }
-          });
-        });
-      });
-    </script>
   </body>
 </html>

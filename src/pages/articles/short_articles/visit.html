@@ -233,7 +233,7 @@
             </div>
             <ul class="M_BulletList">
               <li>выбирает, какие сцены включить;</li>
-              <li>решает, что важно, а что нет;</li>
+              <li>решает, что важно, а&nbsp;что нет;</li>
               <li>выстраивает повествование.</li>
             </ul>
             <div class="A_Text">
@@ -368,7 +368,8 @@
                   <div class="A_Date">13.12.2025</div>
                 </div>
                 <h2 class="A_ArticleNameSmall">
-                  Они не могли иначе: <br />фатализм «Реинкарнации»
+                  Они не&nbsp;могли иначе: <br />фатализм
+                  &laquo;Реинкарнации&raquo;
                 </h2>
                 <div class="A_TagArticleConceptualAnalysis">
                   <p class="A_p_tag_small">Концептуальный разбор</p>
@@ -391,7 +392,7 @@
                   <div class="A_Date">15.05.2026</div>
                 </div>
                 <h2 class="A_ArticleNameSmall">
-                  Город сверху и город снизу: <br />двойная реальность
+                  Город сверху и&nbsp;город снизу: <br />двойная реальность
                 </h2>
                 <div class="A_TagArticleConceptualAnalysis">
                   <p class="A_p_tag_small">Концептуальный разбор</p>
@@ -419,42 +420,5 @@
         </div>
       </div>
     </footer>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const navLinks = document.querySelectorAll(
-          ".M_NavigationStory .A_ArticleNavLink",
-        );
-        const sections = document.querySelectorAll(".O_BlockStoryText");
-
-        function setActiveLink(link) {
-          navLinks.forEach((l) => l.classList.remove("active"));
-          if (link) link.classList.add("active");
-        }
-
-        navLinks.forEach((link) => {
-          link.addEventListener("click", function (e) {
-            e.preventDefault();
-
-            const targetId = this.getAttribute("href");
-            const targetSection = document.querySelector(targetId);
-
-            if (targetSection) {
-              setActiveLink(this);
-
-              const headerOffset = 100;
-              const elementPosition = targetSection.getBoundingClientRect().top;
-              const offsetPosition =
-                elementPosition + window.pageYOffset - headerOffset;
-
-              window.scrollTo({
-                top: offsetPosition,
-                behavior: "smooth",
-              });
-            }
-          });
-        });
-      });
-    </script>
   </body>
 </html>

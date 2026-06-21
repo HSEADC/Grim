@@ -197,7 +197,9 @@
       <div class="C_StorySections">
         <!-- 1. Травма, которая не проговаривается -->
         <section class="O_BlockStoryText" id="unspoken">
-          <h2 class="A_TitleShitArticle">Травма, которая не проговаривается</h2>
+          <h2 class="A_TitleShitArticle">
+            Травма, которая не&nbsp;проговаривается
+          </h2>
           <div class="W_TextStory">
             <div class="A_Text">
               Любая травма требует осмысления, иначе она не&nbsp;исчезает, а
@@ -207,9 +209,9 @@
               вытесняется. Это приводит к&nbsp;нескольким последствиям:
             </div>
             <ul class="M_BulletList">
-              <li>события не получают объяснения;</li>
+              <li>события не&nbsp;получают объяснения;</li>
               <li>жертвы остаются без признания;</li>
-              <li>общество делает вид, что ничего не произошло.</li>
+              <li>общество делает вид, что ничего не&nbsp;произошло.</li>
             </ul>
             <div class="Q_ImageFullWidthArticle">
               <img src="../../../images/articles/Q_Derryone.webp" />
@@ -288,7 +290,7 @@
             </div>
             <ul class="M_BulletList">
               <li>признать проблему;</li>
-              <li>зафиксировать её в коллективной памяти;</li>
+              <li>зафиксировать её&nbsp;в&nbsp;коллективной памяти;</li>
               <li>изменить поведение.</li>
             </ul>
             <div class="A_Text">
@@ -426,42 +428,5 @@
         </div>
       </div>
     </footer>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const navLinks = document.querySelectorAll(
-          ".M_NavigationStory .A_ArticleNavLink",
-        );
-        const sections = document.querySelectorAll(".O_BlockStoryText");
-
-        function setActiveLink(link) {
-          navLinks.forEach((l) => l.classList.remove("active"));
-          if (link) link.classList.add("active");
-        }
-
-        navLinks.forEach((link) => {
-          link.addEventListener("click", function (e) {
-            e.preventDefault();
-
-            const targetId = this.getAttribute("href");
-            const targetSection = document.querySelector(targetId);
-
-            if (targetSection) {
-              setActiveLink(this);
-
-              const headerOffset = 100;
-              const elementPosition = targetSection.getBoundingClientRect().top;
-              const offsetPosition =
-                elementPosition + window.pageYOffset - headerOffset;
-
-              window.scrollTo({
-                top: offsetPosition,
-                behavior: "smooth",
-              });
-            }
-          });
-        });
-      });
-    </script>
   </body>
 </html>

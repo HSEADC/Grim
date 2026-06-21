@@ -153,7 +153,8 @@ body {
 .W_styleguide_image_color_logo,
 .W_styleguide_image_only_logo,
 .A_styleguide_sticker_image,
-.W_styleguide_font_image_big {
+.W_styleguide_font_image_big,
+.W_styleguide_grid {
   display: block;
   width: 100%;
   height: auto;
@@ -193,6 +194,11 @@ body {
 .W_styleguide_color_palette {
   aspect-ratio: 78 / 36;
 }
+
+.W_styleguide_grid {
+  aspect-ratio: 71 / 36;
+}
+
 .W_styleguide_font_image {
   aspect-ratio: 62 / 34;
 }
@@ -244,6 +250,11 @@ body {
   background: url("/src/images/styleguide/M_ColorGrid.png") no-repeat
     center/cover;
 }
+
+.W_styleguide_grid {
+  background: url("/src/images/styleguide/M_Grid.png") no-repeat center/cover;
+}
+
 .W_styleguide_font_image_one {
   background: url("/src/images/styleguide/M_Table.webp") no-repeat center/cover;
 }
@@ -314,6 +325,12 @@ body {
     background: url("/src/images/styleguide/M_ColorGridMobile.webp") no-repeat
       center/cover;
   }
+
+  .W_styleguide_grid {
+    background: url("/src/images/styleguide/M_GridMobile.png") no-repeat
+      center/cover;
+  }
+
   .W_styleguide_image_image_one {
     background: url("/src/images/styleguide/M_GraphicsLine1Mobile.webp")
       no-repeat center/cover;
@@ -399,6 +416,10 @@ body {
 
   .W_styleguide_color_palette {
     aspect-ratio: 8 / 18;
+  }
+
+  .W_styleguide_grid {
+    aspect-ratio: 9 / 25;
   }
 
   .W_styleguide_font_image {

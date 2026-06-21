@@ -244,7 +244,7 @@
 
         <!-- 2. Холод и визуальная атмосфера -->
         <section class="O_BlockStoryText" id="atmosphere">
-          <h2 class="A_TitleShitArticle">Холод и визуальная атмосфера</h2>
+          <h2 class="A_TitleShitArticle">Холод и&nbsp;визуальная атмосфера</h2>
           <div class="W_TextStory">
             <div class="A_Text">
               Значительную роль в&nbsp;фильме играет визуальная атмосфера. Мир
@@ -259,7 +259,8 @@
               и&nbsp;тепла.
             </div>
             <div class="A_Text">
-              Атмосфера тревоги складывается из нескольких визуальных элементов:
+              Атмосфера тревоги складывается из&nbsp;нескольких визуальных
+              элементов:
             </div>
             <ul class="M_BulletList">
               <li>
@@ -331,7 +332,7 @@
               поломанное, чуждое человеческому пониманию.
             </div>
             <div class="A_Text">
-              Проклятое видео работает за счёт нескольких приёмов:
+              Проклятое видео работает за&nbsp;счёт нескольких приёмов:
             </div>
             <ul class="M_BulletList">
               <li>
@@ -340,7 +341,8 @@
               <li>странных символов, которые невозможно сразу расшифровать;</li>
               <li>плохого качества изображения — повреждённой реальности;</li>
               <li>
-                отсутствия понятной логики, из-за чего видео похоже на кошмар;
+                отсутствия понятной логики, из-за чего видео похоже
+                на&nbsp;кошмар;
               </li>
               <li>ощущения запретного просмотра.</li>
             </ul>
@@ -481,7 +483,7 @@
         <!-- 9. Нарушение границы между экраном и реальностью -->
         <section class="O_BlockStoryText" id="boundary">
           <h2 class="A_TitleShitArticle">
-            Нарушение границы между экраном и реальностью
+            Нарушение границы между экраном и&nbsp;реальностью
           </h2>
           <div class="W_TextStory">
             <div class="A_Text">
@@ -637,42 +639,5 @@
         </div>
       </div>
     </footer>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const navLinks = document.querySelectorAll(
-          ".M_NavigationStory .A_ArticleNavLink",
-        );
-        const sections = document.querySelectorAll(".O_BlockStoryText");
-
-        function setActiveLink(link) {
-          navLinks.forEach((l) => l.classList.remove("active"));
-          if (link) link.classList.add("active");
-        }
-
-        navLinks.forEach((link) => {
-          link.addEventListener("click", function (e) {
-            e.preventDefault();
-
-            const targetId = this.getAttribute("href");
-            const targetSection = document.querySelector(targetId);
-
-            if (targetSection) {
-              setActiveLink(this);
-
-              const headerOffset = 100;
-              const elementPosition = targetSection.getBoundingClientRect().top;
-              const offsetPosition =
-                elementPosition + window.pageYOffset - headerOffset;
-
-              window.scrollTo({
-                top: offsetPosition,
-                behavior: "smooth",
-              });
-            }
-          });
-        });
-      });
-    </script>
   </body>
 </html>

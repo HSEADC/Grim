@@ -267,8 +267,8 @@
             <ul class="M_BulletList">
               <li>ожидание «правильного» поведения;</li>
               <li>поощрение соответствия нормам;</li>
-              <li>изоляция тех, кто не вписывается;</li>
-              <li>формирование устойчивых групп и ролей.</li>
+              <li>изоляция тех, кто не&nbsp;вписывается;</li>
+              <li>формирование устойчивых групп и&nbsp;ролей.</li>
             </ul>
             <div class="Q_ImageFullWidthArticle">
               <img src="../../../images/articles/Q_Wensdayschoolfive.webp" />
@@ -411,42 +411,5 @@
         </div>
       </div>
     </footer>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const navLinks = document.querySelectorAll(
-          ".M_NavigationStory .A_ArticleNavLink",
-        );
-        const sections = document.querySelectorAll(".O_BlockStoryText");
-
-        function setActiveLink(link) {
-          navLinks.forEach((l) => l.classList.remove("active"));
-          if (link) link.classList.add("active");
-        }
-
-        navLinks.forEach((link) => {
-          link.addEventListener("click", function (e) {
-            e.preventDefault();
-
-            const targetId = this.getAttribute("href");
-            const targetSection = document.querySelector(targetId);
-
-            if (targetSection) {
-              setActiveLink(this);
-
-              const headerOffset = 100;
-              const elementPosition = targetSection.getBoundingClientRect().top;
-              const offsetPosition =
-                elementPosition + window.pageYOffset - headerOffset;
-
-              window.scrollTo({
-                top: offsetPosition,
-                behavior: "smooth",
-              });
-            }
-          });
-        });
-      });
-    </script>
   </body>
 </html>

@@ -13,42 +13,42 @@ const htmlPages = [
   createPages(
     "./src/pages/articles/big_articles/philosophy-of-the-saw.html",
     "./pages/articles/big_articles/philosophy-of-the-saw.html",
-    ["index"],
+    ["index", "scrollmenu"],
   ),
   createPages(
     "./src/pages/articles/big_articles/running-man.html",
     "./pages/articles/big_articles/running-man.html",
-    ["index"],
+    ["index", "scrollmenu"],
   ),
   createPages(
     "./src/pages/articles/big_articles/joyce-st.html",
     "./pages/articles/big_articles/joyce-st.html",
-    ["index"],
+    ["index", "scrollmenu"],
   ),
   createPages(
     "./src/pages/articles/big_articles/hereditary.html",
     "./pages/articles/big_articles/hereditary.html",
-    ["index"],
+    ["index", "scrollmenu"],
   ),
   createPages(
     "./src/pages/articles/big_articles/upside-down.html",
     "./pages/articles/big_articles/upside-down.html",
-    ["index"],
+    ["index", "scrollmenu"],
   ),
   createPages(
     "./src/pages/articles/big_articles/smile.html",
     "./pages/articles/big_articles/smile.html",
-    ["index"],
+    ["index", "scrollmenu"],
   ),
   createPages(
     "./src/pages/articles/big_articles/saw-two.html",
     "./pages/articles/big_articles/saw-two.html",
-    ["index"],
+    ["index", "scrollmenu"],
   ),
   createPages(
     "./src/pages/articles/big_articles/ring.html",
     "./pages/articles/big_articles/ring.html",
-    ["index"],
+    ["index", "scrollmenu"],
   ),
   createPages("./src/pages/articles.html", "./pages/articles.html", [
     "index",
@@ -58,73 +58,73 @@ const htmlPages = [
   createPages(
     "./src/pages/articles/short_articles/it.html",
     "./pages/articles/short_articles/it.html",
-    ["index"],
+    ["index", "scrollmenu"],
   ),
   createPages(
     "./src/pages/articles/short_articles/getout.html",
     "./pages/articles/short_articles/getout.html",
-    ["index"],
+    ["index", "scrollmenu"],
   ),
 
   createPages(
     "./src/pages/articles/short_articles/max-st.html",
     "./pages/articles/short_articles/max-st.html",
-    ["index"],
+    ["index", "scrollmenu"],
   ),
   createPages(
     "./src/pages/articles/short_articles/babadook.html",
     "./pages/articles/short_articles/babadook.html",
-    ["index"],
+    ["index", "scrollmenu"],
   ),
   createPages(
     "./src/pages/articles/short_articles/birdbox.html",
     "./pages/articles/short_articles/birdbox.html",
-    ["index"],
+    ["index", "scrollmenu"],
   ),
   createPages(
     "./src/pages/articles/short_articles/derry.html",
     "./pages/articles/short_articles/derry.html",
-    ["index"],
+    ["index", "scrollmenu"],
   ),
   createPages(
     "./src/pages/articles/short_articles/lighthouse.html",
     "./pages/articles/short_articles/lighthouse.html",
-    ["index"],
+    ["index", "scrollmenu"],
   ),
   createPages(
     "./src/pages/articles/short_articles/midsommar.html",
     "./pages/articles/short_articles/midsommar.html",
-    ["index"],
+    ["index", "scrollmenu"],
   ),
   createPages(
     "./src/pages/articles/short_articles/sabrina.html",
     "./pages/articles/short_articles/sabrina.html",
-    ["index"],
+    ["index", "scrollmenu"],
   ),
   createPages(
     "./src/pages/articles/short_articles/silent-hill.html",
     "./pages/articles/short_articles/silent-hill.html",
-    ["index"],
+    ["index", "scrollmenu"],
   ),
   createPages(
     "./src/pages/articles/short_articles/twoderry.html",
     "./pages/articles/short_articles/twoderry.html",
-    ["index"],
+    ["index", "scrollmenu"],
   ),
   createPages(
     "./src/pages/articles/short_articles/visit.html",
     "./pages/articles/short_articles/visit.html",
-    ["index"],
+    ["index", "scrollmenu"],
   ),
   createPages(
     "./src/pages/articles/short_articles/wednesday-school.html",
     "./pages/articles/short_articles/wednesday-school.html",
-    ["index"],
+    ["index", "scrollmenu"],
   ),
   createPages(
     "./src/pages/articles/short_articles/wednesday.html",
     "./pages/articles/short_articles/wednesday.html",
-    ["index"],
+    ["index", "scrollmenu"],
   ),
   createPages("./src/pages/about.html", "./pages/about.html", ["index"]),
   createPages(
