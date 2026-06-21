@@ -142,7 +142,8 @@
         <div class="O_HeadingArticle">
           <div class="M_IconHeadingLeft">
             <h1 class="A_TitleSuisse">
-              Философия Пилы: Почему Джон <br />Крамер – не просто злодей
+              Философия Пилы: Почему Джон <br />Крамер&nbsp;&mdash;
+              не&nbsp;просто злодей
             </h1>
           </div>
           <div class="A_TagArticleCharacterAnalysis align-bottom">
@@ -299,7 +300,9 @@
 
         <!-- 4. Истина на грани жизни и смерти -->
         <section class="O_BlockStoryText" id="truth">
-          <h2 class="A_TitleShitArticle">Истина на грани жизни и смерти</h2>
+          <h2 class="A_TitleShitArticle">
+            Истина на&nbsp;грани жизни и&nbsp;смерти
+          </h2>
           <div class="W_TextStory">
             <div class="A_Text">
               Идеи Крамера перекликаются с некоторыми философскими концепциями,
@@ -329,7 +332,7 @@
         <!-- 5. Моральный парадокс -->
         <section class="O_BlockStoryText" id="paradox">
           <h2 class="A_TitleShitArticle">
-            Моральный парадокс: зло во имя добра
+            Моральный парадокс: зло во&nbsp;имя добра
           </h2>
           <div class="W_TextStory">
             <div class="A_Text">
@@ -354,7 +357,7 @@
 
         <!-- 6. Место Крамера -->
         <section class="O_BlockStoryText" id="place">
-          <h2 class="A_TitleShitArticle">Место Крамера в жанре хоррора</h2>
+          <h2 class="A_TitleShitArticle">Место Крамера в&nbsp;жанре хоррора</h2>
           <div class="Q_ImageFullWidthArticle">
             <img src="../../../images/articles/Q_Sawsix.webp" />
           </div>
@@ -458,7 +461,8 @@
                   <div class="A_Date">13.12.2025</div>
                 </div>
                 <h2 class="A_ArticleNameSmall">
-                  Они не могли иначе: <br />фатализм «Реинкарнации»
+                  Они не&nbsp;могли иначе: <br />фатализм
+                  &laquo;Реинкарнации&raquo;
                 </h2>
                 <div class="A_TagArticleConceptualAnalysis">
                   <p class="A_p_tag_small">Концептуальный разбор</p>
@@ -516,41 +520,5 @@
         </div>
       </div>
     </footer>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const navLinks = document.querySelectorAll(
-          ".M_NavigationStory .A_ArticleNavLink",
-        );
-        const sections = document.querySelectorAll(".O_BlockStoryText");
-
-        function setActiveLink(link) {
-          navLinks.forEach((l) => l.classList.remove("active"));
-          if (link) link.classList.add("active");
-        }
-
-        navLinks.forEach((link) => {
-          link.addEventListener("click", function (e) {
-            e.preventDefault();
-
-            const targetId = this.getAttribute("href");
-            const targetSection = document.querySelector(targetId);
-
-            if (targetSection) {
-              setActiveLink(this);
-
-              const headerOffset = 100;
-              const elementPosition = targetSection.getBoundingClientRect().top;
-              const offsetPosition =
-                elementPosition + window.pageYOffset - headerOffset;
-
-              window.scrollTo({
-                top: offsetPosition,
-                behavior: "smooth",
-              });
-            }
-          });
-        });
-      });
-    </script>
   </body>
 </html>

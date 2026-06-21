@@ -233,7 +233,7 @@
         <!-- 2. Идентичность как конфликт, а не выбор -->
         <section class="O_BlockStoryText" id="identity">
           <h2 class="A_TitleShitArticle">
-            Идентичность как конфликт, а не выбор
+            Идентичность как конфликт, а&nbsp;не&nbsp;выбор
           </h2>
           <div class="W_TextStory">
             <div class="A_Text">
@@ -242,9 +242,9 @@
               модель. Сабрина пытается совместить несовместимое:
             </div>
             <ul class="M_BulletList">
-              <li>сохранить мораль и использовать тёмную магию;</li>
+              <li>сохранить мораль и&nbsp;использовать тёмную магию;</li>
               <li>быть независимой, оставаясь внутри системы;</li>
-              <li>контролировать силу, не подчиняясь ей.</li>
+              <li>контролировать силу, не&nbsp;подчиняясь&nbsp;ей.</li>
             </ul>
             <div class="Q_ImageFullWidthArticle">
               <img src="../../../images/articles/Q_Sabrinatwo.webp" />
@@ -273,8 +273,8 @@
               её&nbsp;возможности. Это создаёт парадокс:
             </div>
             <ul class="M_BulletList">
-              <li>она стремится к свободе;</li>
-              <li>но вынуждена действовать в заданных рамках;</li>
+              <li>она стремится к&nbsp;свободе;</li>
+              <li>но&nbsp;вынуждена действовать в&nbsp;заданных рамках;</li>
               <li>её «выборы» часто предопределены.</li>
             </ul>
             <div class="Q_ImageFullWidthArticle">
@@ -290,7 +290,8 @@
         <!-- 4. Почему Сабрина — это не «и то, и другое» -->
         <section class="O_BlockStoryText" id="not-both">
           <h2 class="A_TitleShitArticle">
-            Почему Сабрина — это не «и то, и другое»
+            Почему Сабрина&nbsp;&mdash; это не&nbsp;&laquo;и&nbsp;то,
+            и&nbsp;другое&raquo;
           </h2>
           <div class="W_TextStory">
             <div class="Q_ImageFullWidthArticle">
@@ -360,7 +361,8 @@
                   <div class="A_Date">24.04.2026</div>
                 </div>
                 <h2 class="A_ArticleNameSmall">
-                  Школа как модель общества: <br />иерархии, ярлыки и давление
+                  Школа как модель общества: <br />иерархии, ярлыки
+                  и&nbsp;давление
                 </h2>
                 <div class="A_TagArticleSocialCriticism">
                   <p class="A_p_tag_small">Социальная критика</p>
@@ -383,7 +385,7 @@
                   <div class="A_Date">15.12.2025</div>
                 </div>
                 <h2 class="A_ArticleNameSmall">
-                  Вина выжившего и утрата <br />в истории Макс Мэйфилд
+                  Вина выжившего и&nbsp;утрата <br />в&nbsp;истории Макс Мэйфилд
                 </h2>
                 <div class="A_TagArticleCharacterAnalysis">
                   <p class="A_p_tag_small">Анализ персонажа</p>
@@ -435,42 +437,5 @@
         </div>
       </div>
     </footer>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const navLinks = document.querySelectorAll(
-          ".M_NavigationStory .A_ArticleNavLink",
-        );
-        const sections = document.querySelectorAll(".O_BlockStoryText");
-
-        function setActiveLink(link) {
-          navLinks.forEach((l) => l.classList.remove("active"));
-          if (link) link.classList.add("active");
-        }
-
-        navLinks.forEach((link) => {
-          link.addEventListener("click", function (e) {
-            e.preventDefault();
-
-            const targetId = this.getAttribute("href");
-            const targetSection = document.querySelector(targetId);
-
-            if (targetSection) {
-              setActiveLink(this);
-
-              const headerOffset = 100;
-              const elementPosition = targetSection.getBoundingClientRect().top;
-              const offsetPosition =
-                elementPosition + window.pageYOffset - headerOffset;
-
-              window.scrollTo({
-                top: offsetPosition,
-                behavior: "smooth",
-              });
-            }
-          });
-        });
-      });
-    </script>
   </body>
 </html>

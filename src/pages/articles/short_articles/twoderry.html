@@ -265,7 +265,9 @@
               этого не&nbsp;осознаёт. Эта граница проявляется:
             </div>
             <ul class="M_BulletList">
-              <li>в исчезновениях, которые не получают объяснения;</li>
+              <li>
+                в&nbsp;исчезновениях, которые не&nbsp;получают объяснения;
+              </li>
               <li>в страхах, которые нельзя рационализировать;</li>
               <li>в поведении людей, которое становится иррациональным.</li>
             </ul>
@@ -404,7 +406,8 @@
                   <div class="A_Date">13.03.2026</div>
                 </div>
                 <h2 class="A_ArticleNameSmall">
-                  Как фильм обманывает зрителя <br />через монтаж и точку зрения
+                  Как фильм обманывает зрителя <br />через монтаж и&nbsp;точку
+                  зрения
                 </h2>
                 <div class="A_TagArticleConceptualAnalysis">
                   <p class="A_p_tag_small">Концептуальный разбор</p>
@@ -432,42 +435,5 @@
         </div>
       </div>
     </footer>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const navLinks = document.querySelectorAll(
-          ".M_NavigationStory .A_ArticleNavLink",
-        );
-        const sections = document.querySelectorAll(".O_BlockStoryText");
-
-        function setActiveLink(link) {
-          navLinks.forEach((l) => l.classList.remove("active"));
-          if (link) link.classList.add("active");
-        }
-
-        navLinks.forEach((link) => {
-          link.addEventListener("click", function (e) {
-            e.preventDefault();
-
-            const targetId = this.getAttribute("href");
-            const targetSection = document.querySelector(targetId);
-
-            if (targetSection) {
-              setActiveLink(this);
-
-              const headerOffset = 100;
-              const elementPosition = targetSection.getBoundingClientRect().top;
-              const offsetPosition =
-                elementPosition + window.pageYOffset - headerOffset;
-
-              window.scrollTo({
-                top: offsetPosition,
-                behavior: "smooth",
-              });
-            }
-          });
-        });
-      });
-    </script>
   </body>
 </html>

@@ -197,7 +197,7 @@
         <!-- 1. Silent Hill 2 — это путешествие в себя -->
         <section class="O_BlockStoryText" id="journey">
           <h2 class="A_TitleShitArticle">
-            Silent Hill 2 — это путешествие в себя
+            Silent Hill 2&nbsp;&mdash; это путешествие в&nbsp;себя
           </h2>
           <div class="W_TextStory">
             <div class="A_Text">
@@ -261,7 +261,7 @@
             </div>
             <div class="A_Text">В фильме это заменяется:</div>
             <ul class="M_BulletList">
-              <li>сценами из прошлого;</li>
+              <li>сценами из&nbsp;прошлого;</li>
               <li>намеками для зрителя;</li>
               <li>последовательным изложением воспоминаний.</li>
             </ul>
@@ -320,12 +320,13 @@
               словами: одиночество, отчуждение, душевную пустоту.
             </div>
             <div class="A_Text">
-              Return to Silent Hill часто хвалят за то, что он похож на игру:
+              Return to&nbsp;Silent Hill часто хвалят за&nbsp;то, что
+              он&nbsp;похож на&nbsp;игру:
             </div>
             <ul class="M_BulletList">
               <li>знакомые места;</li>
               <li>знакомые визуальные образы;</li>
-              <li>цитаты из известных сцен.</li>
+              <li>цитаты из&nbsp;известных сцен.</li>
             </ul>
           </div>
         </section>
@@ -359,7 +360,9 @@
 
         <!-- 6. Фильм не работает даже сам по себе -->
         <section class="O_BlockStoryText" id="movie-fails">
-          <h2 class="A_TitleShitArticle">Фильм не работает даже сам по себе</h2>
+          <h2 class="A_TitleShitArticle">
+            Фильм не&nbsp;работает даже сам по&nbsp;себе
+          </h2>
           <div class="W_TextStory">
             <div class="A_Text">
               Даже если забыть про игру, Return to&nbsp;Silent Hill страдает от
@@ -497,42 +500,5 @@
         </div>
       </div>
     </footer>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const navLinks = document.querySelectorAll(
-          ".M_NavigationStory .A_ArticleNavLink",
-        );
-        const sections = document.querySelectorAll(".O_BlockStoryText");
-
-        function setActiveLink(link) {
-          navLinks.forEach((l) => l.classList.remove("active"));
-          if (link) link.classList.add("active");
-        }
-
-        navLinks.forEach((link) => {
-          link.addEventListener("click", function (e) {
-            e.preventDefault();
-
-            const targetId = this.getAttribute("href");
-            const targetSection = document.querySelector(targetId);
-
-            if (targetSection) {
-              setActiveLink(this);
-
-              const headerOffset = 100;
-              const elementPosition = targetSection.getBoundingClientRect().top;
-              const offsetPosition =
-                elementPosition + window.pageYOffset - headerOffset;
-
-              window.scrollTo({
-                top: offsetPosition,
-                behavior: "smooth",
-              });
-            }
-          });
-        });
-      });
-    </script>
   </body>
 </html>
