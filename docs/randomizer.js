@@ -53,6 +53,18 @@ const Q_ImageCardsMainIt_namespaceObject = __webpack_require__.p + "images/7c6a7
 const Q_ImageCardsMainSabrina_namespaceObject = __webpack_require__.p + "images/689af8d871b7fd058e1a.gif";
 ;// ./src/images/cards/Q_ImageCardsMainBeverly.gif
 const Q_ImageCardsMainBeverly_namespaceObject = __webpack_require__.p + "images/e14396f6f287fc3c1e62.gif";
+;// ./src/images/cards/Q_ImageCardsMainGabriel.gif
+const Q_ImageCardsMainGabriel_namespaceObject = __webpack_require__.p + "images/a97533e4360c9431238c.gif";
+;// ./src/images/cards/Q_ImageCardsMainRegan.gif
+const Q_ImageCardsMainRegan_namespaceObject = __webpack_require__.p + "images/e0fca8ad8e57ec1b6113.gif";
+;// ./src/images/cards/Q_ImageCardsMainGhostface.gif
+const Q_ImageCardsMainGhostface_namespaceObject = __webpack_require__.p + "images/7fcc64649b13694f077f.gif";
+;// ./src/images/cards/Q_ImageCardsMainKevin.gif
+const Q_ImageCardsMainKevin_namespaceObject = __webpack_require__.p + "images/85dd188633a852026bc0.gif";
+;// ./src/images/cards/Q_ImageCardsMainElizabethSparkle.gif
+const Q_ImageCardsMainElizabethSparkle_namespaceObject = __webpack_require__.p + "images/a56ebb0bc0bba5fdd950.gif";
+;// ./src/images/cards/Q_ImageCardsMainWednesday.gif
+const Q_ImageCardsMainWednesday_namespaceObject = __webpack_require__.p + "images/2c7aad99755f5d655ab0.gif";
 ;// ./src/javascripts/randomizer.js
 
 
@@ -102,32 +114,32 @@ document.addEventListener("DOMContentLoaded", function () {
     tag: "Антагонист",
     title: "Гэбриел",
     description: "Идея о «близнеце», живущем внутри героини, <br />пришла сценаристам после изучения <br />реальных медицинских аномалий",
-    image: Q_ImageCardsMainBeverly_namespaceObject
+    image: Q_ImageCardsMainGabriel_namespaceObject
   }, {
     tag: "Протагонист",
     title: "Риган Эббот",
     description: "Режиссёр принципиально взял на роль <br />глухой героини глухую актрису. Её личный опыт <br />сделал историю достоверной",
-    image: Q_ImageCardsMainBeverly_namespaceObject
+    image: Q_ImageCardsMainRegan_namespaceObject
   }, {
     tag: "Антагонист",
     title: "Призрачное лицо",
     description: "Прототип маньяка в маске — серийный <br />убийца Дэнни Роллинг, охотившийся <br />на студенток во Флориде",
-    image: Q_ImageCardsMainBeverly_namespaceObject
+    image: Q_ImageCardsMainGhostface_namespaceObject
   }, {
     tag: "Антагонист",
     title: "Кевин Крамб",
     description: "Прототип — преступник Билли Миллиган, <br />первый оправданный из-за диссоциативного <br />расстройства идентичности",
-    image: Q_ImageCardsMainBeverly_namespaceObject
+    image: Q_ImageCardsMainKevin_namespaceObject
   }, {
     tag: "Протагонист",
     title: "Элизабет Спаркл",
     description: "Образ героини вырос из личных переживаний <br />режиссёра о старении и давлении общества <br />на женщин после 40 лет",
-    image: Q_ImageCardsMainBeverly_namespaceObject
+    image: Q_ImageCardsMainElizabethSparkle_namespaceObject
   }, {
     tag: "Протагонист",
     title: "Уэнздей",
     description: "Немигающий взгляд появился случайно: <br />Дженна Ортега не моргнула в одном дубле, <br />и Тим Бёртон сделал это частью образа",
-    image: Q_ImageCardsMainBeverly_namespaceObject
+    image: Q_ImageCardsMainWednesday_namespaceObject
   }];
 
   // Фразы по тегу
